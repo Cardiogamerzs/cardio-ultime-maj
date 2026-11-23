@@ -1,0 +1,1237 @@
+{
+"id": "echo",
+"version": 5,
+"description": "Atlas échographique : mesures (49)",
+"tables": {
+"echo_measures": [
+{
+"id": "fevg_simpson",
+"title": "FEVG — méthode de Simpson biplan",
+"category": "Fonction systolique VG",
+"structure": "Ventricule gauche",
+"technique": "2D",
+"summary": "Volumes télédiastolique et télésystolique en 4 et 2 cavités apicales → FEVG.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Fraction d'éjection VG : décision thérapeutique (IC, valvulopathies, cardio-oncologie, DAI).\n\n## 2. Fenêtre et coupe\n- Apicale 4 cavités et apicale 2 cavités, non raccourcies (apex au sommet du secteur).\n\n## 3. Position de la sonde et du curseur\n- Sonde à l'apex vrai (choc de pointe), patient en décubitus latéral gauche.\n\n## 4. Mode à activer\n- 2D, harmonique ; agent de contraste si ≥ 2 segments contigus mal vus.\n\n## 6. Optimisation du signal\n- Profondeur et secteur réduits au VG, gain pour un endocarde net, fréquence d'images élevée.\n\n## 7. Étapes successives\n- Repérer télédiastole (1re image après fermeture mitrale ou pic de R) et télésystole (plus petite cavité).\n- Tracer l'endocarde en excluant les piliers et trabéculations, fermer au niveau de l'anneau mitral.\n- Répéter en 2 cavités ; le logiciel calcule les volumes par disques.\n\n## 8. Formule\n- VTD et VTS par sommation de disques (méthode de Simpson modifiée) ; FEVG = (VTD − VTS)/VTD.\n\n## 9. Normes et seuils (unités)\n- FEVG normale (ASE/EACVI 2015) : 52–72 % (homme), 54–74 % (femme).\n- Catégories d'IC : ESC 2026 → FEVG < 50 % = IC à FE réduite ; ≥ 50 % = préservée.\n\n## 10. Pièges techniques\n- Raccourcissement apical (sous-estime les volumes), inclusion des piliers, mauvaise identification des temps.\n\n## 11. Limites\n- Variabilité inter-observateur de plusieurs points de FEVG ; préférer la 3D ou le contraste pour le suivi sériel.\n\n## 12. Scores et critères associés\n- Critères de dysfonction en cardio-oncologie (baisse de FEVG et de GLS, ESC 2022).",
+"formula": "FEVG (%) = (VTD − VTS) / VTD × 100",
+"sort_order": 0,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "fevg fraction ejection simpson volumes"
+},
+{
+"id": "masse_vg",
+"title": "Masse VG et géométrie",
+"category": "Dimensions et volumes",
+"structure": "Ventricule gauche",
+"technique": "2D / TM",
+"summary": "Masse VG indexée et épaisseur pariétale relative : HVG concentrique ou excentrique.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Détecter et classer une HVG (HTA, RA, CMH, amylose).\n\n## 2. Fenêtre et coupe\n- Parasternale grand axe, mesures perpendiculaires à l'axe du VG, en télédiastole, à l'extrémité des feuillets mitraux.\n\n## 4. Mode à activer\n- 2D (préférée) ou TM bien aligné.\n\n## 7. Étapes successives\n- Mesurer DTDVG, SIV, PP ; calculer masse (formule linéaire ASE) puis indexer à la surface corporelle.\n\n## 8. Formule\n- Masse VG (g) = 0,8 × 1,04 × [(DTDVG + SIV + PP)³ − DTDVG³] + 0,6 (mesures en cm).\n- Épaisseur pariétale relative (EPR) = 2 × PP / DTDVG.\n\n## 9. Normes et seuils (unités)\n- Masse VG indexée (méthode linéaire) : HVG si > 115 g/m² (homme) ou > 95 g/m² (femme).\n- EPR > 0,42 : géométrie concentrique.\n\n## 10. Pièges techniques\n- Inclusion de la bande modératrice ou des fausses cordes dans le septum ; mesure oblique.\n\n## 11. Limites\n- La formule cubique amplifie les erreurs de mesure ; IRM plus précise.",
+"formula": "Masse VG (g) = 0,8 × 1,04 × [(DTDVG + SIV + PP)³ − DTDVG³] + 0,6 ; EPR = 2 × PP / DTDVG",
+"sort_order": 1,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "hvg masse ventriculaire epaisseur relative"
+},
+{
+"id": "gls",
+"title": "Strain longitudinal global (GLS)",
+"category": "Fonction systolique VG",
+"structure": "Ventricule gauche",
+"technique": "Strain (speckle tracking)",
+"summary": "Déformation longitudinale moyenne du VG (valeur négative), sensible à la dysfonction infraclinique.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Dysfonction systolique précoce (cardio-oncologie, CMH, amylose : épargne apicale).\n\n## 2. Fenêtre et coupe\n- Apicales 4, 2 et 3 cavités avec fréquence d'images 40–90 i/s.\n\n## 4. Mode à activer\n- Speckle tracking (logiciel du constructeur).\n\n## 7. Étapes successives\n- Acquérir 3 coupes apicales sur des cycles réguliers, définir la fermeture aortique, vérifier le suivi des segments, valider.\n\n## 9. Normes et seuils (unités)\n- Valeurs normales dépendantes du logiciel/constructeur ; un GLS plus négatif qu'environ −18 % à −20 % est habituellement considéré normal (ASE/EACVI 2015).\n- Cardio-oncologie : baisse relative > 15 % par rapport à la valeur de base = signe de cardiotoxicité (ESC 2022).\n\n## 10. Pièges techniques\n- Comparer des examens réalisés avec le même logiciel/constructeur.\n\n## 11. Limites\n- Variabilité inter-constructeurs ; arythmies ; mauvaise échogénicité.\n\n## 12. Scores et critères associés\n- HFA-PEFF (GLS < 16 % en critère mineur fonctionnel).",
+"formula": "GLS (%) = moyenne des strains longitudinaux segmentaires (A4C, A2C, A3C)",
+"sort_order": 2,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "strain gls speckle tracking epargne apicale"
+},
+{
+"id": "diastole",
+"title": "Fonction diastolique et pressions de remplissage",
+"category": "Fonction diastolique",
+"structure": "Ventricule gauche / OG",
+"technique": "Doppler pulsé, Doppler tissulaire",
+"summary": "Algorithme ASE/EACVI 2016 : e', E/e', Vmax IT, volume OG indexé.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Diagnostic de dysfonction diastolique et estimation des pressions de remplissage (IC à FE préservée, dyspnée).\n\n## 2. Fenêtre et coupe\n- Apicale 4 cavités (flux mitral, Doppler tissulaire septal et latéral), IT multi-fenêtres, volumes OG en A4C/A2C.\n\n## 5. Volume d'échantillonnage / ligne Doppler\n- Flux mitral : échantillon de 1–3 mm à l'extrémité des feuillets.\n- Doppler tissulaire : échantillon sur l'anneau mitral septal et latéral.\n\n## 6. Optimisation du signal\n- Alignement < 20°, vitesse de défilement 50–100 mm/s, en fin d'expiration.\n\n## 7. Étapes successives\n- Mesurer E, A, E/A, e' septal et latéral, E/e' moyen, Vmax IT, volume OG indexé.\n- Appliquer l'algorithme selon la FEVG.\n\n## 8. Formule\n- E/e' moyen = E / [(e' septal + e' latéral)/2].\n\n## 9. Normes et seuils (unités)\n- Critères anormaux (FEVG normale) : e' septal < 7 cm/s ou latéral < 10 cm/s ; E/e' moyen > 14 ; Vmax IT > 2,8 m/s ; VOG indexé > 34 mL/m².\n- > 50 % positifs : dysfonction diastolique ; < 50 % : normale ; 50 % : indéterminée.\n\n## 10. Pièges techniques\n- FA, calcifications annulaires, IM sévère, prothèse mitrale, tachycardie : algorithme non applicable tel quel.\n\n## 11. Limites\n- Une mise à jour ASE a pu être publiée après 2016 : vérifier la version de référence.\n\n## 12. Scores et critères associés\n- H₂FPEF et HFA-PEFF pour l'IC à FE préservée.",
+"formula": "Dysfonction diastolique si > 50 % des 4 critères positifs (FEVG normale)",
+"sort_order": 3,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "diastolique e e prime pressions remplissage"
+},
+{
+"id": "tapse",
+"title": "TAPSE",
+"category": "Fonction VD",
+"structure": "Ventricule droit",
+"technique": "TM",
+"summary": "Excursion systolique de l'anneau tricuspide (fonction longitudinale VD).",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Fonction systolique VD (IC, HTP, embolie pulmonaire).\n\n## 2. Fenêtre et coupe\n- Apicale 4 cavités centrée sur le VD.\n\n## 3. Position de la sonde et du curseur\n- Curseur TM aligné sur l'anneau tricuspide latéral, le plus parallèle possible à son déplacement.\n\n## 4. Mode à activer\n- TM.\n\n## 7. Étapes successives\n- Mesurer l'excursion entre télédiastole et pic systolique.\n\n## 9. Normes et seuils (unités)\n- TAPSE < 17 mm : dysfonction systolique VD (ASE/EACVI 2015).\n\n## 10. Pièges techniques\n- Défaut d'alignement, mouvement de translation global du cœur (post-chirurgie cardiaque).\n\n## 11. Limites\n- Angle-dépendant ; reflète la seule fonction longitudinale.\n\n## 12. Scores et critères associés\n- Rapport TAPSE/PAPs (couplage VD–artère pulmonaire, HTP).",
+"formula": "TAPSE (mm) = déplacement systolique maximal de l'anneau tricuspide latéral",
+"sort_order": 4,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "tapse ventricule droit"
+},
+{
+"id": "s_prime",
+"title": "Onde S' tricuspide (Doppler tissulaire)",
+"category": "Fonction VD",
+"structure": "Ventricule droit",
+"technique": "Doppler tissulaire pulsé",
+"summary": "Vitesse systolique maximale de l'anneau tricuspide latéral.",
+"body": "## 2. Fenêtre et coupe\n- Apicale 4 cavités centrée sur le VD.\n\n## 5. Volume d'échantillonnage / ligne Doppler\n- Échantillon sur l'anneau tricuspide latéral (ou segment basal de la paroi libre).\n\n## 6. Optimisation du signal\n- Alignement parallèle au mouvement annulaire, échelle adaptée.\n\n## 9. Normes et seuils (unités)\n- S' < 9,5 cm/s : dysfonction systolique VD (ASE/EACVI 2015).\n\n## 10. Pièges techniques\n- Mesurer la vitesse de pic (et non l'enveloppe externe de la courbe).\n\n## 11. Limites\n- Angle-dépendante ; régionale.",
+"formula": "S' = pic de vitesse systolique (cm/s)",
+"sort_order": 5,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "s prime tricuspide doppler tissulaire"
+},
+{
+"id": "paps",
+"title": "Pression artérielle pulmonaire systolique (PAPs)",
+"category": "Hypertension pulmonaire",
+"structure": "Valve tricuspide / VD",
+"technique": "Doppler continu",
+"summary": "Estimation par le gradient VD–OD (Vmax IT) + POD estimée.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Probabilité échographique d'HTP, dépistage, suivi.\n\n## 2. Fenêtre et coupe\n- Multi-fenêtres : apicale 4 cavités, parasternale VD, sous-costale.\n\n## 5. Volume d'échantillonnage / ligne Doppler\n- Doppler continu aligné sur le jet d'IT (Doppler couleur pour guider).\n\n## 7. Étapes successives\n- Mesurer Vmax IT (enveloppe nette) ; estimer la POD par la VCI.\n\n## 8. Formule\n- Gradient VD–OD = 4 × V² (Bernoulli simplifiée).\n- POD : VCI ≤ 21 mm et collapsus > 50 % → 3 mmHg ; VCI > 21 mm et collapsus < 50 % → 15 mmHg ; situations intermédiaires → 8 mmHg.\n\n## 9. Normes et seuils (unités)\n- Vmax IT > 2,8 m/s : critère de probabilité d'HTP (ESC/ERS 2022) — probabilité intégrant d'autres signes (VD/VG, septum, flux pulmonaire, VCI, OD).\n\n## 10. Pièges techniques\n- Enveloppe incomplète (sous-estimation), IT massive (Bernoulli non applicable).\n\n## 11. Limites\n- Le diagnostic d'HTP repose sur le cathétérisme droit.\n\n## 12. Scores et critères associés\n- Probabilité échographique d'HTP (faible / intermédiaire / élevée) ESC/ERS 2022.",
+"formula": "PAPs ≈ 4 × (Vmax IT)² + POD",
+"sort_order": 6,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "paps pression pulmonaire htp it"
+},
+{
+"id": "surface_ao",
+"title": "Surface aortique par équation de continuité",
+"category": "Valvulopathies",
+"structure": "Valve aortique",
+"technique": "Doppler pulsé + continu + 2D",
+"summary": "Surface valvulaire aortique effective.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Sévérité du RA, surtout en cas de discordance gradient/surface.\n\n## 2. Fenêtre et coupe\n- Parasternale grand axe (diamètre CCVG, zoom) ; apicale 5 cavités (ITV CCVG en pulsé, ITV aortique en continu).\n\n## 5. Volume d'échantillonnage / ligne Doppler\n- Pulsé : 3–5 mm sous la valve, sans accélération pré-valvulaire.\n- Continu : multi-fenêtres pour la vitesse maximale.\n\n## 7. Étapes successives\n- Diamètre CCVG en mésosystole (bord interne à bord interne).\n- ITV CCVG (pulsé), ITV transvalvulaire (continu).\n- Calculer et indexer à la surface corporelle ; calculer le DVI (ITV CCVG/ITV Ao).\n\n## 8. Formule\n- SAo = surface CCVG × ITV CCVG / ITV Ao ; DVI = ITV CCVG / ITV Ao.\n\n## 9. Normes et seuils (unités)\n- RA serré : SAo < 1,0 cm² ; SAo indexée < 0,6 cm²/m² ; DVI < 0,25.\n\n## 10. Pièges techniques\n- Erreur sur le diamètre CCVG élevée au carré ; position du volume pulsé ; CCVG elliptique.\n\n## 11. Limites\n- Sous-estimation fréquente de la surface de la CCVG (scanner plus précis).\n\n## 12. Scores et critères associés\n- Classification du RA à bas débit (VES indexé ≤ 35 mL/m²).",
+"formula": "SAo (cm²) = [π × (D CCVG/2)²] × ITV CCVG / ITV Ao",
+"sort_order": 7,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "surface aortique continuite ra"
+},
+{
+"id": "gradients_ao",
+"title": "Vmax et gradient moyen aortiques",
+"category": "Valvulopathies",
+"structure": "Valve aortique",
+"technique": "Doppler continu",
+"summary": "Vitesse maximale et gradient moyen transvalvulaires.",
+"body": "## 2. Fenêtre et coupe\n- Apicale 5 et 3 cavités, parasternale droite, sus-sternale, sous-costale.\n\n## 5. Volume d'échantillonnage / ligne Doppler\n- Doppler continu aligné sur le jet (sonde « crayon » si disponible).\n\n## 7. Étapes successives\n- Rechercher la vitesse la plus élevée sur toutes les fenêtres ; tracer l'enveloppe pour le gradient moyen.\n\n## 9. Normes et seuils (unités)\n- RA serré : Vmax ≥ 4 m/s, gradient moyen ≥ 40 mmHg. Très serré : Vmax ≥ 5 m/s (selon recommandations).\n\n## 10. Pièges techniques\n- Contamination par l'IM (jet plus long et plus rapide), mauvais alignement, FA (moyenner 5 cycles).\n\n## 11. Limites\n- Débit-dépendant (bas débit = gradient faussement bas ; haut débit = surestimation).",
+"formula": "Gradient (mmHg) = 4 × V² ; gradient moyen = moyenne des gradients instantanés",
+"sort_order": 8,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "vmax gradient moyen aortique"
+},
+{
+"id": "pisa_im",
+"title": "Quantification de l'IM par PISA",
+"category": "Valvulopathies",
+"structure": "Valve mitrale",
+"technique": "Doppler couleur + continu",
+"summary": "Surface de l'orifice régurgitant et volume régurgité.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Sévérité de l'IM (primaire/secondaire).\n\n## 2. Fenêtre et coupe\n- Apicale 4 cavités zoomée sur la convergence.\n\n## 4. Mode à activer\n- Doppler couleur : décaler la ligne de base vers le jet (vitesse d'aliasing 30–40 cm/s).\n\n## 7. Étapes successives\n- Mesurer le rayon r en mésosystole ; noter Va ; Doppler continu : Vmax et ITV de l'IM.\n\n## 8. Formule\n- SOR = 2π r² × Va / Vmax ; VR = SOR × ITV IM.\n\n## 9. Normes et seuils (unités)\n- IM sévère : SOR ≥ 40 mm² (0,40 cm²), VR ≥ 60 mL, VC ≥ 7 mm, fraction régurgitée ≥ 50 % (ASE 2017). En IM secondaire, un orifice elliptique peut être sévère avec un SOR plus faible.\n\n## 10. Pièges techniques\n- Orifice non hémisphérique, fuites multiples, fuite non holosystolique (prolapsus tardif).\n\n## 11. Limites\n- Approche multiparamétrique obligatoire.",
+"formula": "Débit = 2π r² × Va ; SOR = Débit / Vmax IM ; VR = SOR × ITV IM",
+"sort_order": 9,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "pisa sor volume regurgite im"
+},
+{
+"id": "aorte",
+"title": "Dimensions de l'aorte thoracique",
+"category": "Aorte",
+"structure": "Aorte",
+"technique": "2D",
+"summary": "Anneau, sinus de Valsalva, jonction sino-tubulaire, aorte ascendante.",
+"body": "## 2. Fenêtre et coupe\n- Parasternale grand axe (± un espace intercostal plus haut pour l'ascendante), sus-sternale pour la crosse.\n\n## 7. Étapes successives\n- Mesurer perpendiculairement à l'axe du vaisseau ; anneau en mésosystole ; sinus, JST, ascendante en télédiastole (convention bord d'attaque à bord d'attaque selon ASE/EACVI 2015).\n\n## 9. Normes et seuils (unités)\n- Valeurs normales dépendantes de l'âge, du sexe et de la surface corporelle ; seuils d'intervention : ESC 2024 (pathologies aortiques).\n\n## 10. Pièges techniques\n- Convention de mesure (bords internes vs bords d'attaque) différente entre imageries : préciser la méthode et la conserver au suivi.\n\n## 11. Limites\n- Scanner/IRM pour la mesure de référence et le suivi des dilatations.",
+"formula": "Indexation à la surface corporelle ou à la taille selon le contexte",
+"sort_order": 10,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "aorte sinus valsalva ascendante"
+},
+{
+"id": "pericarde",
+"title": "Épanchement péricardique et tamponnade",
+"category": "Péricarde",
+"structure": "Péricarde",
+"technique": "2D / TM / Doppler",
+"summary": "Quantification, signes de compression et variations respiratoires.",
+"body": "## 2. Fenêtre et coupe\n- Parasternale, apicale, sous-costale (multi-incidences).\n\n## 7. Étapes successives\n- Mesurer l'épanchement en télédiastole ; rechercher collapsus diastolique de l'OD/VD, VCI dilatée non compliante, variations respiratoires des flux mitral et tricuspide.\n\n## 9. Normes et seuils (unités)\n- Classification par l'épaisseur télédiastolique (petit, modéré, abondant) : seuils selon recommandations ESC.\n- La tamponnade est un diagnostic clinique et échographique.\n\n## 10. Pièges techniques\n- Graisse épicardique, épanchement pleural ; épanchement cloisonné post-opératoire.\n\n## 11. Limites\n- ETO/scanner si fenêtre limitée ou épanchement localisé.",
+"formula": "—",
+"sort_order": 11,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "epanchement pericardique tamponnade"
+},
+{
+"id": "diametres_vg",
+"title": "Diamètres du VG (DTDVG, DTSVG) et fraction de raccourcissement",
+"category": "Dimensions et volumes",
+"structure": "Ventricule gauche",
+"technique": "2D / TM",
+"summary": "Diamètres linéaires du VG en parasternale grand axe : dilatation, suivi des valvulopathies (IA, IM).",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Dilatation du VG ; seuils chirurgicaux de l'IA et de l'IM primaire (DTSVG).\n\n## 2. Fenêtre et coupe\n- Parasternale grand axe, perpendiculaire au grand axe du VG, au niveau de l'extrémité des feuillets mitraux (juste sous l'extrémité).\n\n## 4. Mode à activer\n- 2D (recommandé) ; TM seulement si le curseur est parfaitement perpendiculaire.\n\n## 7. Étapes successives\n- DTDVG en télédiastole (début du QRS / plus grande cavité), DTSVG en télésystole (plus petite cavité).\n- Mesure bord interne – bord interne (interface tissu-sang).\n\n## 8. Formule\n- FR = (DTDVG − DTSVG)/DTDVG ; indexer les diamètres à la surface corporelle pour les seuils chirurgicaux.\n\n## 9. Normes et seuils (unités)\n- DTDVG (ASE/EACVI 2015) : homme 42,0–58,4 mm ; femme 37,8–52,2 mm.\n- DTSVG : homme 25,0–39,8 mm ; femme 21,6–34,8 mm.\n- Seuils chirurgicaux (ESC valvulopathies) : IA sévère → DTSVG > 50 mm ou > 25 mm/m² ; IM primaire sévère → DTSVG ≥ 40 mm (ou ≥ 20 mm/m²).\n\n## 10. Pièges techniques\n- Coupe oblique (surestimation), mesure trop basale ou trop apicale, inclusion des cordages.\n\n## 11. Limites\n- Une seule dimension : ne reflète pas les VG déformés (anévrisme, remodelage segmentaire) → préférer les volumes.",
+"formula": "FR (%) = (DTDVG − DTSVG) / DTDVG × 100",
+"sort_order": 12,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "dtdvg dtsvg diametre raccourcissement"
+},
+{
+"id": "volumes_vg",
+"title": "Volumes VG indexés (VTD, VTS)",
+"category": "Dimensions et volumes",
+"structure": "Ventricule gauche",
+"technique": "2D / 3D",
+"summary": "Volumes télédiastolique et télésystolique (Simpson biplan ou 3D), indexés à la surface corporelle.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Remodelage VG, suivi sériel, critères des valvulopathies.\n\n## 2. Fenêtre et coupe\n- Apicales 4 et 2 cavités non raccourcies ; acquisition 3D si disponible (plus reproductible).\n\n## 7. Étapes successives\n- Tracer l'endocarde (piliers inclus dans la cavité), en télédiastole puis télésystole, dans les deux coupes.\n\n## 9. Normes et seuils (unités)\n- VTD indexé (2D biplan, ASE/EACVI 2015) : homme 34–74 mL/m² ; femme 29–61 mL/m².\n- VTS indexé : homme 11–31 mL/m² ; femme 8–24 mL/m².\n\n## 10. Pièges techniques\n- Raccourcissement apical (sous-estimation), mauvaise délimitation de l'endocarde (contraste si besoin).\n\n## 11. Limites\n- Le 2D sous-estime les volumes par rapport à l'IRM ; normes 3D différentes (plus élevées).",
+"formula": "Volume indexé (mL/m²) = volume / surface corporelle",
+"sort_order": 13,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "volume telediastolique telesystolique indexe"
+},
+{
+"id": "og_volume",
+"title": "Oreillette gauche : volume indexé et diamètre",
+"category": "Dimensions et volumes",
+"structure": "Oreillette gauche",
+"technique": "2D",
+"summary": "Volume OG indexé : marqueur de la chronicité des pressions de remplissage élevées et du risque de FA.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Fonction diastolique, FA, valvulopathies mitrales, HFA-PEFF.\n\n## 2. Fenêtre et coupe\n- Apicales 4 et 2 cavités centrées sur l'OG (coupes dédiées, non raccourcies pour l'OG) ; diamètre en parasternale grand axe.\n\n## 7. Étapes successives\n- En télésystole (juste avant l'ouverture mitrale), tracer l'OG en excluant auricule et veines pulmonaires, fermer au plan de l'anneau.\n\n## 8. Formule\n- Méthode biplan aire-longueur ou Simpson biplan.\n\n## 9. Normes et seuils (unités)\n- Volume OG indexé normal ≤ 34 mL/m² (ASE/EACVI 2015).\n- Dilatation : légère 35–41, modérée 42–48, sévère > 48 mL/m².\n- Diamètre antéro-postérieur (PSGA) : homme 30–40 mm ; femme 27–38 mm (paramètre peu fiable).\n- HFA-PEFF : critère majeur > 34 mL/m² en rythme sinusal (> 40 mL/m² en FA).\n\n## 10. Pièges techniques\n- Coupes apicales centrées sur le VG (OG raccourcie), inclusion des veines pulmonaires.\n\n## 11. Limites\n- Augmenté chez l'athlète, en cas de bradycardie ou de valvulopathie mitrale sans dysfonction diastolique.",
+"formula": "Volume OG (biplan aire-longueur) = 0,85 × A4C × A2C / L ; indexé à la surface corporelle",
+"sort_order": 14,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "oreillette gauche volume indexe vog"
+},
+{
+"id": "od_surface",
+"title": "Oreillette droite : surface et volume",
+"category": "Dimensions et volumes",
+"structure": "Oreillette droite",
+"technique": "2D",
+"summary": "Taille de l'OD en apicale 4 cavités : surcharge droite, HTP, IT.",
+"body": "## 2. Fenêtre et coupe\n- Apicale 4 cavités centrée sur le cœur droit.\n\n## 7. Étapes successives\n- En télésystole, tracer l'OD du plan de l'anneau tricuspide en excluant VCI, VCS et auricule.\n\n## 9. Normes et seuils (unités)\n- Surface OD > 18 cm² : dilatation (critère ESC 2022 de probabilité d'HTP).\n- Volume OD indexé (ASE/EACVI 2015) : homme 25 ± 7 mL/m² ; femme 21 ± 6 mL/m².\n\n## 10. Pièges techniques\n- Le volume OD est plus petit que le volume OG pour un même sujet : ne pas transposer les normes gauches.",
+"formula": "Surface OD (cm²) planimétrée en télésystole",
+"sort_order": 15,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "oreillette droite surface volume"
+},
+{
+"id": "vd_dimensions",
+"title": "Dimensions du ventricule droit et de la chambre de chasse",
+"category": "Fonction VD",
+"structure": "Ventricule droit",
+"technique": "2D",
+"summary": "Diamètres VD en coupe apicale « focalisée VD » et diamètres de la CCVD.",
+"body": "## 1. Ce qu'on mesure et pourquoi\n- Dilatation VD : HTP, EP, CMA, shunts, IT.\n\n## 2. Fenêtre et coupe\n- Apicale 4 cavités focalisée sur le VD (apex VG au sommet, VD dans sa plus grande largeur) ; parasternale grand et petit axes pour la CCVD.\n\n## 7. Étapes successives\n- Diamètre basal (tiers basal), médio-cavitaire et longitudinal en télédiastole.\n- CCVD proximale (PSGA et PSPA) et distale (juste sous la valve pulmonaire).\n\n## 9. Normes et seuils (unités)\n- Diamètre basal > 41 mm et médio-cavitaire > 35 mm : dilatation ; longitudinal > 83 mm (ASE/EACVI 2015).\n- CCVD proximale (PSGA) > 30 mm, (PSPA) > 35 mm ; CCVD distale > 27 mm.\n- Rapport VD/VG basal > 1,0 : signe en faveur d'une HTP (ESC 2022) ou d'une surcharge VD (EP).\n\n## 10. Pièges techniques\n- Coupe non focalisée (sous-estimation), confusion entre bande modératrice et paroi.\n\n## 11. Limites\n- Géométrie complexe du VD : IRM ou 3D pour les volumes.",
+"formula": "Rapport VD/VG basal (A4C)",
+"sort_order": 16,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "ventricule droit diametre ccvd"
+},
+{
+"id": "fac_vd",
+"title": "Fraction de raccourcissement de surface du VD (FAC) et strain VD",
+"category": "Fonction VD",
+"structure": "Ventricule droit",
+"technique": "2D / Strain",
+"summary": "FAC = variation de surface du VD entre diastole et systole ; strain longitudinal de la paroi libre.",
+"body": "## 2. Fenêtre et coupe\n- Apicale 4 cavités focalisée VD.\n\n## 7. Étapes successives\n- Tracer l'endocarde du VD en télédiastole et en télésystole, en incluant les trabéculations dans la cavité.\n- Strain : speckle tracking de la paroi libre (3 segments).\n\n## 9. Normes et seuils (unités)\n- FAC < 35 % : dysfonction systolique VD (ASE/EACVI 2015).\n- Strain longitudinal de la paroi libre : valeur moins négative que −20 % = anormale (dépend du logiciel).\n\n## 10. Pièges techniques\n- Mauvaise visualisation de la paroi libre (gain, contraste).\n\n## 11. Limites\n- Ignore la chambre de chasse ; dépendance aux conditions de charge.",
+"formula": "FAC (%) = (STD − STS) / STD × 100",
+"sort_order": 17,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "fac fraction surface vd strain vd"
+},
+{
+"id": "tei_vd",
+"title": "Indice de performance myocardique du VD (indice de Tei)",
+"category": "Fonction VD",
+"structure": "Ventricule droit",
+"technique": "Doppler pulsé / tissulaire",
+"summary": "Rapport des temps isovolumiques sur le temps d'éjection : fonction globale systolo-diastolique du VD.",
+"body": "## 7. Étapes successives\n- Doppler tissulaire à l'anneau tricuspide (un seul cycle) ou Doppler pulsé du flux tricuspide et de la CCVD (même fréquence cardiaque).\n- TCO = fin de l'onde a' → début de l'onde e' ; TE = durée de l'onde S' ou du flux pulmonaire.\n\n## 9. Normes et seuils (unités)\n- IPM VD anormal si > 0,40 (Doppler pulsé) ou > 0,54 (Doppler tissulaire) (ASE/EACVI 2015).\n\n## 10. Pièges techniques\n- Mesures sur des cycles différents en Doppler pulsé (FA, variabilité).\n\n## 11. Limites\n- Pseudo-normalisation si pression de l'OD élevée (TRIV raccourci).",
+"formula": "IPM = (TCIV + TRIV) / TE = (TCO − TE) / TE",
+"sort_order": 18,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "tei ipm indice performance myocardique"
+},
+{
+"id": "vci",
+"title": "Veine cave inférieure et pression de l'OD",
+"category": "Hémodynamique",
+"structure": "Veine cave inférieure",
+"technique": "2D / TM",
+"summary": "Diamètre de la VCI et collapsus inspiratoire (« sniff ») → estimation de la pression de l'OD.",
+"body": "## 2. Fenêtre et coupe\n- Sous-costale, VCI en grand axe, 1–2 cm en amont de l'abouchement des veines sus-hépatiques.\n\n## 7. Étapes successives\n- Mesurer le diamètre maximal en expiration, puis au reniflement (sniff) : calcul du collapsus.\n\n## 9. Normes et seuils (unités)\n- VCI ≤ 21 mm et collapsus > 50 % : POD ≈ 3 mmHg (0–5).\n- VCI > 21 mm et collapsus < 50 % : POD ≈ 15 mmHg (10–20).\n- Situations intermédiaires : POD ≈ 8 mmHg (5–10) (ASE 2010, ASE/EACVI 2015).\n- VCI > 21 mm avec collapsus diminué : signe de probabilité d'HTP (ESC 2022).\n\n## 10. Pièges techniques\n- Mesure oblique, confusion avec l'aorte, ventilation mécanique (non interprétable).\n\n## 11. Limites\n- VCI dilatée physiologique chez l'athlète.",
+"formula": "POD estimée selon diamètre et collapsus",
+"sort_order": 19,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "vci veine cave pod pression oreillette droite"
+},
+{
+"id": "debit",
+"title": "Volume d'éjection systolique, débit et index cardiaques",
+"category": "Hémodynamique",
+"structure": "Chambre de chasse VG",
+"technique": "Doppler pulsé",
+"summary": "Volume éjecté = surface de la CCVG × ITV sous-aortique ; débit = VES × FC.",
+"body": "## 2. Fenêtre et coupe\n- Diamètre de la CCVG en parasternale grand axe (zoom, mésosystole) ; ITV en apicale 5 cavités.\n\n## 5. Volume d'échantillonnage / ligne Doppler\n- Échantillon de Doppler pulsé placé 5 mm sous la valve aortique, aligné sur le flux.\n\n## 7. Étapes successives\n- Mesurer le diamètre au même niveau que l'échantillon Doppler ; moyenne de 3 cycles (5 en FA).\n\n## 9. Normes et seuils (unités)\n- ITV sous-aortique ≈ 18–22 cm chez l'adulte au repos (valeur < 15 cm évocatrice de bas débit).\n- Index cardiaque normal ≈ 2,5–4,0 L/min/m².\n- VES indexé ≤ 35 mL/m² : bas débit (rétrécissement aortique à bas débit, EACVI 2017).\n\n## 10. Pièges techniques\n- Erreur sur le diamètre élevée au carré ; échantillon trop proche de la valve (accélération).\n\n## 11. Limites\n- CCVG elliptique (sous-estimation) ; arythmies.",
+"formula": "VES (mL) = π × (D CCVG / 2)² × ITV CCVG ; DC = VES × FC ; IC = DC / SC",
+"sort_order": 20,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "debit cardiaque ves itv ccvg index"
+},
+{
+"id": "dpdt",
+"title": "dP/dt du VG",
+"category": "Fonction systolique VG",
+"structure": "Ventricule gauche",
+"technique": "Doppler continu",
+"summary": "Vitesse de montée en pression du VG mesurée sur l'enveloppe d'IM : contractilité globale.",
+"body": "## 7. Étapes successives\n- Doppler continu de l'IM (apicale 4 cavités), vitesse de défilement rapide.\n- Mesurer le temps entre 1 m/s et 3 m/s sur la pente ascendante.\n\n## 9. Normes et seuils (unités)\n- dP/dt ≥ 1 200 mmHg/s : normal ; < 1 000 mmHg/s : altéré ; < 800 mmHg/s : très altéré (valeurs usuelles des traités d'échocardiographie).\n\n## 11. Limites\n- Nécessite une IM avec une enveloppe nette ; dépend de la précharge.",
+"formula": "dP/dt (mmHg/s) = 32 mmHg / Δt (temps entre 1 et 3 m/s)",
+"sort_order": 21,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "dpdt contractilite im"
+},
+{
+"id": "segments_vg",
+"title": "Cinétique segmentaire du VG (17 segments)",
+"category": "Fonction systolique VG",
+"structure": "Ventricule gauche",
+"technique": "2D",
+"summary": "Analyse des 17 segments et index de cinétique pariétale (WMSI).",
+"body": "## 2. Fenêtre et coupe\n- Parasternales grand et petit axes (base, piliers, apex) ; apicales 4, 2 et 3 cavités.\n\n## 7. Étapes successives\n- Score par segment : 1 normal, 2 hypokinétique, 3 akinétique, 4 dyskinétique (anévrisme selon les échelles).\n- Correspondance aux territoires coronaires (IVA, circonflexe, coronaire droite).\n\n## 9. Normes et seuils (unités)\n- WMSI = 1 : cinétique normale ; toute valeur > 1 est anormale (ASE/EACVI 2015).\n\n## 10. Pièges techniques\n- Mouvements de translation, BBG/stimulation (asynchronisme septal), segments mal vus (contraste).",
+"formula": "WMSI = somme des scores / nombre de segments analysés",
+"sort_order": 22,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "cinetique segmentaire wmsi 17 segments"
+},
+{
+"id": "flux_vp",
+"title": "Flux veineux pulmonaire",
+"category": "Fonction diastolique",
+"structure": "Oreillette gauche",
+"technique": "Doppler pulsé",
+"summary": "Ondes S, D et Ar : complément de l'évaluation des pressions de remplissage et de l'IM.",
+"body": "## 2. Fenêtre et coupe\n- Apicale 4 cavités, veine pulmonaire supérieure droite (aidée du Doppler couleur).\n\n## 5. Volume d'échantillonnage / ligne Doppler\n- Échantillon de 2–3 mm placé 1–2 cm dans la veine.\n\n## 9. Normes et seuils (unités)\n- S ≥ D chez l'adulte d'âge moyen (S < D physiologique chez le sujet jeune).\n- Ar − A > 30 ms : pression télédiastolique VG élevée (ASE/EACVI 2016).\n- Inversion systolique (S négative) : critère en faveur d'une IM sévère (ASE 2017).\n\n## 11. Limites\n- Faisabilité imparfaite en ETT ; FA (pas d'onde Ar).",
+"formula": "Ar − A (ms) = durée de l'onde Ar − durée de l'onde A mitrale",
+"sort_order": 23,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "veines pulmonaires onde s d ar"
+},
+{
+"id": "flux_mitral",
+"title": "Flux mitral : E, A, E/A et temps de décélération",
+"category": "Fonction diastolique",
+"structure": "Valve mitrale",
+"technique": "Doppler pulsé",
+"summary": "Profil de remplissage VG : normal, trouble de la relaxation, pseudo-normal, restrictif.",
+"body": "## 5. Volume d'échantillonnage / ligne Doppler\n- Échantillon de 1–3 mm à l'extrémité des feuillets mitraux en apicale 4 cavités.\n\n## 7. Étapes successives\n- Mesurer E, A, TD (pente de décélération de E) et le TRIV (apicale 5 cavités).\n\n## 9. Normes et seuils (unités)\n- E/A ≤ 0,8 avec E ≤ 50 cm/s : pressions de l'OG normales (ASE/EACVI 2016).\n- E/A ≥ 2 : pressions de l'OG élevées (restrictif), sauf sujet jeune/athlète.\n- TD < 160 ms en faveur d'un remplissage restrictif (FEVG altérée).\n\n## 10. Pièges techniques\n- Fusion E-A en tachycardie ; échantillon mal placé ; valeurs dépendantes de l'âge.",
+"formula": "E/A = vitesse E / vitesse A",
+"sort_order": 24,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "flux mitral e a deceleration remplissage"
+},
+{
+"id": "e_prime",
+"title": "Doppler tissulaire à l'anneau mitral : e' et E/e'",
+"category": "Fonction diastolique",
+"structure": "Anneau mitral",
+"technique": "Doppler tissulaire pulsé",
+"summary": "Vitesses e' septale et latérale et rapport E/e' moyen.",
+"body": "## 5. Volume d'échantillonnage / ligne Doppler\n- Échantillon de 5–10 mm sur l'insertion des feuillets (anneau) septal puis latéral, alignement < 20°.\n\n## 9. Normes et seuils (unités)\n- e' septale < 7 cm/s ou e' latérale < 10 cm/s : relaxation altérée (ASE/EACVI 2016).\n- E/e' moyen > 14 : pressions de remplissage élevées (> 15 en septal, > 13 en latéral).\n- HFA-PEFF : E/e' ≥ 15 critère majeur, 9–14 mineur.\n\n## 10. Pièges techniques\n- Calcifications annulaires, prothèse ou anneau mitral, péricardite constrictive (annulus reversus), zones akinétiques.",
+"formula": "E/e' moyen = E / [(e' septale + e' latérale) / 2]",
+"sort_order": 25,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "e prime e/e doppler tissulaire anneau mitral"
+},
+{
+"id": "tta_pulm",
+"title": "Flux pulmonaire : temps d'accélération et encoche",
+"category": "Hypertension pulmonaire",
+"structure": "Artère pulmonaire",
+"technique": "Doppler pulsé",
+"summary": "Temps d'accélération du flux de la CCVD : raccourci en cas d'HTP.",
+"body": "## 2. Fenêtre et coupe\n- Parasternale petit axe (gros vaisseaux), échantillon dans la CCVD juste sous la valve pulmonaire.\n\n## 9. Normes et seuils (unités)\n- TA < 105 ms et/ou encoche mésosystolique : signe en faveur d'une HTP (ESC/ERS 2022).\n\n## 11. Limites\n- Dépend de la FC et du débit ; une encoche oriente vers une maladie vasculaire pulmonaire pré-capillaire.",
+"formula": "TA = début du flux → pic de vitesse",
+"sort_order": 26,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "temps acceleration pulmonaire encoche"
+},
+{
+"id": "papd_papm",
+"title": "PAP diastolique et PAP moyenne (flux d'insuffisance pulmonaire)",
+"category": "Hypertension pulmonaire",
+"structure": "Artère pulmonaire",
+"technique": "Doppler continu",
+"summary": "Estimations des pressions diastolique et moyenne à partir de l'IP.",
+"body": "## 2. Fenêtre et coupe\n- Parasternale petit axe ou sous-costale, Doppler continu aligné sur l'IP.\n\n## 9. Normes et seuils (unités)\n- Vitesse protodiastolique de l'IP > 2,2 m/s : signe en faveur d'une HTP (ESC/ERS 2022).\n- HTP hémodynamique définie au cathétérisme par PAPm > 20 mmHg (ESC/ERS 2022).\n\n## 11. Limites\n- Estimations approximatives ; le cathétérisme droit reste la référence.",
+"formula": "PAPd = 4 × (V télédiastolique IP)² + POD ; PAPm ≈ 4 × (V protodiastolique IP)² + POD",
+"sort_order": 27,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "papd papm insuffisance pulmonaire"
+},
+{
+"id": "proba_htp",
+"title": "Probabilité échographique d'HTP (ESC/ERS 2022)",
+"category": "Hypertension pulmonaire",
+"structure": "Cœur droit",
+"technique": "Synthèse multiparamétrique",
+"summary": "Vmax IT + signes indirects des catégories ventricules, artère pulmonaire, VCI/OD.",
+"body": "## 9. Normes et seuils (unités)\n- Vmax IT ≤ 2,8 m/s (ou non mesurable) sans autre signe : probabilité faible.\n- Vmax IT ≤ 2,8 m/s avec signes, ou 2,9–3,4 m/s sans signes : probabilité intermédiaire.\n- Vmax IT 2,9–3,4 m/s avec signes, ou > 3,4 m/s : probabilité élevée.\n- Signes : (A) VD/VG basal > 1, aplatissement septal (indice d'excentricité > 1,1), TAPSE/PAPs < 0,55 mm/mmHg ; (B) TA pulmonaire < 105 ms et/ou encoche, IP protodiastolique > 2,2 m/s, diamètre de l'AP > diamètre de la racine aortique ou > 25 mm ; (C) VCI > 21 mm avec collapsus diminué, surface OD > 18 cm².\n\n## 12. Scores et critères associés\n- La probabilité oriente vers le cathétérisme droit et le centre de compétence.",
+"formula": "Probabilité = f(Vmax IT, nombre de catégories de signes présents)",
+"sort_order": 28,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "probabilite htp vmax it tapse paps"
+},
+{
+"id": "rm_quant",
+"title": "Rétrécissement mitral : surface et gradients",
+"category": "Valvulopathies",
+"structure": "Valve mitrale",
+"technique": "2D / Doppler continu",
+"summary": "Planimétrie (référence), demi-temps de pression, gradient moyen.",
+"body": "## 2. Fenêtre et coupe\n- Parasternale petit axe au sommet de l'entonnoir mitral (planimétrie, aidée de la 3D) ; apicale 4 cavités pour le Doppler continu.\n\n## 7. Étapes successives\n- Planimétrer l'orifice en protodiastole ; mesurer le PHT sur la pente de décélération ; gradient moyen avec la FC.\n- Score de Wilkins pour l'éligibilité à la commissurotomie percutanée.\n\n## 9. Normes et seuils (unités)\n- RM significatif : surface ≤ 1,5 cm² (ESC 2025) ; ≤ 1,0 cm² : très serré.\n- Gradient moyen > 10 mmHg habituellement en faveur d'un RM serré (à interpréter selon la FC et le débit) (EAE/ASE 2009).\n- PAPs > 50 mmHg au repos : retentissement.\n\n## 10. Pièges techniques\n- PHT non valide juste après commissurotomie, en cas d'IA importante ou de compliance VG anormale.\n\n## 11. Limites\n- Gradient dépendant du débit et de la FC (FA, grossesse, anémie).",
+"formula": "Surface (PHT) = 220 / PHT ; surface par continuité possible",
+"sort_order": 29,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "retrecissement mitral planimetrie pht wilkins"
+},
+{
+"id": "ia_quant",
+"title": "Quantification de l'insuffisance aortique",
+"category": "Valvulopathies",
+"structure": "Valve aortique",
+"technique": "Doppler couleur / continu",
+"summary": "Approche multiparamétrique : vena contracta, PHT, reflux aortique, SOR et VR.",
+"body": "## 2. Fenêtre et coupe\n- Parasternale grand axe (vena contracta, largeur du jet/CCVG), apicale 5 cavités (Doppler continu), suprasternale et sous-costale (aorte descendante et abdominale).\n\n## 9. Normes et seuils (unités)\n- IA sévère (ASE 2017) : vena contracta > 6 mm ; largeur du jet ≥ 65 % de la CCVG ; PHT < 200 ms ; reflux holodiastolique dans l'aorte descendante (vitesse télédiastolique > 20 cm/s) ; SOR ≥ 30 mm² ; VR ≥ 60 mL ; FR ≥ 50 %.\n- IA minime : vena contracta < 3 mm, PHT > 500 ms.\n\n## 10. Pièges techniques\n- Jet excentré (largeur sous-estimée), PHT raccourci par une PTDVG élevée indépendamment de la sévérité.\n\n## 11. Limites\n- PISA moins validé que pour l'IM ; IRM pour les cas discordants.",
+"formula": "SOR (PISA) = 2πr² × Va / Vmax IA ; VR = SOR × ITV IA",
+"sort_order": 30,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "insuffisance aortique quantification vena contracta pht"
+},
+{
+"id": "im_quant",
+"title": "Quantification de l'insuffisance mitrale (synthèse)",
+"category": "Valvulopathies",
+"structure": "Valve mitrale",
+"technique": "Doppler couleur / continu / pulsé",
+"summary": "Mécanisme (Carpentier) + critères qualitatifs, semi-quantitatifs et quantitatifs.",
+"body": "## 9. Normes et seuils (unités)\n- IM primaire sévère (ASE 2017) : vena contracta ≥ 7 mm ; SOR ≥ 40 mm² ; VR ≥ 60 mL ; FR ≥ 50 % ; inversion systolique du flux veineux pulmonaire ; onde E > 1,2 m/s ; grand jet central (> 50 % de l'OG) ou jet excentré pariétal.\n- IM secondaire sévère (ESC) : SOR ≥ 40 mm² et VR ≥ 60 mL (seuils plus bas à envisager si bas débit : SOR ≥ 30 mm², VR ≥ 45 mL ; orifice elliptique).\n- IM minime : vena contracta < 3 mm, SOR < 20 mm², VR < 30 mL.\n\n## 10. Pièges techniques\n- Hémisphère de PISA aplati (secondaire), jets multiples, IM télésystolique (prolapsus) surestimée par une mesure unique.\n\n## 11. Limites\n- Intégrer les données ; IRM ou ETO 3D si discordance.",
+"formula": "SOR = 2πr² × Va / Vmax IM ; VR = SOR × ITV IM ; FR = VR / VES total",
+"sort_order": 31,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "insuffisance mitrale quantification sor vr carpentier"
+},
+{
+"id": "it_quant",
+"title": "Quantification de l'insuffisance tricuspide",
+"category": "Valvulopathies",
+"structure": "Valve tricuspide",
+"technique": "Doppler couleur / continu / pulsé",
+"summary": "Vena contracta, PISA, flux des veines sus-hépatiques, anneau tricuspide.",
+"body": "## 9. Normes et seuils (unités)\n- IT sévère (ASE 2017) : vena contracta ≥ 7 mm ; SOR ≥ 40 mm² ; VR ≥ 45 mL ; inversion systolique du flux sus-hépatique ; enveloppe continue dense, triangulaire, précoce ; anneau dilaté (≥ 40 mm ou > 21 mm/m²).\n- Grades étendus proposés au-delà de « sévère » : « massive » puis « torrentielle » (vena contracta plus large, SOR beaucoup plus grande) — repris dans les essais de traitement percutané.\n\n## 10. Pièges techniques\n- Vmax IT faible dans l'IT torrentielle (égalisation des pressions) : ne pas en déduire une PAPs basse.",
+"formula": "SOR = 2πr² × Va / Vmax IT",
+"sort_order": 32,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "insuffisance tricuspide quantification veines sus hepatiques"
+},
+{
+"id": "ra_bas_debit",
+"title": "Rétrécissement aortique à bas débit / bas gradient",
+"category": "Valvulopathies",
+"structure": "Valve aortique",
+"technique": "Doppler / échographie de stress",
+"summary": "Surface < 1 cm² avec gradient < 40 mmHg : distinguer RA serré vrai et pseudo-sévère.",
+"body": "## 9. Normes et seuils (unités)\n- RA serré : Vmax ≥ 4 m/s, gradient moyen ≥ 40 mmHg, surface < 1,0 cm² (< 0,6 cm²/m²), rapport ITV CCVG/ITV Ao < 0,25 (EACVI/ASE 2017).\n- Bas débit : VES indexé ≤ 35 mL/m².\n- FEVG réduite : échographie de stress à la dobutamine (faibles doses) ; réserve contractile si VES augmente ≥ 20 % ; RA vrai si surface reste ≤ 1,0 cm² avec gradient moyen ≥ 40 mmHg.\n- FEVG préservée (bas débit paradoxal) : score calcique en scanner (seuils de calcification sévère : homme ≥ 3 000 UA, femme ≥ 1 600 UA, valeurs ESC).\n\n## 10. Pièges techniques\n- Sous-estimation du diamètre de la CCVG, mauvais alignement du Doppler continu (explorer apical, parasternal droit, suprasternal).",
+"formula": "Surface projetée et réserve contractile sous dobutamine",
+"sort_order": 33,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "bas debit bas gradient dobutamine score calcique"
+},
+{
+"id": "cmh_obstruction",
+"title": "CMH : épaisseur pariétale et obstruction de la CCVG",
+"category": "Cardiomyopathies",
+"structure": "Ventricule gauche",
+"technique": "2D / Doppler continu",
+"summary": "Épaisseur maximale, SAM, gradient intraventriculaire au repos et lors des manœuvres de provocation.",
+"body": "## 2. Fenêtre et coupe\n- Parasternale petit axe (épaisseur segmentaire à tous les niveaux), apicales 5 et 3 cavités pour le Doppler continu.\n\n## 7. Étapes successives\n- Repérer le SAM et l'IM associée (jet postérolatéral) ; Doppler continu « en dague » (pic télésystolique) ; manœuvre de Valsalva, passage debout, effort.\n\n## 9. Normes et seuils (unités)\n- CMH (ESC 2023) : épaisseur ≥ 15 mm (≥ 13 mm chez les apparentés ou avec variant pathogène).\n- Obstruction : gradient ≥ 30 mmHg ; hémodynamiquement significative si ≥ 50 mmHg (repos ou provocation).\n- Épaisseur ≥ 30 mm : facteur de risque de mort subite (score HCM Risk-SCD).\n\n## 10. Pièges techniques\n- Confondre le flux d'IM et le gradient de la CCVG (forme et timing différents).",
+"formula": "Gradient (mmHg) = 4 × Vmax²",
+"sort_order": 34,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "cmh obstruction sam gradient dague"
+},
+{
+"id": "amylose_echo",
+"title": "Amylose cardiaque : signes échographiques",
+"category": "Cardiomyopathies",
+"structure": "Ventricule gauche",
+"technique": "2D / Strain",
+"summary": "HVG avec épargne apicale du strain, dilatation biatriale, épanchement, épaississement valvulaire.",
+"body": "## 9. Normes et seuils (unités)\n- Épaisseur pariétale ≥ 12 mm + signes d'alerte (ESC 2021) : épargne apicale du strain longitudinal, dysfonction diastolique de grade ≥ 2, TAPSE abaissé, épaississement du septum interatrial et des valves, épanchement péricardique.\n- Rapport d'épargne apicale > 1 : très évocateur.\n- Aspect granité (« sparkling ») : peu spécifique (harmonique).\n\n## 12. Scores et critères associés\n- Diagnostic non invasif de l'amylose à transthyrétine : scintigraphie osseuse (grade 2–3) avec absence de chaîne légère monoclonale.",
+"formula": "Rapport d'épargne apicale = strain apical moyen / (strain basal + médian moyens)",
+"sort_order": 35,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "amylose epargne apicale strain sparkling"
+},
+{
+"id": "protheses_doppler",
+"title": "Prothèses valvulaires : évaluation Doppler",
+"category": "Valvulopathies",
+"structure": "Prothèses",
+"technique": "Doppler",
+"summary": "Gradients, surface effective, DVI et temps d'accélération comparés à l'examen de référence.",
+"body": "## 9. Normes et seuils (unités)\n- Prothèse aortique (ASE 2009) : DVI ≥ 0,30 normal, 0,25–0,29 sténose possible, < 0,25 sténose significative ; temps d'accélération < 80 ms normal, > 100 ms sténose significative.\n- Prothèse mitrale : Vmax < 1,9 m/s, gradient moyen ≤ 5 mmHg, ITV prothèse/ITV CCVG < 2,2, PHT < 130 ms normaux ; Vmax ≥ 2,5 m/s, gradient moyen > 10 mmHg, rapport > 2,5, PHT > 200 ms en faveur d'une sténose significative.\n- Mismatch aortique : surface effective indexée ≤ 0,85 cm²/m² (modéré), ≤ 0,65 cm²/m² (sévère).\n\n## 10. Pièges techniques\n- Haut débit (anémie, fièvre, IM) élevant les gradients sans sténose ; recouvrement de pression des petites prothèses.",
+"formula": "DVI = ITV CCVG / ITV prothèse aortique",
+"sort_order": 36,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "prothese dvi gradient mismatch"
+},
+{
+"id": "qp_qs",
+"title": "Shunt : rapport Qp/Qs",
+"category": "Cardiopathies congénitales",
+"structure": "Cœur droit et gauche",
+"technique": "Doppler pulsé",
+"summary": "Débit pulmonaire rapporté au débit systémique.",
+"body": "## 7. Étapes successives\n- Diamètre de la CCVD (parasternale petit axe) et de la CCVG ; ITV dans chaque chambre de chasse.\n\n## 9. Normes et seuils (unités)\n- Qp/Qs ≥ 1,5 : shunt hémodynamiquement significatif (argument de fermeture d'une CIA/CIV, ESC 2020).\n\n## 11. Limites\n- Erreurs de diamètre amplifiées (au carré) : IRM plus précise.",
+"formula": "Qp/Qs = (S CCVD × ITV CCVD) / (S CCVG × ITV CCVG)",
+"sort_order": 37,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "qp qs shunt cia civ"
+},
+{
+"id": "constriction",
+"title": "Péricardite constrictive : critères échographiques",
+"category": "Péricarde",
+"structure": "Péricarde",
+"technique": "2D / TM / Doppler",
+"summary": "Rebond septal, variations respiratoires des flux, annulus reversus, flux sus-hépatique.",
+"body": "## 9. Normes et seuils (unités)\n- Rebond septal respiratoire ; variation de l'onde E mitrale > 25 % ; e' médial ≥ e' latéral (annulus reversus), e' médial conservé (≥ 9 cm/s dans les critères de la Mayo Clinic) ; inversion diastolique expiratoire marquée dans les veines sus-hépatiques ; VCI dilatée.\n- Différentiel avec la cardiomyopathie restrictive : e' bas, PAPs élevée, pas de variation respiratoire.",
+"formula": "Variation respiratoire de E mitral = (E expi − E inspi) / E expi",
+"sort_order": 38,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "constriction rebond septal annulus reversus"
+},
+{
+"id": "fevg_classes",
+"title": "FEVG : valeurs normales et classes",
+"category": "Fonction systolique VG",
+"structure": "Ventricule gauche",
+"technique": "2D / 3D",
+"summary": "Normes de la FEVG et classification de l'insuffisance cardiaque selon la FEVG.",
+"body": "## 9. Normes et seuils (unités)\n- FEVG normale (2D, ASE/EACVI 2015) : homme 52–72 % ; femme 54–74 %.\n- Classes ESC (insuffisance cardiaque) : FEVG ≤ 40 % réduite ; 41–49 % légèrement réduite ; ≥ 50 % préservée ; « améliorée » si FEVG antérieure ≤ 40 % remontée > 40 %.\n\n## 10. Pièges techniques\n- Estimation visuelle seule : variabilité importante ; préférer Simpson biplan ou 3D, contraste si ≥ 2 segments mal vus.",
+"formula": "FEVG = (VTD − VTS) / VTD",
+"sort_order": 39,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "fevg classes ic fer ficmr ficep"
+},
+{
+"id": "ra_grades",
+"title": "Rétrécissement aortique : grades de sévérité",
+"category": "Valvulopathies",
+"structure": "Valve aortique",
+"technique": "Doppler continu / 2D",
+"summary": "Vitesse maximale, gradient moyen, surface valvulaire et indexation.",
+"body": "## 9. Normes et seuils (unités)\n- Sclérose aortique : Vmax ≤ 2,5 m/s.\n- RA léger : Vmax 2,6–2,9 m/s, gradient moyen < 20 mmHg, surface > 1,5 cm².\n- RA modéré : Vmax 3,0–3,9 m/s, gradient moyen 20–39 mmHg, surface 1,0–1,5 cm².\n- RA serré : Vmax ≥ 4 m/s, gradient moyen ≥ 40 mmHg, surface < 1,0 cm² (indexée < 0,6 cm²/m²), rapport des ITV < 0,25 (EAE/ASE 2009, EACVI/ASE 2017).\n- RA très serré : Vmax ≥ 5 m/s ou gradient moyen ≥ 60 mmHg (facteur pronostique, ESC).\n\n## 10. Pièges techniques\n- Explorer toutes les fenêtres (apicale, parasternale droite, suprasternale, sous-costale) pour la Vmax ; ne pas confondre avec une IM.",
+"formula": "Gradient = 4 V² ; surface = S CCVG × ITV CCVG / ITV Ao",
+"sort_order": 40,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "retrecissement aortique grades vmax surface"
+},
+{
+"id": "rp_stenose",
+"title": "Sténose pulmonaire",
+"category": "Valvulopathies",
+"structure": "Valve pulmonaire",
+"technique": "Doppler continu",
+"summary": "Gradient transvalvulaire pulmonaire et niveau de l'obstacle.",
+"body": "## 2. Fenêtre et coupe\n- Parasternale petit axe (gros vaisseaux), sous-costale.\n\n## 9. Normes et seuils (unités)\n- Légère : Vmax < 3 m/s (gradient pic < 36 mmHg).\n- Modérée : Vmax 3–4 m/s (36–64 mmHg).\n- Sévère : Vmax > 4 m/s (gradient pic > 64 mmHg) (EAE/ASE 2009).\n\n## 10. Pièges techniques\n- Obstacle sous-valvulaire (infundibulaire) en série : gradients non additifs ; utiliser l'équation de Bernoulli complète si vitesse d'amont > 1 m/s.",
+"formula": "Gradient = 4 V²",
+"sort_order": 41,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "stenose pulmonaire gradient"
+},
+{
+"id": "ip_quant",
+"title": "Insuffisance pulmonaire : quantification",
+"category": "Valvulopathies",
+"structure": "Valve pulmonaire",
+"technique": "Doppler couleur / continu",
+"summary": "Largeur du jet, densité et décélération du flux, reflux dans les branches.",
+"body": "## 9. Normes et seuils (unités)\n- IP sévère (ASE 2017) : jet couleur large (> 50 % de l'anneau pulmonaire) ; enveloppe Doppler dense avec décélération rapide et fin précoce du flux (PHT < 100 ms) ; reflux diastolique dans les branches pulmonaires ; dilatation du VD.\n- IP minime physiologique très fréquente (jet fin, bref).\n\n## 11. Limites\n- Fenêtre parfois difficile ; IRM de référence pour la fraction de régurgitation (tétralogie opérée).",
+"formula": "Indice de décélération (PHT) du flux d'IP",
+"sort_order": 42,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "insuffisance pulmonaire quantification"
+},
+{
+"id": "prolapsus_mitral",
+"title": "Prolapsus valvulaire mitral",
+"category": "Valvulopathies",
+"structure": "Valve mitrale",
+"technique": "2D / 3D / ETO",
+"summary": "Définition, analyse segmentaire (Carpentier : A1–A3, P1–P3) et signes associés.",
+"body": "## 2. Fenêtre et coupe\n- Parasternale grand axe (l'anneau mitral y est en selle : coupe de référence), apicales, ETO 3D pour l'analyse segmentaire.\n\n## 9. Normes et seuils (unités)\n- Prolapsus : déplacement systolique d'un ou des deux feuillets ≥ 2 mm au-delà du plan de l'anneau en parasternale grand axe.\n- Maladie de Barlow : feuillets épaissis (> 5 mm) et redondants, prolapsus multisegmentaire ; dégénérescence fibro-élastique : rupture de cordage, feuillets fins.\n- Flail : extrémité du feuillet éversée dans l'OG (souvent IM sévère).\n- Disjonction annulaire mitrale (MAD) : à rechercher, associée à des arythmies ventriculaires.\n\n## 10. Pièges techniques\n- Coupe apicale 4 cavités : faux prolapsus (anneau en selle).",
+"formula": "Déplacement systolique des feuillets au-delà du plan de l'anneau",
+"sort_order": 43,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "prolapsus mitral barlow flail carpentier mad"
+},
+{
+"id": "echo_stress",
+"title": "Échocardiographie de stress (effort / dobutamine)",
+"category": "Fonction systolique VG",
+"structure": "Ventricule gauche",
+"technique": "Stress",
+"summary": "Recherche d'ischémie, de viabilité, évaluation des valvulopathies à bas débit.",
+"body": "## 7. Étapes successives\n- Dobutamine IV par paliers de 3 min : 5, 10, 20, 30, 40 µg/kg/min ; atropine 0,25–0,5 mg IV fractionnée (max 1–2 mg selon protocole local) si objectif de FC non atteint.\n- Acquisition des 4 coupes à chaque palier (repos, faible dose, pic, récupération).\n\n## 9. Normes et seuils (unités)\n- Test positif pour l'ischémie : apparition d'une anomalie de cinétique dans ≥ 2 segments contigus (ou aggravation).\n- Viabilité : amélioration de la cinétique à faible dose (5–10 µg/kg/min), réponse biphasique = viabilité + ischémie.\n- Arrêt : objectif de FC, anomalie de cinétique significative, PAS < 90 mmHg ou chute > 20 mmHg, arythmie, douleur.\n\n## 10. Pièges techniques\n- Bêtabloquants : objectif de FC difficile à atteindre ; ischémie apicale mal vue sans contraste.",
+"formula": "FMT = 220 − âge ; objectif ≥ 85 % de la FMT",
+"sort_order": 44,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "echographie de stress dobutamine ischemie viabilite"
+},
+{
+"id": "echo_pulmonaire",
+"title": "Échographie pulmonaire : lignes B et épanchement",
+"category": "Hémodynamique",
+"structure": "Poumon / plèvre",
+"technique": "2D (sonde cardiaque ou abdominale)",
+"summary": "Congestion pulmonaire : lignes B ; épanchement pleural.",
+"body": "## 7. Étapes successives\n- Explorer 4 zones par hémithorax (antéro-supérieure, antéro-inférieure, latérale supérieure et inférieure), profondeur 18 cm.\n\n## 9. Normes et seuils (unités)\n- Zone positive : ≥ 3 lignes B (artefacts verticaux hyperéchogènes partant de la ligne pleurale, effaçant les lignes A).\n- ≥ 2 zones positives par hémithorax : syndrome interstitiel compatible avec une congestion (contexte d'IC).\n- Épanchement pleural : zone anéchogène au-dessus du diaphragme (signe de la colonne vertébrale).\n\n## 10. Pièges techniques\n- Lignes B aussi dans la fibrose, la pneumopathie, le SDRA : interpréter avec le cœur et la clinique.",
+"formula": "Nombre de lignes B par zone thoracique (8 zones habituellement)",
+"sort_order": 45,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "echographie pulmonaire lignes b congestion"
+},
+{
+"id": "vd_paroi",
+"title": "Épaisseur de la paroi libre du VD",
+"category": "Fonction VD",
+"structure": "Ventricule droit",
+"technique": "2D / TM",
+"summary": "Hypertrophie VD : surcharge de pression chronique, cardiomyopathies infiltratives.",
+"body": "## 2. Fenêtre et coupe\n- Sous-costale (de référence) ou parasternale grand axe, en télédiastole, en excluant trabéculations et graisse épicardique.\n\n## 9. Normes et seuils (unités)\n- Épaisseur de la paroi libre du VD > 5 mm : hypertrophie (ASE 2010, ASE/EACVI 2015).\n\n## 10. Pièges techniques\n- Inclusion de la graisse épicardique ou de la bande modératrice.",
+"formula": "—",
+"sort_order": 46,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "paroi vd hypertrophie vd"
+},
+{
+"id": "vegetations",
+"title": "Endocardite : végétations et complications",
+"category": "Valvulopathies",
+"structure": "Valves",
+"technique": "ETT / ETO",
+"summary": "Taille et mobilité des végétations, abcès, perforations, fistules.",
+"body": "## 9. Normes et seuils (unités)\n- Végétation : masse oscillante, échogène, attachée au côté d'amont de la valve (atriale pour mitrale/tricuspide, ventriculaire pour l'aortique).\n- Végétation ≥ 10 mm avec embolie, ou ≥ 30 mm : indication chirurgicale (prévention embolique, ESC 2023).\n- Abcès : zone périvalvulaire épaissie non homogène ; pseudo-anévrisme : cavité pulsatile communiquant avec la lumière ; perforation, fistule, désinsertion de prothèse.\n\n## 10. Pièges techniques\n- ETT normale n'exclut pas une EI (ETO si suspicion intermédiaire ou élevée, prothèse, dispositif) ; excroissances de Lambl, fibroélastome, thrombus.",
+"formula": "Plus grande longueur de la végétation (mm)",
+"sort_order": 47,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "endocardite vegetation abces eto"
+},
+{
+"id": "non_compaction",
+"title": "Hypertrabéculation (non-compaction) du VG",
+"category": "Cardiomyopathies",
+"structure": "Ventricule gauche",
+"technique": "2D / contraste",
+"summary": "Couche trabéculée épaisse avec récessus profonds communiquant avec la cavité.",
+"body": "## 9. Normes et seuils (unités)\n- Critère échographique historique (Jenni) : rapport NC/C > 2 en télésystole en petit axe, récessus perfusés au Doppler couleur.\n- ESC 2023 : l'hypertrabéculation est un trait phénotypique (fréquent chez l'athlète, la femme enceinte, l'Africain) et non une cardiomyopathie à elle seule ; l'évaluer avec la FEVG, la génétique et l'IRM.\n\n## 10. Pièges techniques\n- Surdiagnostic important avec des appareils récents de haute résolution.",
+"formula": "Rapport NC/C = couche non compactée / couche compactée (télésystole, petit axe)",
+"sort_order": 48,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "non compaction hypertrabeculation nc/c"
+}
+],
+"source_links": [
+{
+"entity_type": "echo",
+"entity_id": "fevg_simpson",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "fevg_simpson",
+"section_key": "",
+"source_id": "esc2026_ic"
+},
+{
+"entity_type": "echo",
+"entity_id": "masse_vg",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "gls",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "gls",
+"section_key": "",
+"source_id": "esc2022_co"
+},
+{
+"entity_type": "echo",
+"entity_id": "gls",
+"section_key": "",
+"source_id": "pieske2019_hfapeff"
+},
+{
+"entity_type": "echo",
+"entity_id": "diastole",
+"section_key": "",
+"source_id": "ase2016_diast"
+},
+{
+"entity_type": "echo",
+"entity_id": "diastole",
+"section_key": "",
+"source_id": "pieske2019_hfapeff"
+},
+{
+"entity_type": "echo",
+"entity_id": "tapse",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "tapse",
+"section_key": "",
+"source_id": "esc2022_hp"
+},
+{
+"entity_type": "echo",
+"entity_id": "s_prime",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "paps",
+"section_key": "",
+"source_id": "esc2022_hp"
+},
+{
+"entity_type": "echo",
+"entity_id": "paps",
+"section_key": "",
+"source_id": "ase2010_rv"
+},
+{
+"entity_type": "echo",
+"entity_id": "surface_ao",
+"section_key": "",
+"source_id": "eacvi2017_as"
+},
+{
+"entity_type": "echo",
+"entity_id": "surface_ao",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "gradients_ao",
+"section_key": "",
+"source_id": "eacvi2017_as"
+},
+{
+"entity_type": "echo",
+"entity_id": "gradients_ao",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "pisa_im",
+"section_key": "",
+"source_id": "ase2017_regurg"
+},
+{
+"entity_type": "echo",
+"entity_id": "pisa_im",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "aorte",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "aorte",
+"section_key": "",
+"source_id": "esc2024_paad"
+},
+{
+"entity_type": "echo",
+"entity_id": "pericarde",
+"section_key": "",
+"source_id": "esc2025_myoperi"
+},
+{
+"entity_type": "echo",
+"entity_id": "pericarde",
+"section_key": "",
+"source_id": "esc2015_peri"
+},
+{
+"entity_type": "echo",
+"entity_id": "diametres_vg",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "diametres_vg",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "volumes_vg",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "og_volume",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "og_volume",
+"section_key": "",
+"source_id": "ase2016_diast"
+},
+{
+"entity_type": "echo",
+"entity_id": "og_volume",
+"section_key": "",
+"source_id": "pieske2019_hfapeff"
+},
+{
+"entity_type": "echo",
+"entity_id": "od_surface",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "od_surface",
+"section_key": "",
+"source_id": "esc2022_hp"
+},
+{
+"entity_type": "echo",
+"entity_id": "vd_dimensions",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "vd_dimensions",
+"section_key": "",
+"source_id": "ase2010_rv"
+},
+{
+"entity_type": "echo",
+"entity_id": "vd_dimensions",
+"section_key": "",
+"source_id": "esc2022_hp"
+},
+{
+"entity_type": "echo",
+"entity_id": "fac_vd",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "fac_vd",
+"section_key": "",
+"source_id": "ase2010_rv"
+},
+{
+"entity_type": "echo",
+"entity_id": "tei_vd",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "tei_vd",
+"section_key": "",
+"source_id": "ase2010_rv"
+},
+{
+"entity_type": "echo",
+"entity_id": "vci",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "vci",
+"section_key": "",
+"source_id": "ase2010_rv"
+},
+{
+"entity_type": "echo",
+"entity_id": "vci",
+"section_key": "",
+"source_id": "esc2022_hp"
+},
+{
+"entity_type": "echo",
+"entity_id": "debit",
+"section_key": "",
+"source_id": "eacvi2017_as"
+},
+{
+"entity_type": "echo",
+"entity_id": "debit",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "dpdt",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "segments_vg",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "flux_vp",
+"section_key": "",
+"source_id": "ase2016_diast"
+},
+{
+"entity_type": "echo",
+"entity_id": "flux_vp",
+"section_key": "",
+"source_id": "ase2017_regurg"
+},
+{
+"entity_type": "echo",
+"entity_id": "flux_mitral",
+"section_key": "",
+"source_id": "ase2016_diast"
+},
+{
+"entity_type": "echo",
+"entity_id": "e_prime",
+"section_key": "",
+"source_id": "ase2016_diast"
+},
+{
+"entity_type": "echo",
+"entity_id": "e_prime",
+"section_key": "",
+"source_id": "pieske2019_hfapeff"
+},
+{
+"entity_type": "echo",
+"entity_id": "tta_pulm",
+"section_key": "",
+"source_id": "esc2022_hp"
+},
+{
+"entity_type": "echo",
+"entity_id": "tta_pulm",
+"section_key": "",
+"source_id": "ase2010_rv"
+},
+{
+"entity_type": "echo",
+"entity_id": "papd_papm",
+"section_key": "",
+"source_id": "esc2022_hp"
+},
+{
+"entity_type": "echo",
+"entity_id": "papd_papm",
+"section_key": "",
+"source_id": "ase2010_rv"
+},
+{
+"entity_type": "echo",
+"entity_id": "proba_htp",
+"section_key": "",
+"source_id": "esc2022_hp"
+},
+{
+"entity_type": "echo",
+"entity_id": "rm_quant",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "rm_quant",
+"section_key": "",
+"source_id": "baumgartner2009_stenosis"
+},
+{
+"entity_type": "echo",
+"entity_id": "ia_quant",
+"section_key": "",
+"source_id": "ase2017_regurg"
+},
+{
+"entity_type": "echo",
+"entity_id": "ia_quant",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "im_quant",
+"section_key": "",
+"source_id": "ase2017_regurg"
+},
+{
+"entity_type": "echo",
+"entity_id": "im_quant",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "it_quant",
+"section_key": "",
+"source_id": "ase2017_regurg"
+},
+{
+"entity_type": "echo",
+"entity_id": "it_quant",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "ra_bas_debit",
+"section_key": "",
+"source_id": "eacvi2017_as"
+},
+{
+"entity_type": "echo",
+"entity_id": "ra_bas_debit",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "cmh_obstruction",
+"section_key": "",
+"source_id": "esc2023_cmp"
+},
+{
+"entity_type": "echo",
+"entity_id": "cmh_obstruction",
+"section_key": "",
+"source_id": "omahony2014_hcmrisk"
+},
+{
+"entity_type": "echo",
+"entity_id": "amylose_echo",
+"section_key": "",
+"source_id": "esc_amylose_2021"
+},
+{
+"entity_type": "echo",
+"entity_id": "amylose_echo",
+"section_key": "",
+"source_id": "esc2023_cmp"
+},
+{
+"entity_type": "echo",
+"entity_id": "protheses_doppler",
+"section_key": "",
+"source_id": "zoghbi2009_prosth"
+},
+{
+"entity_type": "echo",
+"entity_id": "protheses_doppler",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "qp_qs",
+"section_key": "",
+"source_id": "esc2020_achd"
+},
+{
+"entity_type": "echo",
+"entity_id": "constriction",
+"section_key": "",
+"source_id": "esc2025_myoperi"
+},
+{
+"entity_type": "echo",
+"entity_id": "constriction",
+"section_key": "",
+"source_id": "esc2015_peri"
+},
+{
+"entity_type": "echo",
+"entity_id": "fevg_classes",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "fevg_classes",
+"section_key": "",
+"source_id": "esc2021_ic"
+},
+{
+"entity_type": "echo",
+"entity_id": "ra_grades",
+"section_key": "",
+"source_id": "baumgartner2009_stenosis"
+},
+{
+"entity_type": "echo",
+"entity_id": "ra_grades",
+"section_key": "",
+"source_id": "eacvi2017_as"
+},
+{
+"entity_type": "echo",
+"entity_id": "ra_grades",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "rp_stenose",
+"section_key": "",
+"source_id": "baumgartner2009_stenosis"
+},
+{
+"entity_type": "echo",
+"entity_id": "ip_quant",
+"section_key": "",
+"source_id": "ase2017_regurg"
+},
+{
+"entity_type": "echo",
+"entity_id": "prolapsus_mitral",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "echo",
+"entity_id": "prolapsus_mitral",
+"section_key": "",
+"source_id": "ase2017_regurg"
+},
+{
+"entity_type": "echo",
+"entity_id": "echo_stress",
+"section_key": "",
+"source_id": "esc2024_ccs"
+},
+{
+"entity_type": "echo",
+"entity_id": "echo_stress",
+"section_key": "",
+"source_id": "eacvi2017_as"
+},
+{
+"entity_type": "echo",
+"entity_id": "echo_pulmonaire",
+"section_key": "",
+"source_id": "esc2021_ic"
+},
+{
+"entity_type": "echo",
+"entity_id": "vd_paroi",
+"section_key": "",
+"source_id": "ase2010_rv"
+},
+{
+"entity_type": "echo",
+"entity_id": "vd_paroi",
+"section_key": "",
+"source_id": "ase2015_chamber"
+},
+{
+"entity_type": "echo",
+"entity_id": "vegetations",
+"section_key": "",
+"source_id": "esc2023_ei"
+},
+{
+"entity_type": "echo",
+"entity_id": "non_compaction",
+"section_key": "",
+"source_id": "esc2023_cmp"
+}
+]
+}
+}

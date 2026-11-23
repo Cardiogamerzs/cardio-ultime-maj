@@ -1,0 +1,737 @@
+{
+"id": "scores",
+"version": 6,
+"description": "Catalogue des scores (calculateurs testés + fiches avec lien officiel)",
+"tables": {
+"scores": [
+{
+"id": "cha2ds2va",
+"title": "CHA₂DS₂-VA",
+"category": "Fibrillation atriale",
+"indication": "Risque thrombo-embolique dans la FA (sans critère de sexe).",
+"population": "Patients en FA non valvulaire",
+"reference_version": "ESC 2024",
+"calculator_key": "cha2ds2va",
+"body": "## Variables\n- IC/dysfonction VG (1), HTA (1), âge ≥ 75 ans (2), diabète (1), AVC/AIT/embolie (2), maladie vasculaire (1), âge 65–74 ans (1).\n\n## Interprétation\n- ≥ 2 : anticoagulation orale recommandée (I) ; 1 : à envisager (IIa) ; 0 : pas d'anticoagulation sur ce seul critère.\n\n## Limites\n- Ne s'applique pas aux valves mécaniques ni au RM modéré à sévère ; ne prend pas en compte d'autres facteurs (amylose, CMH : anticoagulation indépendamment du score).\n\n## Place dans les recommandations\n- Score recommandé par l'ESC 2024.",
+"official_url": null,
+"sort_order": 0,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "CHA₂DS₂-VA Fibrillation atriale"
+},
+{
+"id": "cha2ds2vasc",
+"title": "CHA₂DS₂-VASc",
+"category": "Fibrillation atriale",
+"indication": "Version historique avec le sexe féminin (Sc).",
+"population": "Patients en FA non valvulaire",
+"reference_version": "Lip 2010",
+"calculator_key": "cha2ds2vasc",
+"body": "## Variables\n- Comme CHA₂DS₂-VA + sexe féminin (1).\n\n## Interprétation\n- Seuils historiques : ≥ 2 (homme) / ≥ 3 (femme) anticoagulation recommandée.\n\n## Limites\n- Remplacé dans l'ESC 2024 par CHA₂DS₂-VA ; encore utilisé dans d'autres recommandations (ACC/AHA 2023).\n\n## Place dans les recommandations\n- Historique.",
+"official_url": null,
+"sort_order": 1,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "CHA₂DS₂-VASc Fibrillation atriale"
+},
+{
+"id": "hasbled",
+"title": "HAS-BLED",
+"category": "Fibrillation atriale",
+"indication": "Risque hémorragique sous anticoagulant.",
+"population": "Patients en FA anticoagulés",
+"reference_version": "Pisters 2010",
+"calculator_key": "hasbled",
+"body": "## Variables\n- HTA non contrôlée (PAS > 160), fonction rénale anormale, fonction hépatique anormale, AVC, saignement, INR labile, âge > 65 ans, médicaments (antiagrégants/AINS), alcool — 1 point chacun.\n\n## Interprétation\n- ≥ 3 : risque hémorragique élevé → corriger les facteurs modifiables et surveiller plus étroitement ; **ne contre-indique pas** l'anticoagulation à lui seul.\n\n## Limites\n- Validé principalement sous AVK.\n\n## Place dans les recommandations\n- ESC 2024 : privilégier l'identification des facteurs modifiables.",
+"official_url": null,
+"sort_order": 2,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "HAS-BLED Fibrillation atriale"
+},
+{
+"id": "timi_nste",
+"title": "TIMI (SCA sans sus-décalage de ST)",
+"category": "SCA",
+"indication": "Risque d'événements à 14 jours dans l'angor instable/IDM sans sus-ST.",
+"population": "Population des essais TIMI 11B / ESSENCE",
+"reference_version": "Antman 2000",
+"calculator_key": "timi_nste",
+"body": "## Variables\n- Âge ≥ 65 ans, ≥ 3 facteurs de risque, sténose coronaire connue ≥ 50 %, aspirine dans les 7 jours, ≥ 2 épisodes angineux en 24 h, déviation ST ≥ 0,5 mm, marqueur positif — 1 point chacun.\n\n## Interprétation\n- Risque de décès/IDM/revascularisation urgente à 14 jours : 0–1 : 4,7 % ; 2 : 8,3 % ; 3 : 13,2 % ; 4 : 19,9 % ; 5 : 26,2 % ; 6–7 : 40,9 %.\n\n## Limites\n- Population ancienne (avant les troponines ultrasensibles et les stratégies invasives actuelles).\n\n## Place dans les recommandations\n- ESC 2023 privilégie le score GRACE pour la stratification.",
+"official_url": null,
+"sort_order": 3,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "TIMI (SCA sans sus-décalage de ST) SCA"
+},
+{
+"id": "wells_ep",
+"title": "Wells (embolie pulmonaire)",
+"category": "Embolie pulmonaire",
+"indication": "Probabilité clinique d'EP.",
+"population": "Patients suspects d'EP",
+"reference_version": "Wells 2000",
+"calculator_key": "wells_ep",
+"body": "## Variables\n- Signes cliniques de TVP (3), diagnostic alternatif moins probable (3), FC > 100 (1,5), immobilisation ≥ 3 j ou chirurgie < 4 semaines (1,5), antécédent de TVP/EP (1,5), hémoptysie (1), cancer actif (1).\n\n## Interprétation\n- Deux niveaux : ≤ 4 « EP peu probable », > 4 « EP probable ».\n- Trois niveaux : < 2 faible, 2–6 intermédiaire, > 6 élevée.\n\n## Limites\n- Critère subjectif (diagnostic alternatif).\n\n## Place dans les recommandations\n- ESC 2019 : stratégie diagnostique fondée sur la probabilité clinique (Wells ou Genève).",
+"official_url": null,
+"sort_order": 4,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Wells (embolie pulmonaire) Embolie pulmonaire"
+},
+{
+"id": "geneve_ep",
+"title": "Genève révisé (embolie pulmonaire)",
+"category": "Embolie pulmonaire",
+"indication": "Probabilité clinique d'EP (score objectif).",
+"population": "Patients aux urgences suspects d'EP",
+"reference_version": "Le Gal 2006",
+"calculator_key": "geneve",
+"body": "## Variables\n- Âge > 65 ans (1), antécédent de TVP/EP (3), chirurgie ou fracture < 1 mois (2), cancer actif (2), douleur unilatérale d'un membre inférieur (3), hémoptysie (2), FC 75–94 (3) ou ≥ 95 (5), douleur à la palpation veineuse et œdème unilatéral (4).\n\n## Interprétation\n- 0–3 faible ; 4–10 intermédiaire ; ≥ 11 élevée.\n\n## Limites\n- Version simplifiée (1 point par item) non implémentée ici.\n\n## Place dans les recommandations\n- ESC 2019.",
+"official_url": null,
+"sort_order": 5,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Genève révisé (embolie pulmonaire) Embolie pulmonaire"
+},
+{
+"id": "pesi",
+"title": "PESI",
+"category": "Embolie pulmonaire",
+"indication": "Pronostic à 30 jours de l'EP.",
+"population": "EP confirmée",
+"reference_version": "Aujesky 2005",
+"calculator_key": "pesi",
+"body": "## Variables\n- Âge (points = années), sexe masculin (+10), cancer (+30), IC (+10), maladie pulmonaire chronique (+10), FC ≥ 110 (+20), PAS < 100 (+30), FR ≥ 30 (+20), T° < 36 °C (+20), altération de la conscience (+60), SaO₂ < 90 % (+20).\n\n## Interprétation\n- Classe I ≤ 65 ; II 66–85 ; III 86–105 ; IV 106–125 ; V > 125.\n\n## Limites\n- Ne remplace pas l'évaluation du VD et des troponines (risque intermédiaire).\n\n## Place dans les recommandations\n- ESC 2019 : stratification du risque.",
+"official_url": null,
+"sort_order": 6,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "PESI Embolie pulmonaire"
+},
+{
+"id": "spesi",
+"title": "sPESI",
+"category": "Embolie pulmonaire",
+"indication": "PESI simplifié.",
+"population": "EP confirmée",
+"reference_version": "Jiménez 2010",
+"calculator_key": "spesi",
+"body": "## Variables\n- Âge > 80 ans, cancer, maladie cardio-pulmonaire chronique, FC ≥ 110, PAS < 100 mmHg, SaO₂ < 90 % — 1 point chacun.\n\n## Interprétation\n- 0 : faible risque ; ≥ 1 : risque non faible.\n\n## Limites\n- —\n\n## Place dans les recommandations\n- ESC 2019.",
+"official_url": null,
+"sort_order": 7,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "sPESI Embolie pulmonaire"
+},
+{
+"id": "h2fpef",
+"title": "H₂FPEF",
+"category": "Insuffisance cardiaque",
+"indication": "Probabilité d'IC à FE préservée devant une dyspnée inexpliquée.",
+"population": "Dyspnée, FEVG ≥ 50 %",
+"reference_version": "Reddy 2018",
+"calculator_key": "h2fpef",
+"body": "## Variables\n- Obésité IMC > 30 (2), ≥ 2 antihypertenseurs (1), FA paroxystique ou persistante (3), PAPs > 35 mmHg (1), âge > 60 ans (1), E/e' > 9 (1).\n\n## Interprétation\n- 0–1 : faible ; 2–5 : intermédiaire ; 6–9 : élevée.\n\n## Limites\n- Dérivé dans une population de centre de référence.\n\n## Place dans les recommandations\n- Aide diagnostique citée par l'ESC.",
+"official_url": null,
+"sort_order": 8,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "H₂FPEF Insuffisance cardiaque"
+},
+{
+"id": "hfapeff",
+"title": "HFA-PEFF (étape 2)",
+"category": "Insuffisance cardiaque",
+"indication": "Score diagnostique de l'IC à FE préservée.",
+"population": "Suspicion d'IC à FE préservée",
+"reference_version": "HFA 2019",
+"calculator_key": "hfapeff",
+"body": "## Variables\n- Domaines fonctionnel, morphologique et biomarqueurs (critères majeurs 2 points, mineurs 1 point ; maximum 2 points par domaine).\n\n## Interprétation\n- ≥ 5 : IC à FE préservée ; 2–4 : examens complémentaires (étape 3 : écho d'effort/cathétérisme) ; ≤ 1 : peu probable.\n\n## Limites\n- Seuils différents en FA ; vérifier la cohérence avec l'ESC 2026.\n\n## Place dans les recommandations\n- Consensus HFA 2019.",
+"official_url": null,
+"sort_order": 9,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "HFA-PEFF (étape 2) Insuffisance cardiaque"
+},
+{
+"id": "dapt",
+"title": "DAPT score",
+"category": "SCA / angioplastie",
+"indication": "Bénéfice/risque d'une bithérapie antiplaquettaire prolongée au-delà de 12 mois.",
+"population": "Patients sans événement à 12 mois après angioplastie",
+"reference_version": "Yeh 2016",
+"calculator_key": "dapt",
+"body": "## Variables\n- Âge ≥ 75 (−2), 65–74 (−1), tabac (+1), diabète (+1), IDM à la présentation (+1), antécédent d'angioplastie ou d'IDM (+1), stent au paclitaxel (+1), stent < 3 mm (+1), IC ou FEVG < 30 % (+2), stent sur pontage veineux (+2).\n\n## Interprétation\n- ≥ 2 : bénéfice probable d'une prolongation ; < 2 : balance défavorable.\n\n## Limites\n- Stents de première génération dans la population de dérivation.\n\n## Place dans les recommandations\n- Cité par l'ESC (décision de durée de la bithérapie).",
+"official_url": null,
+"sort_order": 10,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "DAPT score SCA / angioplastie"
+},
+{
+"id": "hcm_risk_scd",
+"title": "HCM Risk-SCD",
+"category": "Cardiomyopathies",
+"indication": "Risque de mort subite à 5 ans dans la CMH.",
+"population": "CMH ≥ 16 ans, sans antécédent de mort subite récupérée ni TV soutenue",
+"reference_version": "O'Mahony 2014",
+"calculator_key": "hcm_risk_scd",
+"body": "## Variables\n- Âge, épaisseur maximale (mm), diamètre OG (mm), gradient CCVG maximal (mmHg), antécédent familial de mort subite, TV non soutenue, syncope inexpliquée.\n\n## Interprétation\n- < 4 % : risque faible ; 4–6 % : intermédiaire ; ≥ 6 % : élevé (DAI à envisager) — interpréter avec les marqueurs additionnels de l'ESC 2023.\n\n## Limites\n- Non validé chez l'enfant, l'athlète de haut niveau, les maladies métaboliques/syndromiques.\n\n## Place dans les recommandations\n- ESC 2023 cardiomyopathies.",
+"official_url": null,
+"sort_order": 11,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "HCM Risk-SCD Cardiomyopathies"
+},
+{
+"id": "killip",
+"title": "Classification de Killip",
+"category": "SCA",
+"indication": "Gravité clinique de l'insuffisance cardiaque à la phase aiguë de l'infarctus.",
+"population": "Infarctus du myocarde",
+"reference_version": "Killip 1967",
+"calculator_key": "killip",
+"body": "## Variables\n- Classe I à IV selon l'examen clinique.\n\n## Interprétation\n- I : pas d'IC ; II : crépitants < 50 % des champs, B3 ; III : OAP ; IV : choc cardiogénique.\n\n## Limites\n- Classification ancienne, pronostique.\n\n## Place dans les recommandations\n- Variable du score GRACE.",
+"official_url": null,
+"sort_order": 12,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Classification de Killip SCA"
+},
+{
+"id": "nyha",
+"title": "Classification NYHA",
+"category": "Insuffisance cardiaque",
+"indication": "Retentissement fonctionnel des symptômes.",
+"population": "IC",
+"reference_version": "NYHA",
+"calculator_key": "nyha",
+"body": "## Variables\n- Classe I à IV.\n\n## Interprétation\n- I : pas de limitation ; II : limitation légère ; III : limitation marquée ; IV : symptômes au repos.\n\n## Limites\n- Subjective.\n\n## Place dans les recommandations\n- Utilisée par les recommandations.",
+"official_url": null,
+"sort_order": 13,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Classification NYHA Insuffisance cardiaque"
+},
+{
+"id": "score2",
+"title": "SCORE2",
+"category": "Prévention",
+"indication": "Risque CV à 10 ans d'événement fatal et non fatal (40–69 ans).",
+"population": "Prévention primaire en Europe, sans diabète ni MCV",
+"reference_version": "ESC 2021",
+"calculator_key": "score2",
+"body": "## Variables\n- Âge, sexe, tabac, PAS, cholestérol total, HDL, région de risque (France : faible).\n\n## Interprétation\n- 40–49 ans : < 2,5 % faible à modéré, 2,5–< 7,5 % élevé, ≥ 7,5 % très élevé ; 50–69 ans : < 5 %, 5–< 10 %, ≥ 10 %.\n\n## Limites\n- Non applicable si MCV, diabète, IRC, hypercholestérolémie familiale (d'emblée à risque élevé/très élevé).\n\n## Place dans les recommandations\n- ESC 2021 prévention ; ESC 2024 HTA ; ESC 2025 dyslipidémies.",
+"official_url": null,
+"sort_order": 14,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "SCORE2 Prévention"
+},
+{
+"id": "score2op",
+"title": "SCORE2-OP",
+"category": "Prévention",
+"indication": "Risque CV à 10 ans (≥ 70 ans).",
+"population": "Prévention primaire ≥ 70 ans",
+"reference_version": "ESC 2021",
+"calculator_key": "score2op",
+"body": "## Variables\n- Âge, sexe, tabac, PAS, cholestérol total, HDL, région de risque.\n\n## Interprétation\n- ≥ 70 ans : < 7,5 % faible à modéré, 7,5–< 15 % élevé, ≥ 15 % très élevé.\n\n## Limites\n- Tenir compte de la fragilité, des comorbidités, de l'espérance de vie.\n\n## Place dans les recommandations\n- ESC 2021.",
+"official_url": null,
+"sort_order": 15,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "SCORE2-OP Prévention"
+},
+{
+"id": "score2_diabetes",
+"title": "SCORE2-Diabetes",
+"category": "Prévention",
+"indication": "Risque CV à 10 ans chez le diabétique de type 2.",
+"population": "Diabète de type 2, 40–69 ans, sans MCV athéromateuse",
+"reference_version": "ESC 2023",
+"calculator_key": "score2_diabetes",
+"body": "## Variables\n- Variables de SCORE2 + âge au diagnostic du diabète, HbA1c (mmol/mol), DFGe.\n\n## Interprétation\n- < 5 % faible ; 5–< 10 % modéré ; 10–< 20 % élevé ; ≥ 20 % très élevé.\n\n## Limites\n- Pas en cas de MCV athéromateuse ou d'atteinte d'organe sévère (déjà très haut risque).\n\n## Place dans les recommandations\n- ESC 2023 diabète.",
+"official_url": null,
+"sort_order": 16,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "SCORE2-Diabetes Prévention"
+},
+{
+"id": "grace",
+"title": "GRACE",
+"category": "SCA",
+"indication": "Risque de décès hospitalier dans les SCA (version « points »).",
+"population": "SCA",
+"reference_version": "GRACE 1.0 (Granger 2003)",
+"calculator_key": "grace",
+"body": "## Variables\n- Âge, FC, PAS, créatinine, classe de Killip, arrêt cardiaque, déviation ST, marqueurs.\n\n## Interprétation\n- ≤ 108 faible (< 1 %) ; 109–140 intermédiaire ; > 140 élevé (> 3 %) → stratégie invasive < 24 h.\n\n## Limites\n- GRACE 2.0 (en ligne) pour les estimations à 6 mois et 1 an.\n\n## Place dans les recommandations\n- ESC 2023 SCA.",
+"official_url": null,
+"sort_order": 17,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "GRACE SCA"
+},
+{
+"id": "precise_dapt",
+"title": "PRECISE-DAPT",
+"category": "SCA / angioplastie",
+"indication": "Risque hémorragique sous bithérapie antiplaquettaire.",
+"population": "Patients après angioplastie",
+"reference_version": "Costa 2017",
+"calculator_key": "precise_dapt",
+"body": "## Variables\n- Hémoglobine, leucocytes, âge, ClCr, antécédent de saignement spontané.\n\n## Interprétation\n- ≥ 25 : haut risque hémorragique (bithérapie courte 3–6 mois) ; < 25 : bithérapie standard ou prolongée.\n\n## Limites\n- Non validé sous trithérapie ni après pontage.\n\n## Place dans les recommandations\n- ESC (durée de la bithérapie).",
+"official_url": null,
+"sort_order": 18,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "PRECISE-DAPT SCA / angioplastie"
+},
+{
+"id": "arvc",
+"title": "Critères de cardiomyopathie arythmogène",
+"category": "Cardiomyopathies",
+"indication": "Diagnostic de la cardiomyopathie arythmogène (Task Force 2010).",
+"population": "Suspicion de cardiomyopathie arythmogène",
+"reference_version": "Task Force 2010",
+"calculator_key": "arvc",
+"body": "## Variables\n- Critères majeurs et mineurs : structure (écho/IRM), histologie, repolarisation, dépolarisation, arythmies, histoire familiale/génétique.\n\n## Interprétation\n- Certain = 2 majeurs, ou 1 majeur + 2 mineurs, ou 4 mineurs de catégories différentes ; limite = 1 majeur + 1 mineur ou 3 mineurs ; possible = 1 majeur ou 2 mineurs.\n\n## Limites\n- Padoue 2020 étend les critères à l'atteinte VG (rehaussement tardif en IRM).\n\n## Place dans les recommandations\n- ESC 2023 cardiomyopathies.",
+"official_url": null,
+"sort_order": 19,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Critères de cardiomyopathie arythmogène Cardiomyopathies"
+},
+{
+"id": "heart",
+"title": "HEART (douleur thoracique)",
+"category": "SCA",
+"indication": "Stratification de la douleur thoracique aux urgences.",
+"population": "Douleur thoracique sans STEMI",
+"reference_version": "Backus 2013",
+"calculator_key": "heart",
+"body": "## Variables\n- Histoire, ECG, âge, facteurs de risque, troponine : 0 à 2 points chacun.\n\n## Interprétation\n- 0–3 : MACE ≈ 1,7 % ; 4–6 : ≈ 16,6 % ; 7–10 : ≈ 50 % (validation prospective, 2 440 patients).\n\n## Limites\n- Composante subjective (histoire) ; à intégrer aux algorithmes de troponine hypersensible.\n\n## Place dans les recommandations\n- L'ESC 2023 privilégie les algorithmes 0 h/1 h pour l'exclusion ; le HEART reste utile aux urgences.",
+"official_url": null,
+"sort_order": 20,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "HEART (douleur thoracique) SCA"
+},
+{
+"id": "lee_rcri",
+"title": "Indice de risque cardiaque révisé (Lee)",
+"category": "Préopératoire",
+"indication": "Risque de complications cardiaques après chirurgie non cardiaque.",
+"population": "Chirurgie non cardiaque programmée, ≥ 50 ans",
+"reference_version": "Lee 1999",
+"calculator_key": "lee_rcri",
+"body": "## Variables\n- Chirurgie à haut risque, cardiopathie ischémique, IC, AVC/AIT, diabète insulinotraité, créatinine > 177 µmol/L : 1 point chacun.\n\n## Interprétation\n- Validation : 0 → 0,4 % ; 1 → 0,9 % ; 2 → 6,6 % ; ≥ 3 → 11 % de complications cardiaques majeures.\n\n## Limites\n- Cohorte ancienne ; sous-estime le risque avec les troponines actuelles.\n\n## Place dans les recommandations\n- ESC 2022 : à combiner au risque chirurgical, à la capacité fonctionnelle et aux biomarqueurs.",
+"official_url": null,
+"sort_order": 21,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Indice de risque cardiaque révisé (Lee) Préopératoire"
+},
+{
+"id": "duke_tts",
+"title": "Score de Duke (épreuve d'effort)",
+"category": "Coronaropathie chronique",
+"indication": "Pronostic après épreuve d'effort sur tapis (protocole de Bruce).",
+"population": "Suspicion de coronaropathie",
+"reference_version": "Mark 1991",
+"calculator_key": "duke_tts",
+"body": "## Variables\n- Durée d'exercice (min), déviation ST maximale (mm), index d'angor (0 aucun, 1 non limitant, 2 limitant).\n\n## Interprétation\n- ≥ +5 : faible risque ; −10 à +4 : intermédiaire ; ≤ −11 : élevé.\n\n## Limites\n- Validé sur le protocole de Bruce ; ininterprétable si ECG de base anormal (BBG, HVG, digoxine).\n\n## Place dans les recommandations\n- L'ESC 2024 privilégie l'imagerie fonctionnelle ou le coroscanner ; l'ECG d'effort reste utile au pronostic.",
+"official_url": null,
+"sort_order": 22,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Score de Duke (épreuve d'effort) Coronaropathie chronique"
+},
+{
+"id": "orbit",
+"title": "ORBIT (risque hémorragique, FA)",
+"category": "Fibrillation atriale",
+"indication": "Risque de saignement majeur sous anticoagulant.",
+"population": "FA anticoagulée",
+"reference_version": "O'Brien 2015",
+"calculator_key": "orbit",
+"body": "## Variables\n- Âge ≥ 75 ans (1), Hb basse/anémie (2), antécédent hémorragique (2), DFG < 60 (1), antiagrégant (1).\n\n## Interprétation\n- 0–2 faible, 3 intermédiaire, ≥ 4 élevé.\n\n## Limites\n- Ne contre-indique pas l'anticoagulation ; mieux calibré que HAS-BLED dans ORBIT-AF/ROCKET-AF.\n\n## Place dans les recommandations\n- ESC 2024 : évaluer et corriger les facteurs de risque hémorragique modifiables.",
+"official_url": null,
+"sort_order": 23,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "ORBIT (risque hémorragique, FA) Fibrillation atriale"
+},
+{
+"id": "ehra",
+"title": "Score EHRA (symptômes de FA)",
+"category": "Fibrillation atriale",
+"indication": "Retentissement fonctionnel de la FA.",
+"population": "FA",
+"reference_version": "EHRA modifié",
+"calculator_key": "ehra",
+"body": "## Variables\n- 1 aucun ; 2a léger ; 2b modéré ; 3 sévère ; 4 invalidant.\n\n## Interprétation\n- Oriente la stratégie de contrôle du rythme et le suivi des symptômes.\n\n## Limites\n- Subjectif.\n\n## Place dans les recommandations\n- ESC 2024 FA.",
+"official_url": null,
+"sort_order": 24,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Score EHRA (symptômes de FA) Fibrillation atriale"
+},
+{
+"id": "ccs",
+"title": "Classification CCS de l'angor",
+"category": "Coronaropathie chronique",
+"indication": "Sévérité fonctionnelle de l'angor.",
+"population": "Angor stable",
+"reference_version": "CCS",
+"calculator_key": "ccs",
+"body": "## Variables\n- Classes I à IV selon le niveau d'effort déclenchant.\n\n## Interprétation\n- III–IV : angor invalidant.\n\n## Limites\n- Subjectif.\n\n## Place dans les recommandations\n- Utilisée dans les recommandations ESC 2024.",
+"official_url": null,
+"sort_order": 25,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Classification CCS de l'angor Coronaropathie chronique"
+},
+{
+"id": "lvh_ecg",
+"title": "HVG électrique (Sokolow-Lyon, Cornell)",
+"category": "ECG",
+"indication": "Critères de voltage d'hypertrophie ventriculaire gauche.",
+"population": "ECG 12 dérivations",
+"reference_version": "ESC 2024 HTA",
+"calculator_key": "lvh_ecg",
+"body": "## Variables\n- Sokolow-Lyon : SV1 + RV5/V6 > 35 mm ; Cornell : RaVL + SV3 > 28 mm (homme) ou > 20 mm (femme) ; produit de Cornell > 2 440 mm·ms.\n\n## Interprétation\n- Un critère positif signe une HVG électrique (atteinte d'organe dans l'HTA).\n\n## Limites\n- Sensibilité faible, spécificité correcte ; influencés par l'âge, la morphologie thoracique, le BBG.\n\n## Place dans les recommandations\n- ESC 2024 HTA : ECG systématique chez l'hypertendu.",
+"official_url": null,
+"sort_order": 26,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "HVG électrique (Sokolow-Lyon, Cornell) ECG"
+},
+{
+"id": "dlcn",
+"title": "Dutch Lipid Clinic Network (HF)",
+"category": "Prévention",
+"indication": "Probabilité d'hypercholestérolémie familiale.",
+"population": "Adulte avec LDL-c élevé",
+"reference_version": "DLCN",
+"calculator_key": "dlcn",
+"body": "## Variables\n- Antécédents familiaux, antécédents personnels, xanthomes, arc cornéen, LDL-c non traité, génétique.\n\n## Interprétation\n- > 8 certaine ; 6–8 probable ; 3–5 possible ; < 3 peu probable.\n\n## Limites\n- LDL-c sous traitement non utilisable directement.\n\n## Place dans les recommandations\n- Recommandé par l'ESC pour orienter génétique et dépistage en cascade.",
+"official_url": null,
+"sort_order": 27,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Dutch Lipid Clinic Network (HF) Prévention"
+},
+{
+"id": "doac_dose_fa",
+"title": "Dose d'AOD dans la FA (apixaban, rivaroxaban, édoxaban, dabigatran)",
+"category": "Fibrillation atriale",
+"indication": "Choix de la dose d'un anticoagulant oral direct selon l'âge, le poids, la fonction rénale (Cockcroft-Gault) et les interactions.",
+"population": "FA non valvulaire de l'adulte",
+"reference_version": "RCP européens ; EHRA 2021",
+"calculator_key": "doac_dose_fa",
+"body": "## Critères de réduction de dose\n- Apixaban 5 mg × 2/j per os → 2,5 mg × 2/j si ≥ 2 critères parmi âge ≥ 80 ans, poids ≤ 60 kg, créatinine ≥ 133 µmol/L (1,5 mg/dL), ou si ClCr 15–29 mL/min ; non recommandé si ClCr < 15.\n- Rivaroxaban 20 mg × 1/j per os au cours d'un repas → 15 mg × 1/j si ClCr 15–49 ; non recommandé si ClCr < 15.\n- Édoxaban 60 mg × 1/j per os → 30 mg × 1/j si ClCr 15–50, poids ≤ 60 kg ou inhibiteur puissant de la P-gp (ciclosporine, dronédarone, érythromycine, kétoconazole) ; non recommandé si ClCr < 15.\n- Dabigatran 150 mg × 2/j per os → 110 mg × 2/j si âge ≥ 80 ans ou vérapamil ; 110 mg à discuter si 75–79 ans, ClCr 30–50, gastrite/œsophagite/RGO ou risque hémorragique élevé ; contre-indiqué si ClCr < 30.\n\n## Limites\n- Aide au calcul : vérifier le RCP en vigueur, l'ensemble des interactions et une créatinine récente.\n\n## Sources\n- Steffel J et al. 2021 EHRA Practical Guide on the use of NOACs. Europace 2021.\n- RCP européens (EMA) d'Eliquis, Xarelto, Lixiana, Pradaxa.",
+"official_url": "https://www.escardio.org/static-file/Escardio/Subspecialty/EHRA/Documents/KM/EHRA-KM-NOAC-2021.pdf",
+"sort_order": 28,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "AOD NACO anticoagulant dose apixaban rivaroxaban édoxaban dabigatran clairance Cockcroft insuffisance rénale"
+},
+{
+"id": "echo_normes",
+"title": "Valeurs normales d'échographie selon le sexe et la surface corporelle",
+"category": "Cardiomyopathies",
+"indication": "Limites de normalité adultes des dimensions, volumes, masse et fonction, converties en valeurs absolues pour le patient.",
+"population": "Adulte",
+"reference_version": "ASE/EACVI 2015",
+"calculator_key": "echo_normes",
+"body": "## Contenu\n- Surface corporelle de Mosteller, puis bornes indexées × SC : volumes VG, masse VG, volume OG.\n- Valeurs non indexées : DTDVG, FEVG, épaisseurs, VD (diamètre basal, TAPSE, S', FAC), strain.\n\n## Limites\n- L'aorte dépend de l'âge et de la SC (non pris en compte). Populations de référence majoritairement caucasiennes.\n\n## Source\n- Lang RM et al. Recommendations for cardiac chamber quantification by echocardiography in adults: an update from the ASE and the EACVI. J Am Soc Echocardiogr 2015;28:1-39 ; Eur Heart J Cardiovasc Imaging 2015;16:233-71.",
+"official_url": "https://doi.org/10.1016/j.echo.2014.10.003",
+"sort_order": 29,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "normes valeurs normales échographie surface corporelle indexé volume masse OG TAPSE FEVG Lang 2015"
+}
+],
+"source_links": [
+{
+"entity_type": "score",
+"entity_id": "cha2ds2va",
+"section_key": "",
+"source_id": "esc2024_fa"
+},
+{
+"entity_type": "score",
+"entity_id": "cha2ds2va",
+"section_key": "",
+"source_id": "lip2010_cha2ds2vasc"
+},
+{
+"entity_type": "score",
+"entity_id": "cha2ds2vasc",
+"section_key": "",
+"source_id": "lip2010_cha2ds2vasc"
+},
+{
+"entity_type": "score",
+"entity_id": "cha2ds2vasc",
+"section_key": "",
+"source_id": "acc_aha_2023_fa"
+},
+{
+"entity_type": "score",
+"entity_id": "hasbled",
+"section_key": "",
+"source_id": "pisters2010_hasbled"
+},
+{
+"entity_type": "score",
+"entity_id": "hasbled",
+"section_key": "",
+"source_id": "esc2024_fa"
+},
+{
+"entity_type": "score",
+"entity_id": "timi_nste",
+"section_key": "",
+"source_id": "antman2000_timi"
+},
+{
+"entity_type": "score",
+"entity_id": "wells_ep",
+"section_key": "",
+"source_id": "wells2000_ep"
+},
+{
+"entity_type": "score",
+"entity_id": "wells_ep",
+"section_key": "",
+"source_id": "esc2019_ep"
+},
+{
+"entity_type": "score",
+"entity_id": "geneve_ep",
+"section_key": "",
+"source_id": "legal2006_geneve"
+},
+{
+"entity_type": "score",
+"entity_id": "geneve_ep",
+"section_key": "",
+"source_id": "esc2019_ep"
+},
+{
+"entity_type": "score",
+"entity_id": "pesi",
+"section_key": "",
+"source_id": "aujesky2005_pesi"
+},
+{
+"entity_type": "score",
+"entity_id": "pesi",
+"section_key": "",
+"source_id": "esc2019_ep"
+},
+{
+"entity_type": "score",
+"entity_id": "spesi",
+"section_key": "",
+"source_id": "jimenez2010_spesi"
+},
+{
+"entity_type": "score",
+"entity_id": "spesi",
+"section_key": "",
+"source_id": "esc2019_ep"
+},
+{
+"entity_type": "score",
+"entity_id": "h2fpef",
+"section_key": "",
+"source_id": "reddy2018_h2fpef"
+},
+{
+"entity_type": "score",
+"entity_id": "hfapeff",
+"section_key": "",
+"source_id": "pieske2019_hfapeff"
+},
+{
+"entity_type": "score",
+"entity_id": "dapt",
+"section_key": "",
+"source_id": "yeh2016_dapt"
+},
+{
+"entity_type": "score",
+"entity_id": "hcm_risk_scd",
+"section_key": "",
+"source_id": "omahony2014_hcmrisk"
+},
+{
+"entity_type": "score",
+"entity_id": "hcm_risk_scd",
+"section_key": "",
+"source_id": "esc2023_cmp"
+},
+{
+"entity_type": "score",
+"entity_id": "killip",
+"section_key": "",
+"source_id": "killip1967"
+},
+{
+"entity_type": "score",
+"entity_id": "nyha",
+"section_key": "",
+"source_id": "esc2026_ic"
+},
+{
+"entity_type": "score",
+"entity_id": "score2",
+"section_key": "",
+"source_id": "score2_2021"
+},
+{
+"entity_type": "score",
+"entity_id": "score2",
+"section_key": "",
+"source_id": "esc2021_prev"
+},
+{
+"entity_type": "score",
+"entity_id": "score2op",
+"section_key": "",
+"source_id": "score2op_2021"
+},
+{
+"entity_type": "score",
+"entity_id": "score2op",
+"section_key": "",
+"source_id": "esc2021_prev"
+},
+{
+"entity_type": "score",
+"entity_id": "score2_diabetes",
+"section_key": "",
+"source_id": "score2diab_2023"
+},
+{
+"entity_type": "score",
+"entity_id": "score2_diabetes",
+"section_key": "",
+"source_id": "esc2023_diab"
+},
+{
+"entity_type": "score",
+"entity_id": "grace",
+"section_key": "",
+"source_id": "granger2003_grace"
+},
+{
+"entity_type": "score",
+"entity_id": "grace",
+"section_key": "",
+"source_id": "esc2023_acs"
+},
+{
+"entity_type": "score",
+"entity_id": "precise_dapt",
+"section_key": "",
+"source_id": "costa2017_precisedapt"
+},
+{
+"entity_type": "score",
+"entity_id": "arvc",
+"section_key": "",
+"source_id": "marcus2010_arvc"
+},
+{
+"entity_type": "score",
+"entity_id": "arvc",
+"section_key": "",
+"source_id": "corrado2020_padua"
+},
+{
+"entity_type": "score",
+"entity_id": "arvc",
+"section_key": "",
+"source_id": "esc2023_cmp"
+},
+{
+"entity_type": "score",
+"entity_id": "heart",
+"section_key": "",
+"source_id": "backus2013_heart"
+},
+{
+"entity_type": "score",
+"entity_id": "heart",
+"section_key": "",
+"source_id": "esc2023_acs"
+},
+{
+"entity_type": "score",
+"entity_id": "lee_rcri",
+"section_key": "",
+"source_id": "lee1999_rcri"
+},
+{
+"entity_type": "score",
+"entity_id": "lee_rcri",
+"section_key": "",
+"source_id": "esc2022_ncs"
+},
+{
+"entity_type": "score",
+"entity_id": "duke_tts",
+"section_key": "",
+"source_id": "mark1991_duke"
+},
+{
+"entity_type": "score",
+"entity_id": "duke_tts",
+"section_key": "",
+"source_id": "esc2024_ccs"
+},
+{
+"entity_type": "score",
+"entity_id": "orbit",
+"section_key": "",
+"source_id": "obrien2015_orbit"
+},
+{
+"entity_type": "score",
+"entity_id": "orbit",
+"section_key": "",
+"source_id": "esc2024_fa"
+},
+{
+"entity_type": "score",
+"entity_id": "ehra",
+"section_key": "",
+"source_id": "esc2024_fa"
+},
+{
+"entity_type": "score",
+"entity_id": "ccs",
+"section_key": "",
+"source_id": "esc2024_ccs"
+},
+{
+"entity_type": "score",
+"entity_id": "lvh_ecg",
+"section_key": "",
+"source_id": "esc2024_hta"
+},
+{
+"entity_type": "score",
+"entity_id": "dlcn",
+"section_key": "",
+"source_id": "esc2025_lipid"
+}
+]
+}
+}

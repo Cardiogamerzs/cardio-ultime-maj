@@ -1,0 +1,3167 @@
+{
+ "id": "report_templates",
+ "version": 2,
+ "description": "Modèles de comptes rendus intégrés (structure, sans contenu clinique).",
+ "tables": {
+  "report_templates": [
+   {
+    "id": "cr_consultation_standard",
+    "name": "Consultation standard",
+    "category": "Général",
+    "sort_order": 1,
+    "keywords": "consultation standard premiere consultation suivi",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Consultation de cardiologie.",
+          "Avis cardiologique demandé par le médecin traitant.",
+          "Consultation de suivi."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour [motif].\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\n[histoire de la maladie, symptômes, chronologie]\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire».\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nCONCLUSION\n[conclusion]\n\nCONDUITE À TENIR\n- [modifications thérapeutiques]\n- [examens complémentaires]\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_hta",
+    "name": "HTA",
+    "category": "Hypertension",
+    "sort_order": 2,
+    "keywords": "hta hypertension arterielle pression",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Bilan d'hypertension artérielle.",
+          "Suivi d'hypertension artérielle.",
+          "Hypertension artérielle non contrôlée."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "mesures_ambulatoires",
+         "label": "Mesures ambulatoires (automesure / MAPA)",
+         "type": "multiline"
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "bio",
+       "title": "Biologie",
+       "fields": [
+        {
+         "key": "bio",
+         "label": "Biologie",
+         "type": "multiline",
+         "hint": "Valeurs et unités",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — HYPERTENSION ARTÉRIELLE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «bilan d'une hypertension artérielle».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\nHTA connue depuis [durée], traitée par [traitement]. Mesures à domicile : [moyenne automesure] mmHg. Observance «bonne». Pas de céphalées, épistaxis ni troubles visuels .\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire». Pas d'asymétrie tensionnelle (bras droit [PA D] / bras gauche [PA G] mmHg). Pas d'hypotension orthostatique.\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation». «Pas de signe d'hypertrophie ventriculaire gauche électrique» (Sokolow [Sokolow] mm, Cornell [Cornell] mm).\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nMESURES AMBULATOIRES\nMAPA / automesure du [date] : moyenne diurne [PA jour] mmHg, nocturne [PA nuit] mmHg, sur 24 h [PA 24 h] mmHg.\n\nBIOLOGIE\nCréatinine [créatinine] µmol/L (DFG [DFG] mL/min/1,73 m²), kaliémie [K] mmol/L, natrémie [Na] mmol/L, rapport albumine/créatinine urinaire [RAC] mg/g, LDL [LDL] g/L, HbA1c [HbA1c] %.\n\nCONCLUSION\nHypertension artérielle «essentielle» «non contrôlée», sans/avec atteinte d'organe cible : [précisions].\n\nCONDUITE À TENIR\n- Mesures hygiéno-diététiques : réduction du sel (< 5 g/j), activité physique, perte de poids, alcool.\n- Traitement : [schéma — ex. bithérapie fixe IEC/ARA2 + inhibiteur calcique].\n- Objectif PAS 120–129 mmHg si bien tolérée ; automesure à 4 semaines.\n- Bilan d'HTA secondaire : «non indiqué» [ou : aldostérone/rénine, échographie des artères rénales…].\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_fa",
+    "name": "Fibrillation atriale",
+    "category": "Rythmologie",
+    "sort_order": 3,
+    "keywords": "fa fibrillation atriale auriculaire acfa arythmie",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Fibrillation atriale.",
+          "Suivi de fibrillation atriale.",
+          "Palpitations."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "fa_type",
+         "label": "Type de FA",
+         "type": "choice",
+         "phrases": [
+          "Paroxystique",
+          "Persistante",
+          "Persistante de longue durée",
+          "Permanente",
+          "Non déterminé"
+         ]
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "fa_scores",
+         "label": "Scores calculés (thrombo-embolique / hémorragique)",
+         "type": "text",
+         "hint": "Saisir les scores et leur version"
+        },
+        {
+         "key": "fa_anticoagulation",
+         "label": "Anticoagulation",
+         "type": "text"
+        },
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — FIBRILLATION ATRIALE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «une fibrillation atriale».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\nFA «paroxystique» découverte le [date] devant [palpitations / dyspnée / découverte fortuite]. Nombre et durée des épisodes : [fréquence, durée]. Retentissement fonctionnel EHRA [score EHRA]. Pas de syncope .\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire».\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation». Le jour de la consultation : «rythme sinusal» [ou FA à … bpm].\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nSTRATIFICATION DU RISQUE\nScore CHA₂DS₂-VA = [score] (IC [ ], HTA [ ], âge [ ], diabète [ ], AVC/AIT [ ], maladie vasculaire [ ]). Facteurs de risque hémorragique modifiables : [HTA non contrôlée, AINS, alcool…]. Clairance de la créatinine (Cockcroft) [ClCr] mL/min.\n\nCONCLUSION\nFibrillation atriale «paroxystique», CHA₂DS₂-VA [score], [retentissement].\n\nCONDUITE À TENIR\n- Anticoagulation : [AOD, molécule et posologie adaptée — ex. apixaban 5 mg × 2/j per os].\n- Contrôle de la fréquence / du rythme : [bêtabloquant, antiarythmique, discussion d'ablation].\n- Prise en charge des facteurs de risque : HTA, poids, SAOS, alcool.\n- Holter ECG [ ], bilan biologique (TSH, fonction rénale, NFS).\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_ic",
+    "name": "Insuffisance cardiaque",
+    "category": "Insuffisance cardiaque",
+    "sort_order": 4,
+    "keywords": "ic insuffisance cardiaque fevg dyspnee",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Suivi d'insuffisance cardiaque.",
+          "Dyspnée d'effort.",
+          "Décompensation cardiaque récente."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "nyha",
+         "label": "Classe NYHA",
+         "type": "choice",
+         "phrases": [
+          "I",
+          "II",
+          "III",
+          "IV"
+         ]
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "bio",
+       "title": "Biologie",
+       "fields": [
+        {
+         "key": "bio",
+         "label": "Biologie",
+         "type": "multiline",
+         "hint": "NT-proBNP, fonction rénale, kaliémie… avec unités",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — INSUFFISANCE CARDIAQUE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «le suivi d'une insuffisance cardiaque».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\nInsuffisance cardiaque à FE «réduite» d'étiologie [ischémique / dilatée primitive / …], connue depuis [date]. Dernière hospitalisation : [date]. Dyspnée stade NYHA [NYHA]. Poids stable à [poids sec] kg. Pas d'orthopnée ni d'œdèmes .\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire». Pas de turgescence jugulaire ni de reflux hépato-jugulaire, pas d'œdème des membres inférieurs, pas de crépitants.\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nBIOLOGIE\nNT-proBNP [NT-proBNP] pg/mL (précédent [NT-proBNP antérieur]), créatinine [créatinine] µmol/L (DFG [DFG]), kaliémie [K] mmol/L, natrémie [Na] mmol/L, hémoglobine [Hb] g/dL, ferritine [ferritine] µg/L, CST [CST] %.\n\nTRAITEMENT MÉDICAL FONDAMENTAL\n- Bêtabloquant : [molécule, dose / dose cible].\n- IEC / ARNI / ARA2 : [molécule, dose / dose cible].\n- ARM : [molécule, dose].\n- iSGLT2 : [molécule, dose].\n\nCONCLUSION\nInsuffisance cardiaque à FE «réduite» (FEVG [FEVG] %), NYHA [NYHA], «stable / en voie d'optimisation».\n\nCONDUITE À TENIR\n- Titration : [modification].\n- Contrôle kaliémie et créatinine à 1–2 semaines.\n- Éducation : poids quotidien, régime, signes d'alerte.\n- DAI / resynchronisation : [indication à réévaluer après optimisation].\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_coronaropathie",
+    "name": "Coronaropathie",
+    "category": "Coronaropathie",
+    "sort_order": 5,
+    "keywords": "coronaropathie coronarien angor sca infarctus stent",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Suivi de coronaropathie.",
+          "Douleur thoracique.",
+          "Suivi après angioplastie coronaire."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        },
+        {
+         "key": "revascularisation",
+         "label": "Antécédents de revascularisation",
+         "type": "multiline",
+         "hint": "Date, type, territoire"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "angor",
+         "label": "Angor (description, classe)",
+         "type": "text"
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — CORONAROPATHIE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «le suivi d'une coronaropathie».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Coronaropathie : [SCA / angor], revascularisation le [date] : [angioplastie de … / pontage].\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\nPas de récidive angineuse , pas de dyspnée d'effort . Activité physique : [ ]. Observance du traitement «bonne».\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire».\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nBIOLOGIE\nLDL-cholestérol [LDL] g/L ([LDL mmol] mmol/L) — objectif < 0,55 g/L (1,4 mmol/L) et baisse ≥ 50 %. HbA1c [HbA1c] %, créatinine [créatinine] µmol/L.\n\nCONCLUSION\nCoronaropathie «stable», [revascularisation], asymptomatique sous traitement.\n\nCONDUITE À TENIR\n- Antithrombotique : [aspirine 75–100 mg/j per os / bithérapie jusqu'au …].\n- Hypolipémiant : [statine forte dose ± ézétimibe].\n- Bêtabloquant / anti-angineux : [ ].\n- Réadaptation, sevrage tabagique, activité physique.\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_valvulopathie",
+    "name": "Valvulopathies",
+    "category": "Valvulopathies",
+    "sort_order": 6,
+    "keywords": "valvulopathie valve retrecissement insuffisance aortique mitrale",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Suivi de valvulopathie.",
+          "Souffle cardiaque."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_quantification",
+         "label": "Quantification de la valvulopathie",
+         "type": "multiline",
+         "hint": "Paramètres, méthode, unités"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — VALVULOPATHIE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «le suivi d'une valvulopathie».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\n[Valvulopathie] connue depuis [date]. Symptômes : [aucun / dyspnée / angor / syncope].\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire».\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : [valve atteinte] : [mécanisme]. Quantification : [Vmax, gradient moyen, surface (équation de continuité) / SOR, volume régurgité, vena contracta]. Retentissement : [dimensions VG, FEVG, OG, PAPs].\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nCONCLUSION\n[Valvulopathie] «modérée/sévère», «asymptomatique», [retentissement].\n\nCONDUITE À TENIR\n- Surveillance clinique et échographique dans [délai].\n- [Discussion en Heart Team / bilan préopératoire si indication].\n- Prévention de l'endocardite : hygiène bucco-dentaire.\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_cardiomyopathie",
+    "name": "Cardiomyopathies",
+    "category": "Cardiomyopathies",
+    "sort_order": 7,
+    "keywords": "cardiomyopathie cmh cmd amylose hypertrophique dilatee",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Suivi de cardiomyopathie.",
+          "Bilan d'hypertrophie ventriculaire gauche."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        },
+        {
+         "key": "histoire_familiale",
+         "label": "Histoire familiale / génétique",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "bilan",
+       "title": "Bilan étiologique et examens complémentaires",
+       "fields": [
+        {
+         "key": "bilan",
+         "label": "Bilan",
+         "type": "multiline",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — CARDIOMYOPATHIE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «le bilan / suivi d'une cardiomyopathie».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\n[Phénotype] découvert(e) le [date] devant [ ]. Histoire familiale : [mort subite, cardiomyopathie, génétique]. Symptômes : [ ].\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire».\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nBILAN ÉTIOLOGIQUE ET RYTHMIQUE\n- IRM cardiaque : [LGE, VEC, épaisseurs].\n- Holter : [TVNS, FA].\n- Génétique : [résultat / en cours].\n- Score de risque : [HCM Risk-SCD … %].\n\nCONCLUSION\n[Type de cardiomyopathie], [obstructive ou non], risque rythmique [ ].\n\nCONDUITE À TENIR\n- Traitement : [ ].\n- Dépistage familial des apparentés au 1er degré.\n- [Indication de DAI à discuter / non retenue].\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_pericardite",
+    "name": "Péricardite",
+    "category": "Péricarde",
+    "sort_order": 8,
+    "keywords": "pericardite pericarde epanchement",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Douleur thoracique.",
+          "Suivi de péricardite."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "bio",
+       "title": "Biologie",
+       "fields": [
+        {
+         "key": "bio",
+         "label": "Biologie",
+         "type": "multiline",
+         "hint": "Marqueurs inflammatoires, troponine… avec unités",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — PÉRICARDITE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «une douleur thoracique».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\nDouleur thoracique depuis [durée], augmentée à l'inspiration et en décubitus, soulagée penché en avant. Contexte : [syndrome viral]. Fièvre : «non».\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire». Frottement péricardique : «absent».\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation». «Sus-décalage du segment ST diffus concave avec sous-décalage du PR, sans image en miroir».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nBIOLOGIE\nCRP [CRP] mg/L, troponine [troponine] ng/L, leucocytes [GB] G/L, créatinine [créatinine] µmol/L.\n\nCONCLUSION\nPéricardite aiguë «sans critère de gravité», [épanchement].\n\nCONDUITE À TENIR\n- Ibuprofène 600 mg × 3/j per os (ou aspirine 750–1000 mg × 3/j) 1 à 2 semaines puis décroissance, avec protection gastrique.\n- Colchicine 0,5 mg × [1 ou 2]/j per os pendant 3 mois.\n- Repos sportif jusqu'à résolution ; CRP de contrôle à [1–2 semaines].\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_esv_palpitations",
+    "name": "ESV et palpitations",
+    "category": "Rythmologie",
+    "sort_order": 9,
+    "keywords": "esv extrasystole palpitations holter",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Palpitations.",
+          "Extrasystoles ventriculaires."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "holter",
+       "title": "Holter ECG",
+       "fields": [
+        {
+         "key": "holter",
+         "label": "Holter",
+         "type": "multiline",
+         "hint": "Durée, charge extrasystolique, morphologies, événements",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — PALPITATIONS / EXTRASYSTOLES\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «des palpitations».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\nPalpitations à type de [sauts / accélérations] depuis [durée], [au repos / à l'effort], durée [ ]. Pas de syncope . Consommation de café/alcool : [ ].\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire».\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nHOLTER ECG\nHolter des 24 h du [date] : rythme [ ], [nombre] ESV ([charge] %), [mono/polymorphes], [doublets, TVNS]. Corrélation symptômes : [ ].\n\nCONCLUSION\nExtrasystolie ventriculaire [monomorphe à type de …], charge [ ] %, sur cœur [sain / pathologique].\n\nCONDUITE À TENIR\n- [Abstention et réassurance / bêtabloquant / discussion d'ablation].\n- Réduction des excitants.\n- Contrôle de la FEVG et du Holter dans [délai] si charge élevée.\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_syncope",
+    "name": "Syncope",
+    "category": "Syncope",
+    "sort_order": 10,
+    "keywords": "syncope malaise perte de connaissance",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Syncope.",
+          "Malaise avec perte de connaissance."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "syncope_circonstances",
+         "label": "Circonstances",
+         "type": "multiline"
+        },
+        {
+         "key": "syncope_prodromes",
+         "label": "Prodromes",
+         "type": "text"
+        },
+        {
+         "key": "orthostatisme",
+         "label": "Mesures en orthostatisme",
+         "type": "text",
+         "hint": "PA/FC couché puis debout, avec délais"
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — SYNCOPE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «une perte de connaissance».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\nPerte de connaissance le [date], en position [debout / assise / couchée], [circonstances : effort, émotion, miction, chaleur]. Prodromes : [ ]. Durée : [ ]. Récupération : [rapide / confusion]. Traumatisme : [ ]. Épisodes antérieurs : [ ].\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire». Mesures en orthostatisme : couché [PA couché] mmHg / [FC couché] bpm, debout 1 min [PA 1 min] mmHg, 3 min [PA 3 min] mmHg / [FC 3 min] bpm.\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nCONCLUSION\nSyncope probablement [réflexe / orthostatique / d'origine cardiaque à éliminer], [critères de gravité].\n\nCONDUITE À TENIR\n- [Holter ECG / moniteur implantable / test d'inclinaison / épreuve d'effort].\n- Conseils : hydratation, manœuvres de contre-pression.\n- Conduite automobile : [conseils selon la réglementation].\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_bilan_preop",
+    "name": "Bilan préopératoire",
+    "category": "Préopératoire",
+    "sort_order": 11,
+    "keywords": "preoperatoire preop chirurgie anesthesie",
+    "definition": {
+     "document_title": "Compte rendu de consultation cardiologique préopératoire",
+     "sections": [
+      {
+       "key": "motif",
+       "title": "Motif de consultation",
+       "fields": [
+        {
+         "key": "motif",
+         "label": "Motif",
+         "type": "multiline",
+         "hint": "Texte libre ou formulation prédéfinie",
+         "phrases": [
+          "Bilan cardiologique préopératoire."
+         ],
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "frcv",
+       "title": "Facteurs de risque et antécédents",
+       "fields": [
+        {
+         "key": "frcv_tabac",
+         "label": "Tabac",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_dyslipidemie",
+         "label": "Dyslipidémie",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_diabete",
+         "label": "Diabète",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_hta",
+         "label": "HTA",
+         "type": "tristate"
+        },
+        {
+         "key": "frcv_atcd_fam",
+         "label": "Antécédents familiaux cardiovasculaires précoces",
+         "type": "family_history"
+        },
+        {
+         "key": "atcd_cv",
+         "label": "Antécédents cardiovasculaires",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_medicaux",
+         "label": "Antécédents médicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "atcd_chir",
+         "label": "Antécédents chirurgicaux",
+         "type": "multiline"
+        },
+        {
+         "key": "allergies",
+         "label": "Allergies",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "traitements",
+       "title": "Traitements",
+       "fields": [
+        {
+         "key": "traitements",
+         "label": "Traitements actuels",
+         "type": "multiline",
+         "hint": "Molécule, dose, rythme d'administration — une ligne par traitement",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "clinique",
+       "title": "Clinique",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes",
+         "type": "multiline"
+        },
+        {
+         "key": "pa",
+         "label": "Pression artérielle",
+         "type": "text",
+         "hint": "ex. 132/78 mmHg (préciser le bras)"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquence cardiaque",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "poids",
+         "label": "Poids",
+         "type": "text",
+         "hint": "kg"
+        },
+        {
+         "key": "taille",
+         "label": "Taille",
+         "type": "text",
+         "hint": "cm"
+        },
+        {
+         "key": "auscultation",
+         "label": "Auscultation",
+         "type": "multiline",
+         "phrases": [
+          "Bruits du cœur réguliers, sans souffle audible.",
+          "Auscultation pulmonaire libre."
+         ]
+        },
+        {
+         "key": "congestion",
+         "label": "Signes congestifs",
+         "type": "text",
+         "phrases": [
+          "Pas de signe congestif.",
+          "Œdèmes des membres inférieurs.",
+          "Turgescence jugulaire.",
+          "Reflux hépato-jugulaire."
+         ]
+        },
+        {
+         "key": "chirurgie_prevue",
+         "label": "Chirurgie prévue",
+         "type": "text"
+        },
+        {
+         "key": "capacite_fonctionnelle",
+         "label": "Capacité fonctionnelle",
+         "type": "text"
+        },
+        {
+         "key": "examen_autre",
+         "label": "Autres éléments de l'examen",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ecg",
+       "title": "ECG",
+       "fields": [
+        {
+         "key": "ecg_rythme",
+         "label": "Rythme",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal",
+          "Fibrillation atriale",
+          "Flutter atrial",
+          "Rythme électroentraîné"
+         ]
+        },
+        {
+         "key": "ecg_fc",
+         "label": "Fréquence",
+         "type": "text",
+         "hint": "bpm"
+        },
+        {
+         "key": "ecg_axe",
+         "label": "Axe",
+         "type": "text"
+        },
+        {
+         "key": "ecg_conduction",
+         "label": "Conduction",
+         "type": "text",
+         "hint": "PR, QRS, blocs"
+        },
+        {
+         "key": "ecg_repol",
+         "label": "Repolarisation",
+         "type": "text"
+        },
+        {
+         "key": "ecg_autres",
+         "label": "Autres anomalies",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "ett",
+       "title": "ETT",
+       "fields": [
+        {
+         "key": "ett_dimensions",
+         "label": "Dimensions",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, OG… (unités)"
+        },
+        {
+         "key": "ett_fevg",
+         "label": "FEVG",
+         "type": "text",
+         "hint": "% et méthode (Simpson biplan, visuelle…)"
+        },
+        {
+         "key": "ett_vd",
+         "label": "Fonction VD",
+         "type": "text",
+         "hint": "TAPSE, S' tricuspide…"
+        },
+        {
+         "key": "ett_valves",
+         "label": "Valves",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pressions",
+         "label": "Pressions de remplissage / pressions pulmonaires",
+         "type": "multiline"
+        },
+        {
+         "key": "ett_pericarde",
+         "label": "Péricarde",
+         "type": "text"
+        },
+        {
+         "key": "ett_autres",
+         "label": "Autres mesures",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "cat",
+       "title": "Conduite à tenir",
+       "fields": [
+        {
+         "key": "cat_diagnostic",
+         "label": "Diagnostic retenu",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_examens",
+         "label": "Examens prescrits",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_therapeutique",
+         "label": "Modifications thérapeutiques",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_suivi",
+         "label": "Suivi",
+         "type": "multiline"
+        },
+        {
+         "key": "cat_recommandations",
+         "label": "Recommandations au patient",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — BILAN PRÉOPÉRATOIRE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «un bilan cardiologique avant [intervention prévue] le [date]».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\nCapacité fonctionnelle : [> 4 METs : monte 2 étages sans s'arrêter / limitée]. Pas d'angor ni de dyspnée d'effort . Risque chirurgical de l'intervention : [faible / intermédiaire / élevé].\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire».\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nCONCLUSION\nPas de contre-indication cardiologique à l'intervention prévue  [ou : précautions].\n\nCONDUITE À TENIR\n- Traitement antithrombotique : [poursuite de l'aspirine / arrêt de … le …, relais].\n- Poursuite des bêtabloquants et des statines.\n- [Examens complémentaires si nécessaire].\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   }
+  ]
+ }
+}

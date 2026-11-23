@@ -1,0 +1,1036 @@
+{
+"id": "outils",
+"version": 5,
+"description": "Diagnostic différentiel et algorithmes décisionnels",
+"tables": {
+"differentials": [
+{
+"id": "diff_hvg",
+"title": "HVG : HTA, CMH, amylose, rétrécissement aortique",
+"category": "Hypertrophie",
+"definition": {
+"columns": [
+"HTA",
+"CMH",
+"Amylose",
+"RA"
+],
+"rows": [
+[
+"Clinique",
+[
+"Antécédent d'HTA, atteinte d'organes",
+"Antécédents familiaux, souffle dynamique (Valsalva)",
+"Canal carpien bilatéral, intolérance aux antihypertenseurs, neuropathie",
+"Souffle éjectionnel aortique, B2 diminué"
+]
+],
+[
+"ECG",
+[
+"Critères de voltage, surcharge",
+"Ondes Q fines, T négatives géantes (apicale)",
+"Microvoltage/discordance, pseudo-infarctus",
+"HVG, surcharge"
+]
+],
+[
+"Échographie",
+[
+"HVG concentrique modérée (souvent < 15 mm)",
+"Épaisseur ≥ 15 mm, asymétrique, SAM, obstruction CCVG",
+"HVG granitée, épargne apicale du strain, épaississement valvulaire/septal interatrial",
+"Valve calcifiée, Vmax ≥ 4 m/s si serré"
+]
+],
+[
+"Biologie",
+[
+"—",
+"—",
+"Chaînes légères (AL), NT-proBNP/troponine élevés",
+"—"
+]
+],
+[
+"IRM",
+[
+"LGE rare",
+"LGE intramural aux jonctions",
+"LGE sous-endocardique diffus, VEC élevé",
+"Fibrose diffuse possible"
+]
+],
+[
+"Autres examens",
+[
+"MAPA",
+"Génétique",
+"Scintigraphie osseuse (ATTR)",
+"Scanner (score calcique)"
+]
+]
+],
+"sources": [
+"esc2023_cmp",
+"esc_amylose_2021",
+"esc2024_hta",
+"esc2025_vhd"
+]
+},
+"sort_order": 0,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "HVG : HTA, CMH, amylose, rétrécissement aortique HTA CMH Amylose RA"
+},
+{
+"id": "diff_douleur",
+"title": "Douleur thoracique : SCA, péricardite, dissection, embolie pulmonaire",
+"category": "Douleur thoracique",
+"definition": {
+"columns": [
+"SCA",
+"Péricardite",
+"Dissection aortique",
+"Embolie pulmonaire"
+],
+"rows": [
+[
+"Clinique",
+[
+"Constrictive, effort/repos, irradiation",
+"Pleurale, positionnelle, frottement",
+"Déchirante, migratrice, asymétrie tensionnelle",
+"Dyspnée, tachycardie, signes de TVP"
+]
+],
+[
+"ECG",
+[
+"Sus- ou sous-décalage systématisé, miroir",
+"Sus-décalage diffus, sous-décalage PR",
+"Souvent non spécifique (ou SCA si dissection coronaire)",
+"Tachycardie, S1Q3T3, BBD, T négatives V1–V4"
+]
+],
+[
+"Échographie",
+[
+"Trouble de cinétique segmentaire",
+"Épanchement péricardique",
+"Voile intimal, IA, épanchement",
+"Dilatation VD, signe de McConnell"
+]
+],
+[
+"Biologie",
+[
+"Troponine (cinétique)",
+"CRP élevée ; troponine si myopéricardite",
+"D-dimères élevés (non spécifiques)",
+"D-dimères (exclusion si probabilité non élevée), troponine/NT-proBNP (pronostic)"
+]
+],
+[
+"Imagerie",
+[
+"Coronarographie",
+"IRM (IMPS)",
+"Angioscanner aortique",
+"Angioscanner pulmonaire"
+]
+]
+],
+"sources": [
+"esc2023_acs",
+"esc2025_myoperi",
+"esc2024_paad",
+"esc2019_ep"
+]
+},
+"sort_order": 1,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Douleur thoracique : SCA, péricardite, dissection, embolie pulmonaire SCA Péricardite Dissection aortique Embolie pulmonaire"
+},
+{
+"id": "diff_dyspnee",
+"title": "Dyspnée : IC, HTAP, valvulopathie, embolie pulmonaire",
+"category": "Dyspnée",
+"definition": {
+"columns": [
+"Insuffisance cardiaque",
+"HTAP",
+"Valvulopathie",
+"Embolie pulmonaire"
+],
+"rows": [
+[
+"Clinique",
+[
+"Orthopnée, œdèmes, crépitants",
+"Dyspnée d'effort progressive, signes droits",
+"Souffle, symptômes d'effort",
+"Début brutal, facteurs de risque thrombo-embolique"
+]
+],
+[
+"ECG",
+[
+"Rarement normal",
+"Surcharge droite, HAD",
+"HVG/HAG selon valve",
+"Tachycardie, surcharge VD aiguë"
+]
+],
+[
+"Échographie",
+[
+"FEVG, pressions de remplissage",
+"Vmax IT > 2,8 m/s, signes VD",
+"Quantification valvulaire",
+"VD dilaté, thrombus"
+]
+],
+[
+"Biologie",
+[
+"NT-proBNP élevé",
+"NT-proBNP (pronostic)",
+"NT-proBNP",
+"D-dimères"
+]
+],
+[
+"Autres examens",
+[
+"IRM, coronarographie",
+"Cathétérisme droit (référence)",
+"ETO, scanner",
+"Angioscanner, scintigraphie V/Q"
+]
+]
+],
+"sources": [
+"esc2026_ic",
+"esc2022_hp",
+"esc2025_vhd",
+"esc2019_ep"
+]
+},
+"sort_order": 2,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Dyspnée : IC, HTAP, valvulopathie, embolie pulmonaire Insuffisance cardiaque HTAP Valvulopathie Embolie pulmonaire"
+},
+{
+"id": "diff_syncope",
+"title": "Syncope : réflexe, orthostatique, cardiaque (rythmique et structurelle)",
+"category": "Syncope",
+"definition": {
+"columns": [
+"Réflexe",
+"Hypotension orthostatique",
+"Rythmique",
+"Structurelle"
+],
+"rows": [
+[
+"Clinique",
+[
+"Prodromes, facteur déclenchant (station debout, émotion, effort de toux…)",
+"Au lever, médicaments, dysautonomie",
+"Brutale, sans prodrome, en décubitus, palpitations",
+"À l'effort, souffle, cardiopathie connue"
+]
+],
+[
+"ECG",
+[
+"Normal",
+"Normal",
+"BAV, bloc bifasciculaire, préexcitation, QT long, Brugada, TV",
+"HVG, ondes Q"
+]
+],
+[
+"Examen clé",
+[
+"Massage sinocarotidien, tilt-test",
+"Mesures couché/debout",
+"Holter, moniteur implantable, EEP",
+"ETT, épreuve d'effort, scanner/IRM"
+]
+],
+[
+"Risque",
+[
+"Faible",
+"Variable",
+"Élevé",
+"Élevé"
+]
+]
+],
+"sources": [
+"esc2018_syncope"
+]
+},
+"sort_order": 3,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Syncope : réflexe, orthostatique, cardiaque (rythmique et structurelle) Réflexe Hypotension orthostatique Rythmique Structurelle"
+}
+],
+"decision_trees": [
+{
+"id": "algo_fa_anticoag",
+"title": "FA : décision d'anticoagulation",
+"category": "Fibrillation atriale",
+"guideline_version": "ESC 2024",
+"definition": {
+"start": "q1",
+"nodes": {
+"q1": {
+"type": "question",
+"text": "Valve mécanique ou rétrécissement mitral modéré à sévère ?",
+"options": [
+{
+"label": "Oui",
+"next": "r_avk"
+},
+{
+"label": "Non",
+"next": "q2"
+}
+],
+"note": ""
+},
+"q2": {
+"type": "question",
+"text": "Score CHA₂DS₂-VA (utiliser le calculateur) ?",
+"options": [
+{
+"label": "≥ 2",
+"next": "r_oac"
+},
+{
+"label": "= 1",
+"next": "r_consider"
+},
+{
+"label": "0",
+"next": "r_none"
+}
+],
+"note": "Cardiomyopathie hypertrophique ou amylose : anticoagulation indépendamment du score."
+},
+"r_avk": {
+"type": "result",
+"text": "AVK (AOD contre-indiqués dans ces situations).",
+"recommendation": "Anticoagulation par AVK",
+"level": "I"
+},
+"r_oac": {
+"type": "result",
+"text": "Anticoagulation orale recommandée ; AOD de préférence ; corriger les facteurs de risque hémorragique modifiables.",
+"recommendation": "Recommandée",
+"level": "I"
+},
+"r_consider": {
+"type": "result",
+"text": "Anticoagulation orale à envisager (décision partagée, risque hémorragique).",
+"recommendation": "À envisager",
+"level": "IIa"
+},
+"r_none": {
+"type": "result",
+"text": "Pas d'anticoagulation sur le seul score ; réévaluer périodiquement le risque.",
+"recommendation": "—",
+"level": ""
+}
+},
+"sources": [
+"esc2024_fa"
+]
+},
+"sort_order": 0,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "FA : décision d'anticoagulation"
+},
+{
+"id": "algo_ep",
+"title": "Suspicion d'embolie pulmonaire (patient stable)",
+"category": "Embolie pulmonaire",
+"guideline_version": "ESC 2019",
+"definition": {
+"start": "q1",
+"nodes": {
+"q1": {
+"type": "question",
+"text": "Instabilité hémodynamique (choc, hypotension persistante) ?",
+"options": [
+{
+"label": "Oui",
+"next": "r_unstable"
+},
+{
+"label": "Non",
+"next": "q2"
+}
+],
+"note": ""
+},
+"q2": {
+"type": "question",
+"text": "Probabilité clinique (Wells ou Genève) ?",
+"options": [
+{
+"label": "Faible/intermédiaire ou « peu probable »",
+"next": "q3"
+},
+{
+"label": "Élevée ou « probable »",
+"next": "r_ctpa"
+}
+],
+"note": ""
+},
+"q3": {
+"type": "question",
+"text": "D-dimères (seuil ajusté à l'âge au-delà de 50 ans : âge × 10 µg/L) ?",
+"options": [
+{
+"label": "Négatifs",
+"next": "r_excl"
+},
+{
+"label": "Positifs",
+"next": "r_ctpa"
+}
+],
+"note": ""
+},
+"r_unstable": {
+"type": "result",
+"text": "Échographie cardiaque au lit / angioscanner si réalisable immédiatement ; prise en charge de l'EP à haut risque.",
+"recommendation": "Stratégie EP à haut risque",
+"level": "I"
+},
+"r_ctpa": {
+"type": "result",
+"text": "Angioscanner thoracique (ou scintigraphie V/Q selon contexte).",
+"recommendation": "Imagerie diagnostique",
+"level": "I"
+},
+"r_excl": {
+"type": "result",
+"text": "EP raisonnablement exclue (pas d'imagerie ni d'anticoagulation pour ce motif).",
+"recommendation": "Exclusion",
+"level": "I"
+}
+},
+"sources": [
+"esc2019_ep",
+"wells2000_ep",
+"legal2006_geneve"
+]
+},
+"sort_order": 1,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Suspicion d'embolie pulmonaire (patient stable)"
+},
+{
+"id": "algo_pericardite",
+"title": "Diagnostic de péricardite aiguë",
+"category": "Péricarde",
+"guideline_version": "ESC 2015 / 2025",
+"definition": {
+"start": "q1",
+"nodes": {
+"q1": {
+"type": "question",
+"text": "Combien de critères parmi : douleur péricarditique, frottement, sus-décalage ST diffus/sous-décalage PR, épanchement péricardique ?",
+"options": [
+{
+"label": "≥ 2",
+"next": "q2"
+},
+{
+"label": "< 2",
+"next": "r_no"
+}
+],
+"note": ""
+},
+"q2": {
+"type": "question",
+"text": "Signes de gravité (fièvre > 38 °C, épanchement abondant, tamponnade, troponine élevée, immunodépression, anticoagulant, échec des AINS) ?",
+"options": [
+{
+"label": "Oui",
+"next": "r_hosp"
+},
+{
+"label": "Non",
+"next": "r_amb"
+}
+],
+"note": ""
+},
+"r_no": {
+"type": "result",
+"text": "Diagnostic de péricardite non retenu sur ces critères : rechercher d'autres causes (SCA, EP, dissection).",
+"recommendation": "—",
+"level": ""
+},
+"r_hosp": {
+"type": "result",
+"text": "Hospitalisation et bilan étiologique.",
+"recommendation": "Hospitalisation",
+"level": ""
+},
+"r_amb": {
+"type": "result",
+"text": "Prise en charge ambulatoire : AINS/aspirine + colchicine, réévaluation à 1–2 semaines.",
+"recommendation": "Traitement de première intention",
+"level": "I"
+}
+},
+"sources": [
+"esc2025_myoperi",
+"esc2015_peri"
+]
+},
+"sort_order": 2,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Diagnostic de péricardite aiguë"
+},
+{
+"id": "algo_ic_diag",
+"title": "Suspicion d'insuffisance cardiaque chronique",
+"category": "Insuffisance cardiaque",
+"guideline_version": "ESC 2021 / 2026",
+"definition": {
+"start": "q1",
+"nodes": {
+"q1": {
+"type": "question",
+"text": "Peptides natriurétiques (NT-proBNP ≥ 125 pg/mL ou BNP ≥ 35 pg/mL — seuils 2021, à vérifier en 2026) ?",
+"options": [
+{
+"label": "Élevés",
+"next": "q2"
+},
+{
+"label": "Normaux",
+"next": "r_unlikely"
+}
+],
+"note": ""
+},
+"q2": {
+"type": "question",
+"text": "ETT : FEVG ?",
+"options": [
+{
+"label": "< 50 %",
+"next": "r_ref"
+},
+{
+"label": "≥ 50 % avec anomalie structurelle/diastolique",
+"next": "r_pef"
+},
+{
+"label": "≥ 50 % sans anomalie",
+"next": "r_more"
+}
+],
+"note": ""
+},
+"r_unlikely": {
+"type": "result",
+"text": "IC peu probable : rechercher un autre diagnostic.",
+"recommendation": "—",
+"level": ""
+},
+"r_ref": {
+"type": "result",
+"text": "IC à FE réduite (définition ESC 2026) : bilan étiologique et traitement médical fondamental.",
+"recommendation": "Traitement fondamental",
+"level": ""
+},
+"r_pef": {
+"type": "result",
+"text": "IC à FE préservée probable : bilan étiologique (amylose…), traitement selon ESC 2026.",
+"recommendation": "—",
+"level": ""
+},
+"r_more": {
+"type": "result",
+"text": "Examens complémentaires (écho d'effort, cathétérisme ; scores H₂FPEF/HFA-PEFF).",
+"recommendation": "—",
+"level": ""
+}
+},
+"sources": [
+"esc2026_ic",
+"esc2021_ic"
+]
+},
+"sort_order": 3,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Suspicion d'insuffisance cardiaque chronique"
+},
+{
+"id": "algo_ra",
+"title": "Sévérité du rétrécissement aortique",
+"category": "Valvulopathies",
+"guideline_version": "EACVI/ASE 2017 ; ESC 2025",
+"definition": {
+"start": "q1",
+"nodes": {
+"q1": {
+"type": "question",
+"text": "Vmax ≥ 4 m/s ou gradient moyen ≥ 40 mmHg ?",
+"options": [
+{
+"label": "Oui",
+"next": "r_severe_hg"
+},
+{
+"label": "Non",
+"next": "q2"
+}
+],
+"note": ""
+},
+"q2": {
+"type": "question",
+"text": "SAo < 1 cm² (indexée < 0,6 cm²/m²) ?",
+"options": [
+{
+"label": "Oui",
+"next": "q3"
+},
+{
+"label": "Non",
+"next": "r_not_severe"
+}
+],
+"note": ""
+},
+"q3": {
+"type": "question",
+"text": "FEVG ?",
+"options": [
+{
+"label": "< 50 %",
+"next": "r_dobu"
+},
+{
+"label": "≥ 50 %",
+"next": "q4"
+}
+],
+"note": ""
+},
+"q4": {
+"type": "question",
+"text": "VES indexé ≤ 35 mL/m² (bas débit) ?",
+"options": [
+{
+"label": "Oui",
+"next": "r_ct"
+},
+{
+"label": "Non",
+"next": "r_check"
+}
+],
+"note": ""
+},
+"r_severe_hg": {
+"type": "result",
+"text": "RA serré à haut gradient : discuter l'intervention en Heart Team (symptômes, FEVG, ESC 2025 : intervention précoce à envisager si asymptomatique).",
+"recommendation": "—",
+"level": ""
+},
+"r_not_severe": {
+"type": "result",
+"text": "RA non serré sur ces critères : surveillance selon la sévérité.",
+"recommendation": "—",
+"level": ""
+},
+"r_dobu": {
+"type": "result",
+"text": "Bas débit / bas gradient à FEVG réduite : échographie à faible dose de dobutamine.",
+"recommendation": "—",
+"level": ""
+},
+"r_ct": {
+"type": "result",
+"text": "Bas débit paradoxal : score calcique au scanner pour confirmer la sévérité.",
+"recommendation": "—",
+"level": ""
+},
+"r_check": {
+"type": "result",
+"text": "Discordance à débit normal : vérifier les mesures (CCVG, alignement) ; scanner si doute.",
+"recommendation": "—",
+"level": ""
+}
+},
+"sources": [
+"eacvi2017_as",
+"esc2025_vhd"
+]
+},
+"sort_order": 4,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Sévérité du rétrécissement aortique"
+},
+{
+"id": "algo_syncope",
+"title": "Syncope : évaluation initiale",
+"category": "Syncope",
+"guideline_version": "ESC 2018",
+"definition": {
+"start": "q1",
+"nodes": {
+"q1": {
+"type": "question",
+"text": "Perte de connaissance transitoire compatible avec une syncope (et non épilepsie, chute, psychogène) ?",
+"options": [
+{
+"label": "Oui",
+"next": "q2"
+},
+{
+"label": "Non",
+"next": "r_other"
+}
+],
+"note": ""
+},
+"q2": {
+"type": "question",
+"text": "Caractéristiques à haut risque (syncope d'effort ou en décubitus, palpitations, cardiopathie structurelle, ECG anormal, antécédent familial de mort subite) ?",
+"options": [
+{
+"label": "Oui",
+"next": "r_high"
+},
+{
+"label": "Non",
+"next": "q3"
+}
+],
+"note": ""
+},
+"q3": {
+"type": "question",
+"text": "Diagnostic certain ou très probable après évaluation initiale (anamnèse, examen, ECG, PA couché/debout) ?",
+"options": [
+{
+"label": "Oui",
+"next": "r_treat"
+},
+{
+"label": "Non",
+"next": "r_further"
+}
+],
+"note": ""
+},
+"r_other": {
+"type": "result",
+"text": "Orienter vers la cause non syncopale.",
+"recommendation": "—",
+"level": ""
+},
+"r_high": {
+"type": "result",
+"text": "Évaluation rapide en milieu spécialisé ou hospitalisation ; monitorage ECG.",
+"recommendation": "—",
+"level": ""
+},
+"r_treat": {
+"type": "result",
+"text": "Traiter la cause (réflexe, orthostatique…) et éduquer.",
+"recommendation": "—",
+"level": ""
+},
+"r_further": {
+"type": "result",
+"text": "Examens complémentaires orientés (Holter, moniteur implantable, tilt-test, ETT).",
+"recommendation": "—",
+"level": ""
+}
+},
+"sources": [
+"esc2018_syncope"
+]
+},
+"sort_order": 5,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "Syncope : évaluation initiale"
+},
+{
+"id": "algo_hta",
+"title": "HTA : du dépistage au traitement",
+"category": "HTA",
+"guideline_version": "ESC 2024",
+"definition": {
+"start": "q1",
+"nodes": {
+"q1": {
+"type": "question",
+"text": "PA de consultation (mesures répétées) ?",
+"options": [
+{
+"label": "< 120/70",
+"next": "r_nonelev"
+},
+{
+"label": "120–139/70–89 (PA élevée)",
+"next": "q2"
+},
+{
+"label": "≥ 140/90",
+"next": "q3"
+}
+],
+"note": ""
+},
+"q2": {
+"type": "question",
+"text": "Risque CV élevé (maladie CV, diabète, maladie rénale chronique, atteinte d'organe, ou SCORE2 ≥ 10 %) ?",
+"options": [
+{
+"label": "Oui",
+"next": "r_elev_high"
+},
+{
+"label": "Non",
+"next": "r_elev_low"
+}
+],
+"note": ""
+},
+"q3": {
+"type": "question",
+"text": "Hypertension confirmée par MAPA ou automesure ?",
+"options": [
+{
+"label": "Oui",
+"next": "r_htn"
+},
+{
+"label": "Non (blouse blanche)",
+"next": "r_wc"
+}
+],
+"note": ""
+},
+"r_nonelev": {
+"type": "result",
+"text": "PA non élevée : mesures hygiéno-diététiques, recontrôle périodique.",
+"recommendation": "—",
+"level": ""
+},
+"r_elev_high": {
+"type": "result",
+"text": "Mesures hygiéno-diététiques 3 mois puis traitement si PA ≥ 130/80.",
+"recommendation": "—",
+"level": ""
+},
+"r_elev_low": {
+"type": "result",
+"text": "Mesures hygiéno-diététiques ; pas de traitement médicamenteux d'emblée.",
+"recommendation": "—",
+"level": ""
+},
+"r_htn": {
+"type": "result",
+"text": "Mesures hygiéno-diététiques + bithérapie fixe à faible dose ; cible PAS 120–129 si tolérée.",
+"recommendation": "Traitement",
+"level": "I"
+},
+"r_wc": {
+"type": "result",
+"text": "HTA blouse blanche : surveillance hors cabinet, prise en charge du risque global.",
+"recommendation": "—",
+"level": ""
+}
+},
+"sources": [
+"esc2024_hta"
+]
+},
+"sort_order": 6,
+"validation_status": "a_verifier",
+"content_version": "2026.11",
+"keywords": "HTA : du dépistage au traitement"
+}
+],
+"source_links": [
+{
+"entity_type": "differentiel",
+"entity_id": "diff_hvg",
+"section_key": "",
+"source_id": "esc2023_cmp"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_hvg",
+"section_key": "",
+"source_id": "esc_amylose_2021"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_hvg",
+"section_key": "",
+"source_id": "esc2024_hta"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_hvg",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_douleur",
+"section_key": "",
+"source_id": "esc2023_acs"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_douleur",
+"section_key": "",
+"source_id": "esc2025_myoperi"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_douleur",
+"section_key": "",
+"source_id": "esc2024_paad"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_douleur",
+"section_key": "",
+"source_id": "esc2019_ep"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_dyspnee",
+"section_key": "",
+"source_id": "esc2026_ic"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_dyspnee",
+"section_key": "",
+"source_id": "esc2022_hp"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_dyspnee",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_dyspnee",
+"section_key": "",
+"source_id": "esc2019_ep"
+},
+{
+"entity_type": "differentiel",
+"entity_id": "diff_syncope",
+"section_key": "",
+"source_id": "esc2018_syncope"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_fa_anticoag",
+"section_key": "",
+"source_id": "esc2024_fa"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_ep",
+"section_key": "",
+"source_id": "esc2019_ep"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_ep",
+"section_key": "",
+"source_id": "wells2000_ep"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_ep",
+"section_key": "",
+"source_id": "legal2006_geneve"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_pericardite",
+"section_key": "",
+"source_id": "esc2025_myoperi"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_pericardite",
+"section_key": "",
+"source_id": "esc2015_peri"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_ic_diag",
+"section_key": "",
+"source_id": "esc2026_ic"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_ic_diag",
+"section_key": "",
+"source_id": "esc2021_ic"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_ra",
+"section_key": "",
+"source_id": "eacvi2017_as"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_ra",
+"section_key": "",
+"source_id": "esc2025_vhd"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_syncope",
+"section_key": "",
+"source_id": "esc2018_syncope"
+},
+{
+"entity_type": "algorithme",
+"entity_id": "algo_hta",
+"section_key": "",
+"source_id": "esc2024_hta"
+}
+]
+}
+}

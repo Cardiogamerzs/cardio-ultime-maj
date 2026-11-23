@@ -1,0 +1,90 @@
+{
+ "id": "corrections",
+ "version": 1,
+ "description": "Historique des corrections de contenu (audit documentaire)",
+ "tables": {
+  "content_corrections": [
+   {
+    "id": "src_esc_amylose_2021_2026-11-21",
+    "entity_type": "source",
+    "entity_id": "esc_amylose_2021",
+    "corrected_on": "2026-11-21",
+    "description": "DOI ajouté",
+    "source_id": "esc_amylose_2021",
+    "content_version": "sources v6"
+   },
+   {
+    "id": "src_eacvi2017_as_2026-11-21",
+    "entity_type": "source",
+    "entity_id": "eacvi2017_as",
+    "corrected_on": "2026-11-21",
+    "description": "DOI corrigé (l'ancien DOI renvoyait vers un autre article)",
+    "source_id": "eacvi2017_as",
+    "content_version": "sources v6"
+   },
+   {
+    "id": "src_wells2000_ep_2026-11-21",
+    "entity_type": "source",
+    "entity_id": "wells2000_ep",
+    "corrected_on": "2026-11-21",
+    "description": "DOI ajouté",
+    "source_id": "wells2000_ep",
+    "content_version": "sources v6"
+   },
+   {
+    "id": "src_aha2017_kawasaki_2026-11-21",
+    "entity_type": "source",
+    "entity_id": "aha2017_kawasaki",
+    "corrected_on": "2026-11-21",
+    "description": "DOI ajouté",
+    "source_id": "aha2017_kawasaki",
+    "content_version": "sources v6"
+   },
+   {
+    "id": "src_esvs2021_vt_2026-11-21",
+    "entity_type": "source",
+    "entity_id": "esvs2021_vt",
+    "corrected_on": "2026-11-21",
+    "description": "DOI ajouté",
+    "source_id": "esvs2021_vt",
+    "content_version": "sources v6"
+   },
+   {
+    "id": "src_hht2020_2026-11-21",
+    "entity_type": "source",
+    "entity_id": "hht2020",
+    "corrected_on": "2026-11-21",
+    "description": "DOI ajouté",
+    "source_id": "hht2020",
+    "content_version": "sources v6"
+   },
+   {
+    "id": "src_acc_aha_2025_hbp_2026-11-21",
+    "entity_type": "source",
+    "entity_id": "acc_aha_2025_hbp",
+    "corrected_on": "2026-11-21",
+    "description": "DOI ajouté (le lien pointait vers la page d'accueil acc.org)",
+    "source_id": "acc_aha_2025_hbp",
+    "content_version": "sources v6"
+   },
+   {
+    "id": "src_acc_aha_2025_acs_2026-11-21",
+    "entity_type": "source",
+    "entity_id": "acc_aha_2025_acs",
+    "corrected_on": "2026-11-21",
+    "description": "DOI ajouté (le lien pointait vers la page d'accueil acc.org)",
+    "source_id": "acc_aha_2025_acs",
+    "content_version": "sources v6"
+   },
+   {
+    "id": "src_acc_aha_2023_fa_2026-11-21",
+    "entity_type": "source",
+    "entity_id": "acc_aha_2023_fa",
+    "corrected_on": "2026-11-21",
+    "description": "DOI ajouté (le lien pointait vers la page d'accueil acc.org)",
+    "source_id": "acc_aha_2023_fa",
+    "content_version": "sources v6"
+   }
+  ]
+ }
+}

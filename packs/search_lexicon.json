@@ -1,0 +1,281 @@
+{
+ "id": "search_lexicon",
+ "version": 1,
+ "description": "Abréviations et synonymes pour la recherche (terminologie, sans donnée clinique).",
+ "tables": {
+  "synonyms": [
+   {
+    "term": "fa",
+    "expansion": "fibrillation atriale"
+   },
+   {
+    "term": "fa",
+    "expansion": "fibrillation auriculaire"
+   },
+   {
+    "term": "fa",
+    "expansion": "acfa"
+   },
+   {
+    "term": "acfa",
+    "expansion": "fibrillation atriale"
+   },
+   {
+    "term": "ic",
+    "expansion": "insuffisance cardiaque"
+   },
+   {
+    "term": "icfer",
+    "expansion": "insuffisance cardiaque a fevg reduite"
+   },
+   {
+    "term": "icfep",
+    "expansion": "insuffisance cardiaque a fevg preservee"
+   },
+   {
+    "term": "hta",
+    "expansion": "hypertension arterielle"
+   },
+   {
+    "term": "htap",
+    "expansion": "hypertension arterielle pulmonaire"
+   },
+   {
+    "term": "hp",
+    "expansion": "hypertension pulmonaire"
+   },
+   {
+    "term": "ra",
+    "expansion": "retrecissement aortique"
+   },
+   {
+    "term": "ra",
+    "expansion": "stenose aortique"
+   },
+   {
+    "term": "ia",
+    "expansion": "insuffisance aortique"
+   },
+   {
+    "term": "rm",
+    "expansion": "retrecissement mitral"
+   },
+   {
+    "term": "im",
+    "expansion": "insuffisance mitrale"
+   },
+   {
+    "term": "it",
+    "expansion": "insuffisance tricuspide"
+   },
+   {
+    "term": "rt",
+    "expansion": "retrecissement tricuspide"
+   },
+   {
+    "term": "cmh",
+    "expansion": "cardiomyopathie hypertrophique"
+   },
+   {
+    "term": "cmd",
+    "expansion": "cardiomyopathie dilatee"
+   },
+   {
+    "term": "cmr",
+    "expansion": "cardiomyopathie restrictive"
+   },
+   {
+    "term": "dvda",
+    "expansion": "dysplasie arythmogene du ventricule droit"
+   },
+   {
+    "term": "dvda",
+    "expansion": "cardiomyopathie arythmogene"
+   },
+   {
+    "term": "hvg",
+    "expansion": "hypertrophie ventriculaire gauche"
+   },
+   {
+    "term": "ett",
+    "expansion": "echocardiographie transthoracique"
+   },
+   {
+    "term": "ett",
+    "expansion": "echographie"
+   },
+   {
+    "term": "eto",
+    "expansion": "echocardiographie transoesophagienne"
+   },
+   {
+    "term": "esv",
+    "expansion": "extrasystole ventriculaire"
+   },
+   {
+    "term": "esv",
+    "expansion": "extrasystoles ventriculaires"
+   },
+   {
+    "term": "esa",
+    "expansion": "extrasystole atriale"
+   },
+   {
+    "term": "esa",
+    "expansion": "extrasystoles atriales"
+   },
+   {
+    "term": "tv",
+    "expansion": "tachycardie ventriculaire"
+   },
+   {
+    "term": "fv",
+    "expansion": "fibrillation ventriculaire"
+   },
+   {
+    "term": "tsv",
+    "expansion": "tachycardie supraventriculaire"
+   },
+   {
+    "term": "tdp",
+    "expansion": "torsade de pointes"
+   },
+   {
+    "term": "tdp",
+    "expansion": "torsades de pointes"
+   },
+   {
+    "term": "bav",
+    "expansion": "bloc auriculo ventriculaire"
+   },
+   {
+    "term": "bav",
+    "expansion": "bloc atrio ventriculaire"
+   },
+   {
+    "term": "bbg",
+    "expansion": "bloc de branche gauche"
+   },
+   {
+    "term": "bbd",
+    "expansion": "bloc de branche droit"
+   },
+   {
+    "term": "wpw",
+    "expansion": "wolff parkinson white"
+   },
+   {
+    "term": "sca",
+    "expansion": "syndrome coronarien aigu"
+   },
+   {
+    "term": "idm",
+    "expansion": "infarctus du myocarde"
+   },
+   {
+    "term": "ep",
+    "expansion": "embolie pulmonaire"
+   },
+   {
+    "term": "tvp",
+    "expansion": "thrombose veineuse profonde"
+   },
+   {
+    "term": "mtev",
+    "expansion": "maladie thromboembolique veineuse"
+   },
+   {
+    "term": "aomi",
+    "expansion": "arteriopathie oblitérante des membres inferieurs"
+   },
+   {
+    "term": "fevg",
+    "expansion": "fraction d ejection ventriculaire gauche"
+   },
+   {
+    "term": "gls",
+    "expansion": "strain longitudinal global"
+   },
+   {
+    "term": "tapse",
+    "expansion": "excursion systolique de l anneau tricuspide"
+   },
+   {
+    "term": "cr",
+    "expansion": "compte rendu"
+   },
+   {
+    "term": "aod",
+    "expansion": "anticoagulant oral direct"
+   },
+   {
+    "term": "avk",
+    "expansion": "antivitamine k"
+   },
+   {
+    "term": "arm",
+    "expansion": "antagoniste des recepteurs mineralocorticoides"
+   },
+   {
+    "term": "isglt2",
+    "expansion": "inhibiteur sglt2"
+   },
+   {
+    "term": "arni",
+    "expansion": "sacubitril valsartan"
+   },
+   {
+    "term": "iec",
+    "expansion": "inhibiteur de l enzyme de conversion"
+   },
+   {
+    "term": "ara2",
+    "expansion": "antagoniste des recepteurs de l angiotensine 2"
+   },
+   {
+    "term": "ara2",
+    "expansion": "sartan"
+   },
+   {
+    "term": "bb",
+    "expansion": "betabloquant"
+   },
+   {
+    "term": "bb",
+    "expansion": "bloc de branche"
+   },
+   {
+    "term": "amylose",
+    "expansion": "amyloidose"
+   },
+   {
+    "term": "takotsubo",
+    "expansion": "cardiomyopathie de stress"
+   },
+   {
+    "term": "ei",
+    "expansion": "endocardite infectieuse"
+   },
+   {
+    "term": "mapa",
+    "expansion": "mesure ambulatoire de la pression arterielle"
+   },
+   {
+    "term": "irm",
+    "expansion": "imagerie par resonance magnetique"
+   },
+   {
+    "term": "tavi",
+    "expansion": "remplacement valvulaire aortique percutane"
+   },
+   {
+    "term": "pci",
+    "expansion": "angioplastie coronaire"
+   },
+   {
+    "term": "atl",
+    "expansion": "angioplastie"
+   }
+  ]
+ }
+}

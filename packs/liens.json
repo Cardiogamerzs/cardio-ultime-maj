@@ -1,0 +1,1297 @@
+{
+"id": "liens",
+"version": 5,
+"description": "Liens croisés entre fiches",
+"tables": {
+"entity_links": [
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "ecg",
+"to_id": "fa",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "fa",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "ecg",
+"to_id": "flutter",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "flutter",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "score",
+"to_id": "cha2ds2va",
+"label": "Score"
+},
+{
+"from_type": "score",
+"from_id": "cha2ds2va",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "score",
+"to_id": "hasbled",
+"label": "Score"
+},
+{
+"from_type": "score",
+"from_id": "hasbled",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "medicament",
+"to_id": "apixaban",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "apixaban",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "medicament",
+"to_id": "rivaroxaban",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "rivaroxaban",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "medicament",
+"to_id": "dabigatran",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "dabigatran",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "medicament",
+"to_id": "bisoprolol",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "bisoprolol",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "medicament",
+"to_id": "flecainide",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "flecainide",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "medicament",
+"to_id": "amiodarone",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "amiodarone",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "recommandation",
+"to_id": "esc2024_fa",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2024_fa",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "modele_cr",
+"to_id": "cr_fa",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_fa",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "algorithme",
+"to_id": "algo_fa_anticoag",
+"label": "Algorithme"
+},
+{
+"from_type": "algorithme",
+"from_id": "algo_fa_anticoag",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "fa",
+"to_type": "echo",
+"to_id": "diastole",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "diastole",
+"to_type": "pathologie",
+"to_id": "fa",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "ecg",
+"to_id": "hvg",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "hvg",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "echo",
+"to_id": "masse_vg",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "masse_vg",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "medicament",
+"to_id": "ramipril",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "ramipril",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "medicament",
+"to_id": "amlodipine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "amlodipine",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "medicament",
+"to_id": "indapamide",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "indapamide",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "medicament",
+"to_id": "spironolactone",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "spironolactone",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "recommandation",
+"to_id": "esc2024_hta",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2024_hta",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "modele_cr",
+"to_id": "cr_hta",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_hta",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "algorithme",
+"to_id": "algo_hta",
+"label": "Algorithme"
+},
+{
+"from_type": "algorithme",
+"from_id": "algo_hta",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "hta",
+"to_type": "score",
+"to_id": "score2",
+"label": "Score"
+},
+{
+"from_type": "score",
+"from_id": "score2",
+"to_type": "pathologie",
+"to_id": "hta",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "echo",
+"to_id": "fevg_simpson",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "fevg_simpson",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "echo",
+"to_id": "gls",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "gls",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "echo",
+"to_id": "diastole",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "diastole",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "ecg",
+"to_id": "bbg",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "bbg",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "medicament",
+"to_id": "sacubitril_valsartan",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "sacubitril_valsartan",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "medicament",
+"to_id": "bisoprolol",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "bisoprolol",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "medicament",
+"to_id": "spironolactone",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "spironolactone",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "medicament",
+"to_id": "dapagliflozine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "dapagliflozine",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "medicament",
+"to_id": "empagliflozine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "empagliflozine",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "medicament",
+"to_id": "furosemide",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "furosemide",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "score",
+"to_id": "h2fpef",
+"label": "Score"
+},
+{
+"from_type": "score",
+"from_id": "h2fpef",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "score",
+"to_id": "hfapeff",
+"label": "Score"
+},
+{
+"from_type": "score",
+"from_id": "hfapeff",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "score",
+"to_id": "nyha",
+"label": "Score"
+},
+{
+"from_type": "score",
+"from_id": "nyha",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "recommandation",
+"to_id": "esc2026_ic",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2026_ic",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "modele_cr",
+"to_id": "cr_ic",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_ic",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "algorithme",
+"to_id": "algo_ic_diag",
+"label": "Algorithme"
+},
+{
+"from_type": "algorithme",
+"from_id": "algo_ic_diag",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ic",
+"to_type": "differentiel",
+"to_id": "diff_dyspnee",
+"label": "Diagnostic différentiel"
+},
+{
+"from_type": "differentiel",
+"from_id": "diff_dyspnee",
+"to_type": "pathologie",
+"to_id": "ic",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ra",
+"to_type": "echo",
+"to_id": "surface_ao",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "surface_ao",
+"to_type": "pathologie",
+"to_id": "ra",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ra",
+"to_type": "echo",
+"to_id": "gradients_ao",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "gradients_ao",
+"to_type": "pathologie",
+"to_id": "ra",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ra",
+"to_type": "ecg",
+"to_id": "hvg",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "hvg",
+"to_type": "pathologie",
+"to_id": "ra",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ra",
+"to_type": "recommandation",
+"to_id": "esc2025_vhd",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2025_vhd",
+"to_type": "pathologie",
+"to_id": "ra",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ra",
+"to_type": "modele_cr",
+"to_id": "cr_valvulopathie",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_valvulopathie",
+"to_type": "pathologie",
+"to_id": "ra",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ra",
+"to_type": "algorithme",
+"to_id": "algo_ra",
+"label": "Algorithme"
+},
+{
+"from_type": "algorithme",
+"from_id": "algo_ra",
+"to_type": "pathologie",
+"to_id": "ra",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ra",
+"to_type": "differentiel",
+"to_id": "diff_hvg",
+"label": "Diagnostic différentiel"
+},
+{
+"from_type": "differentiel",
+"from_id": "diff_hvg",
+"to_type": "pathologie",
+"to_id": "ra",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "im",
+"to_type": "echo",
+"to_id": "pisa_im",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "pisa_im",
+"to_type": "pathologie",
+"to_id": "im",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "im",
+"to_type": "recommandation",
+"to_id": "esc2025_vhd",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2025_vhd",
+"to_type": "pathologie",
+"to_id": "im",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "im",
+"to_type": "modele_cr",
+"to_id": "cr_valvulopathie",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_valvulopathie",
+"to_type": "pathologie",
+"to_id": "im",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "cmh",
+"to_type": "echo",
+"to_id": "masse_vg",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "masse_vg",
+"to_type": "pathologie",
+"to_id": "cmh",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "cmh",
+"to_type": "echo",
+"to_id": "gls",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "gls",
+"to_type": "pathologie",
+"to_id": "cmh",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "cmh",
+"to_type": "score",
+"to_id": "hcm_risk_scd",
+"label": "Score"
+},
+{
+"from_type": "score",
+"from_id": "hcm_risk_scd",
+"to_type": "pathologie",
+"to_id": "cmh",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "cmh",
+"to_type": "medicament",
+"to_id": "bisoprolol",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "bisoprolol",
+"to_type": "pathologie",
+"to_id": "cmh",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "cmh",
+"to_type": "medicament",
+"to_id": "verapamil",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "verapamil",
+"to_type": "pathologie",
+"to_id": "cmh",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "cmh",
+"to_type": "recommandation",
+"to_id": "esc2023_cmp",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2023_cmp",
+"to_type": "pathologie",
+"to_id": "cmh",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "cmh",
+"to_type": "modele_cr",
+"to_id": "cr_cardiomyopathie",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_cardiomyopathie",
+"to_type": "pathologie",
+"to_id": "cmh",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "cmh",
+"to_type": "differentiel",
+"to_id": "diff_hvg",
+"label": "Diagnostic différentiel"
+},
+{
+"from_type": "differentiel",
+"from_id": "diff_hvg",
+"to_type": "pathologie",
+"to_id": "cmh",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "cmh",
+"to_type": "ecg",
+"to_id": "hvg",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "hvg",
+"to_type": "pathologie",
+"to_id": "cmh",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "pericardite",
+"to_type": "echo",
+"to_id": "pericarde",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "pericarde",
+"to_type": "pathologie",
+"to_id": "pericardite",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "pericardite",
+"to_type": "ecg",
+"to_id": "stemi",
+"label": "ECG (différentiel)"
+},
+{
+"from_type": "ecg",
+"from_id": "stemi",
+"to_type": "pathologie",
+"to_id": "pericardite",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "pericardite",
+"to_type": "medicament",
+"to_id": "colchicine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "colchicine",
+"to_type": "pathologie",
+"to_id": "pericardite",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "pericardite",
+"to_type": "medicament",
+"to_id": "aspirine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "aspirine",
+"to_type": "pathologie",
+"to_id": "pericardite",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "pericardite",
+"to_type": "recommandation",
+"to_id": "esc2025_myoperi",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2025_myoperi",
+"to_type": "pathologie",
+"to_id": "pericardite",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "pericardite",
+"to_type": "modele_cr",
+"to_id": "cr_pericardite",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_pericardite",
+"to_type": "pathologie",
+"to_id": "pericardite",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "pericardite",
+"to_type": "algorithme",
+"to_id": "algo_pericardite",
+"label": "Algorithme"
+},
+{
+"from_type": "algorithme",
+"from_id": "algo_pericardite",
+"to_type": "pathologie",
+"to_id": "pericardite",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "pericardite",
+"to_type": "differentiel",
+"to_id": "diff_douleur",
+"label": "Diagnostic différentiel"
+},
+{
+"from_type": "differentiel",
+"from_id": "diff_douleur",
+"to_type": "pathologie",
+"to_id": "pericardite",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "esv",
+"to_type": "ecg",
+"to_id": "esv",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "esv",
+"to_type": "pathologie",
+"to_id": "esv",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "esv",
+"to_type": "ecg",
+"to_id": "tv",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "tv",
+"to_type": "pathologie",
+"to_id": "esv",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "esv",
+"to_type": "medicament",
+"to_id": "bisoprolol",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "bisoprolol",
+"to_type": "pathologie",
+"to_id": "esv",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "esv",
+"to_type": "medicament",
+"to_id": "flecainide",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "flecainide",
+"to_type": "pathologie",
+"to_id": "esv",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "esv",
+"to_type": "recommandation",
+"to_id": "esc2022_va",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2022_va",
+"to_type": "pathologie",
+"to_id": "esv",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "esv",
+"to_type": "modele_cr",
+"to_id": "cr_esv_palpitations",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_esv_palpitations",
+"to_type": "pathologie",
+"to_id": "esv",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "ecg",
+"to_id": "q_patho",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "q_patho",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "ecg",
+"to_id": "st_sous",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "st_sous",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "medicament",
+"to_id": "aspirine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "aspirine",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "medicament",
+"to_id": "atorvastatine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "atorvastatine",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "medicament",
+"to_id": "rosuvastatine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "rosuvastatine",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "medicament",
+"to_id": "ezetimibe",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "ezetimibe",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "medicament",
+"to_id": "trinitrine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "trinitrine",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "medicament",
+"to_id": "colchicine",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "colchicine",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "recommandation",
+"to_id": "esc2024_ccs",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2024_ccs",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "modele_cr",
+"to_id": "cr_coronaropathie",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_coronaropathie",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "ccs",
+"to_type": "differentiel",
+"to_id": "diff_douleur",
+"label": "Diagnostic différentiel"
+},
+{
+"from_type": "differentiel",
+"from_id": "diff_douleur",
+"to_type": "pathologie",
+"to_id": "ccs",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "amylose",
+"to_type": "echo",
+"to_id": "gls",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "gls",
+"to_type": "pathologie",
+"to_id": "amylose",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "amylose",
+"to_type": "echo",
+"to_id": "masse_vg",
+"label": "Échographie"
+},
+{
+"from_type": "echo",
+"from_id": "masse_vg",
+"to_type": "pathologie",
+"to_id": "amylose",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "amylose",
+"to_type": "ecg",
+"to_id": "q_patho",
+"label": "ECG"
+},
+{
+"from_type": "ecg",
+"from_id": "q_patho",
+"to_type": "pathologie",
+"to_id": "amylose",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "amylose",
+"to_type": "medicament",
+"to_id": "tafamidis",
+"label": "Traitement"
+},
+{
+"from_type": "medicament",
+"from_id": "tafamidis",
+"to_type": "pathologie",
+"to_id": "amylose",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "amylose",
+"to_type": "recommandation",
+"to_id": "esc2023_cmp",
+"label": "Recommandation"
+},
+{
+"from_type": "recommandation",
+"from_id": "esc2023_cmp",
+"to_type": "pathologie",
+"to_id": "amylose",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "amylose",
+"to_type": "modele_cr",
+"to_id": "cr_cardiomyopathie",
+"label": "Compte rendu"
+},
+{
+"from_type": "modele_cr",
+"from_id": "cr_cardiomyopathie",
+"to_type": "pathologie",
+"to_id": "amylose",
+"label": "Pathologie"
+},
+{
+"from_type": "pathologie",
+"from_id": "amylose",
+"to_type": "differentiel",
+"to_id": "diff_hvg",
+"label": "Diagnostic différentiel"
+},
+{
+"from_type": "differentiel",
+"from_id": "diff_hvg",
+"to_type": "pathologie",
+"to_id": "amylose",
+"label": "Pathologie"
+}
+]
+}
+}

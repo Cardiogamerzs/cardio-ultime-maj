@@ -1,6 +1,6 @@
 {
  "id": "report_templates",
- "version": 2,
+ "version": 3,
  "description": "Modèles de comptes rendus intégrés (structure, sans contenu clinique).",
  "tables": {
   "report_templates": [
@@ -3160,6 +3160,410 @@
       }
      ],
      "text": "{{entete}}\n\nCOMPTE RENDU DE CONSULTATION DE CARDIOLOGIE — BILAN PRÉOPÉRATOIRE\nDate : {{date}}\n\nCher Confrère, Chère Consœur,\n\nJ'ai vu en consultation ce jour «Monsieur» [NOM Prénom], âgé(e) de [âge] ans, adressé(e) par le Dr [médecin] pour «un bilan cardiologique avant [intervention prévue] le [date]».\n\nFACTEURS DE RISQUE CARDIOVASCULAIRE\n- Tabac : «-» [paquets-années / sevré depuis]\n- Dyslipidémie : «-»\n- Diabète : «-»\n- HTA : «-»\n- Antécédents familiaux cardiovasculaires précoces : «-» [lien de parenté, événement, sexe, âge de survenue]\n- Surpoids / obésité : «-» ; sédentarité : «-»\n\nANTÉCÉDENTS\n- Cardiovasculaires : «aucun»\n- Médicaux : «aucun»\n- Chirurgicaux : «aucun»\n- Allergies : «aucune allergie connue»\n\nTRAITEMENT ACTUEL\n[molécule, dose, rythme — une ligne par traitement]\n\nHISTOIRE DE LA MALADIE\nCapacité fonctionnelle : [> 4 METs : monte 2 étages sans s'arrêter / limitée]. Pas d'angor ni de dyspnée d'effort . Risque chirurgical de l'intervention : [faible / intermédiaire / élevé].\n\nEXAMEN CLINIQUE\nPoids [poids] kg, taille [taille] cm (IMC [IMC] kg/m²). Pression artérielle [PAS]/[PAD] mmHg au bras «droit», fréquence cardiaque [FC] bpm, SpO₂ [SpO₂] % en air ambiant.\nBruits du cœur «réguliers», «sans souffle audible». Auscultation pulmonaire «libre». «Absence de signe d'insuffisance cardiaque droite ou gauche». Pouls périphériques «tous perçus», «pas de souffle vasculaire».\n\nÉLECTROCARDIOGRAMME\nRythme «sinusal» à [FC] bpm, axe «normal» ([axe]°), PR [PR] ms, QRS «fins» ([QRS] ms), QTc [QTc] ms. «Pas de trouble de la repolarisation».\n\nÉCHOGRAPHIE CARDIAQUE TRANSTHORACIQUE\nÉchogénicité «satisfaisante».\n- Ventricule gauche «non dilaté» (DTDVG [DTDVG] mm, VTD indexé [VTDi] mL/m²), «non hypertrophié» (SIV [SIV] mm, PP [PP] mm), cinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)», GLS [GLS] %.\n- Fonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'], volume OG indexé [VOGi] mL/m² : «pressions de remplissage non élevées».\n- Ventricule droit «non dilaté», «de fonction systolique conservée» (TAPSE [TAPSE] mm, S' [S'] cm/s).\n- Valves : «pas de valvulopathie significative».\n- Pressions : IT [Vmax IT] m/s, PAPs estimée à [PAPs] mmHg, VCI «non dilatée et compliante».\n- Péricarde «sec». Aorte : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nCONCLUSION\nPas de contre-indication cardiologique à l'intervention prévue  [ou : précautions].\n\nCONDUITE À TENIR\n- Traitement antithrombotique : [poursuite de l'aspirine / arrêt de … le …, relais].\n- Poursuite des bêtabloquants et des statines.\n- [Examens complémentaires si nécessaire].\n- Prochaine consultation : [délai / examen à prévoir].\n\nJe vous remercie de m'avoir adressé votre patient(e) et reste à votre disposition.\nBien confraternellement,\n\n[Signature]\n"
+    }
+   },
+   {
+    "id": "cr_ett",
+    "name": "Échographie transthoracique",
+    "category": "Examens",
+    "sort_order": 20,
+    "keywords": "echographie ett compte rendu echo coeur fevg",
+    "definition": {
+     "document_title": "Compte rendu d'échocardiographie transthoracique",
+     "sections": [
+      {
+       "key": "indication",
+       "title": "Indication",
+       "fields": [
+        {
+         "key": "indication",
+         "label": "Indication / motif",
+         "type": "multiline",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "technique",
+       "title": "Conditions",
+       "fields": [
+        {
+         "key": "echogenicite",
+         "label": "Échogénicité",
+         "type": "choice",
+         "phrases": [
+          "satisfaisante",
+          "moyenne",
+          "médiocre"
+         ]
+        },
+        {
+         "key": "rythme",
+         "label": "Rythme pendant l'examen",
+         "type": "text",
+         "hint": "sinusal / FA…, FC"
+        }
+       ]
+      },
+      {
+       "key": "vg",
+       "title": "Ventricule gauche",
+       "fields": [
+        {
+         "key": "vg_dim",
+         "label": "Dimensions et épaisseurs",
+         "type": "multiline",
+         "hint": "DTDVG, DTSVG, SIV, PP, masse indexée, EPR"
+        },
+        {
+         "key": "vg_fonction",
+         "label": "Fonction systolique",
+         "type": "multiline",
+         "hint": "FEVG Simpson biplan, GLS, cinétique segmentaire"
+        },
+        {
+         "key": "diastole",
+         "label": "Fonction diastolique / pressions de remplissage",
+         "type": "multiline",
+         "hint": "E, A, E/A, e' septal/latéral, E/e', VOGi, IT"
+        }
+       ]
+      },
+      {
+       "key": "vd",
+       "title": "Cavités droites",
+       "fields": [
+        {
+         "key": "vd",
+         "label": "Ventricule droit",
+         "type": "multiline",
+         "hint": "diamètre basal, TAPSE, S', FAC"
+        },
+        {
+         "key": "od_og",
+         "label": "Oreillettes",
+         "type": "multiline",
+         "hint": "VOGi, surface OD"
+        }
+       ]
+      },
+      {
+       "key": "valves",
+       "title": "Valves",
+       "fields": [
+        {
+         "key": "valves",
+         "label": "Valves",
+         "type": "multiline",
+         "phrases": [
+          "Pas de valvulopathie significative.",
+          "Valves fines et mobiles."
+         ]
+        }
+       ]
+      },
+      {
+       "key": "pressions",
+       "title": "Pressions et péricarde",
+       "fields": [
+        {
+         "key": "paps",
+         "label": "PAPs / VCI",
+         "type": "multiline",
+         "hint": "Vmax IT, PAPs, VCI"
+        },
+        {
+         "key": "pericarde",
+         "label": "Péricarde",
+         "type": "text",
+         "phrases": [
+          "Péricarde sec."
+         ]
+        },
+        {
+         "key": "aorte",
+         "label": "Aorte",
+         "type": "text",
+         "hint": "sinus, aorte ascendante"
+        }
+       ]
+      },
+      {
+       "key": "conclusion",
+       "title": "Conclusion",
+       "fields": [
+        {
+         "key": "conclusion",
+         "label": "Conclusion",
+         "type": "multiline",
+         "show_label": false
+        },
+        {
+         "key": "cat",
+         "label": "Conduite à tenir / suivi",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU D'ÉCHOCARDIOGRAPHIE TRANSTHORACIQUE\nDate : {{date}}\n\nPatient(e) : [NOM Prénom], [âge] ans. Poids [poids] kg, taille [taille] cm, surface corporelle [SC] m².\nIndication : [indication].\nÉchogénicité «satisfaisante». Rythme «sinusal» à [FC] bpm pendant l'examen.\n\nVENTRICULE GAUCHE\n«Non dilaté» : DTDVG [DTDVG] mm, DTSVG [DTSVG] mm, VTD indexé [VTDi] mL/m². «Non hypertrophié» : SIV [SIV] mm, PP [PP] mm, masse indexée [masse] g/m², épaisseur relative [EPR].\nCinétique segmentaire «homogène». FEVG [FEVG] % «(Simpson biplan)». GLS [GLS] %.\nFonction diastolique : E [E] cm/s, A [A] cm/s, E/A [E/A], TDE [TDE] ms, e' septal [e' sept] cm/s, e' latéral [e' lat] cm/s, E/e' moyen [E/e'] : «pressions de remplissage non élevées».\n\nOREILLETTES\nOG «non dilatée» (volume indexé [VOGi] mL/m²). OD «non dilatée» (surface [OD] cm²).\n\nVENTRICULE DROIT\n«Non dilaté» (diamètre basal [VD] mm), «fonction systolique conservée» : TAPSE [TAPSE] mm, S' [S'] cm/s, FAC [FAC] %.\n\nVALVES\nAortique : «tricuspide, fine» ; Vmax [Vmax Ao] m/s, gradient moyen [Gmoy] mmHg ; «pas de fuite».\nMitrale : «fine, mobile» ; «fuite minime physiologique».\nTricuspide : «fuite minime» ; Vmax IT [Vmax IT] m/s.\nPulmonaire : «sans particularité».\n\nPRESSIONS PULMONAIRES ET VCI\nPAPs estimée à [PAPs] mmHg (gradient VD-OD [gradient] mmHg + POD [POD] mmHg). VCI «non dilatée ([VCI] mm) et compliante».\n\nPÉRICARDE ET AORTE\nPéricarde «sec». Racine aortique : sinus de Valsalva [sinus] mm, aorte ascendante [aorte asc] mm.\n\nCONCLUSION\n[ex. : ventricule gauche non dilaté, non hypertrophié, de fonction systolique conservée (FEVG [FEVG] %) ; pas de valvulopathie significative ; pressions de remplissage non élevées ; PAPs normale.]\n\n[Conduite à tenir / suivi]\n\nDr [Signature]\n"
+    }
+   },
+   {
+    "id": "cr_ecg",
+    "name": "Électrocardiogramme",
+    "category": "Examens",
+    "sort_order": 21,
+    "keywords": "ecg electrocardiogramme compte rendu interpretation",
+    "definition": {
+     "document_title": "Interprétation d'électrocardiogramme",
+     "sections": [
+      {
+       "key": "indication",
+       "title": "Indication",
+       "fields": [
+        {
+         "key": "indication",
+         "label": "Indication / motif",
+         "type": "multiline",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "lecture",
+       "title": "Lecture",
+       "fields": [
+        {
+         "key": "rythme",
+         "label": "Rythme et fréquence",
+         "type": "text",
+         "phrases": [
+          "Rythme sinusal régulier."
+         ]
+        },
+        {
+         "key": "conduction",
+         "label": "PR, QRS, axe",
+         "type": "text"
+        },
+        {
+         "key": "repol",
+         "label": "Repolarisation et QTc",
+         "type": "multiline",
+         "phrases": [
+          "Pas de trouble de la repolarisation."
+         ]
+        }
+       ]
+      },
+      {
+       "key": "comparaison",
+       "title": "Comparaison",
+       "fields": [
+        {
+         "key": "comparaison",
+         "label": "Comparaison avec un tracé antérieur",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "conclusion",
+       "title": "Conclusion",
+       "fields": [
+        {
+         "key": "conclusion",
+         "label": "Conclusion",
+         "type": "multiline",
+         "show_label": false
+        },
+        {
+         "key": "cat",
+         "label": "Conduite à tenir / suivi",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nINTERPRÉTATION D'ÉLECTROCARDIOGRAMME 12 DÉRIVATIONS\nDate : {{date}}\n\nPatient(e) : [NOM Prénom], [âge] ans. Contexte : [indication / symptômes]. Traitements influençant l'ECG : [bêtabloquant, antiarythmique…].\nConditions techniques : 25 mm/s, 10 mm/mV, «tracé de bonne qualité».\n\nLECTURE\n- Rythme «sinusal régulier» à [FC] /min.\n- Onde P : «normale» ([durée P] ms).\n- PR [PR] ms : «normal».\n- QRS [QRS] ms : «fins», axe [axe]° «normal».\n- Pas d'onde Q pathologique. Progression de l'onde R «normale» en précordiales.\n- Indices de voltage : Sokolow [Sokolow] mm, Cornell [Cornell] mm.\n- Segment ST «isoélectrique». Ondes T «positives et concordantes».\n- QT [QT] ms, QTc [QTc] ms («Fridericia» / «Bazett»).\n\nCOMPARAISON\n«Pas de modification» par rapport au tracé du [date antérieure].\n\nCONCLUSION\n«ECG normal» [ou : anomalie principale et signification].\n\nDr [Signature]\n"
+    }
+   },
+   {
+    "id": "cr_holter",
+    "name": "Holter ECG",
+    "category": "Examens",
+    "sort_order": 22,
+    "keywords": "holter ecg 24 heures compte rendu palpitations syncope esv fa pauses",
+    "definition": {
+     "document_title": "Compte rendu de Holter ECG",
+     "sections": [
+      {
+       "key": "indication",
+       "title": "Indication",
+       "fields": [
+        {
+         "key": "indication",
+         "label": "Indication / motif",
+         "type": "multiline",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "enreg",
+       "title": "Enregistrement",
+       "fields": [
+        {
+         "key": "duree",
+         "label": "Durée et qualité",
+         "type": "text",
+         "hint": "24 h / 48 h / 7 j, % analysable"
+        },
+        {
+         "key": "fc",
+         "label": "Fréquences",
+         "type": "text",
+         "hint": "moyenne, min, max"
+        }
+       ]
+      },
+      {
+       "key": "arythmies",
+       "title": "Arythmies",
+       "fields": [
+        {
+         "key": "supra",
+         "label": "Supraventriculaire",
+         "type": "multiline",
+         "hint": "ESA, salves, FA (charge, durée)"
+        },
+        {
+         "key": "ventri",
+         "label": "Ventriculaire",
+         "type": "multiline",
+         "hint": "ESV (nombre, %, morphologies), doublets, TVNS"
+        },
+        {
+         "key": "conduction",
+         "label": "Conduction / pauses",
+         "type": "multiline",
+         "hint": "BAV, pauses > 2,5–3 s"
+        }
+       ]
+      },
+      {
+       "key": "symptomes",
+       "title": "Corrélation aux symptômes",
+       "fields": [
+        {
+         "key": "symptomes",
+         "label": "Symptômes déclarés et tracé correspondant",
+         "type": "multiline"
+        }
+       ]
+      },
+      {
+       "key": "conclusion",
+       "title": "Conclusion",
+       "fields": [
+        {
+         "key": "conclusion",
+         "label": "Conclusion",
+         "type": "multiline",
+         "show_label": false
+        },
+        {
+         "key": "cat",
+         "label": "Conduite à tenir / suivi",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE HOLTER ECG\nDate de pose : {{date}}\n\nPatient(e) : [NOM Prénom], [âge] ans. Indication : «palpitations» [syncope, FA, ESV, contrôle de traitement]. Traitement en cours : [traitements].\n\nENREGISTREMENT\nDurée [durée] h, «[X] voies», qualité «bonne» ([analysable] % analysable).\n\nRYTHME DE BASE\nRythme «sinusal» permanent. Fréquence moyenne [FC moy] /min, minimale [FC min] /min ([heure]), maximale [FC max] /min ([heure]). Variabilité nycthémérale «conservée».\n\nACTIVITÉ SUPRAVENTRICULAIRE\n[nombre] ESA ([%] %), [nombre] salves (la plus longue : [n] complexes à [FC] /min). «Pas d'épisode de fibrillation atriale» [ou : FA, charge [%] %, épisode le plus long [durée], réponse ventriculaire [FC]].\n\nACTIVITÉ VENTRICULAIRE\n[nombre] ESV ([%] % des complexes), «monomorphes», «isolées» ; [n] doublets ; «pas de tachycardie ventriculaire» [ou : TVNS de [n] complexes à [FC] /min].\n\nCONDUCTION\n«Pas de pause significative» (plus longue pause [durée] s à [heure], [mécanisme]). «Pas de bloc atrioventriculaire de haut degré.»\nSegment ST : «pas de modification significative» (analyse indicative).\n\nCORRÉLATION AUX SYMPTÔMES\n[symptômes notés au journal] : [rythme correspondant].\n\nCONCLUSION\n[ex. : rythme sinusal, extrasystolie ventriculaire monomorphe peu abondante (< 1 %), pas de trouble conductif ni d'arythmie soutenue ; symptômes non corrélés à une arythmie.]\n\nDr [Signature]\n"
+    }
+   },
+   {
+    "id": "cr_polygraphie",
+    "name": "Polygraphie ventilatoire",
+    "category": "Examens",
+    "sort_order": 23,
+    "keywords": "polygraphie ventilatoire apnees sommeil iah sas compte rendu",
+    "definition": {
+     "document_title": "Compte rendu de polygraphie ventilatoire",
+     "sections": [
+      {
+       "key": "indication",
+       "title": "Indication",
+       "fields": [
+        {
+         "key": "indication",
+         "label": "Indication / motif",
+         "type": "multiline",
+         "show_label": false
+        }
+       ]
+      },
+      {
+       "key": "enreg",
+       "title": "Enregistrement",
+       "fields": [
+        {
+         "key": "duree",
+         "label": "Durée et qualité",
+         "type": "text",
+         "hint": "temps d'enregistrement valide"
+        },
+        {
+         "key": "position",
+         "label": "Position",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "resultats",
+       "title": "Résultats",
+       "fields": [
+        {
+         "key": "iah",
+         "label": "IAH et événements",
+         "type": "multiline",
+         "hint": "IAH, apnées obstructives/centrales/mixtes, hypopnées"
+        },
+        {
+         "key": "spo2",
+         "label": "Oxymétrie",
+         "type": "multiline",
+         "hint": "IDO, SpO2 moyenne/min, T90"
+        },
+        {
+         "key": "ronflement",
+         "label": "Ronflement / FC",
+         "type": "text"
+        }
+       ]
+      },
+      {
+       "key": "conclusion",
+       "title": "Conclusion",
+       "fields": [
+        {
+         "key": "conclusion",
+         "label": "Conclusion",
+         "type": "multiline",
+         "show_label": false
+        },
+        {
+         "key": "cat",
+         "label": "Conduite à tenir / suivi",
+         "type": "multiline"
+        }
+       ]
+      }
+     ],
+     "text": "{{entete}}\n\nCOMPTE RENDU DE POLYGRAPHIE VENTILATOIRE NOCTURNE\nDate de l'enregistrement : {{date}}\n\nPatient(e) : [NOM Prénom], [âge] ans, IMC [IMC] kg/m². Indication : «suspicion de syndrome d'apnées du sommeil» [HTA résistante, FA, insuffisance cardiaque, somnolence (Epworth [score]/24)…].\n\nENREGISTREMENT\nPolygraphie de type III «à domicile», [appareil]. Durée d'enregistrement valide [durée] h. Signaux : flux nasal, sangles thoracique et abdominale, oxymétrie, position, ronflement. Qualité «satisfaisante».\n\nRÉSULTATS\n- Index d'apnées-hypopnées (IAH) : [IAH] /h (dorsal [IAH dorsal] /h, non dorsal [IAH non dorsal] /h).\n- Apnées : [n] obstructives, [n] centrales, [n] mixtes ; hypopnées : [n].\n- Index de désaturation (≥ 3 %) : [IDO] /h ; SpO₂ moyenne [SpO₂ moy] %, minimale [SpO₂ min] % ; temps < 90 % : [T90] min ([%] %).\n- Respiration de Cheyne-Stokes : «absente».\n- Ronflement : [%] % du temps. Fréquence cardiaque moyenne [FC] /min.\n\nINTERPRÉTATION\nIAH < 5 /h : normal ; 5–14 : léger ; 15–29 : modéré ; ≥ 30 : sévère (AASM). Événements à prédominance «obstructive».\n\nCONCLUSION\n[ex. : syndrome d'apnées obstructives du sommeil «sévère» (IAH [IAH] /h), à prédominance «positionnelle».]\n\nCONDUITE À TENIR\n[ex. : indication à une PPC selon les critères en vigueur (HAS), règles hygiéno-diététiques, contrôle tensionnel ; avis pneumologique / du sommeil si apnées centrales.]\n\nDr [Signature]\n"
     }
    }
   ]

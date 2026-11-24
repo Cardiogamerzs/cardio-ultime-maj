@@ -1,6 +1,6 @@
 {
 "id": "scores",
-"version": 6,
+"version": 7,
 "description": "Catalogue des scores (calculateurs testés + fiches avec lien officiel)",
 "tables": {
 "scores": [
@@ -438,6 +438,21 @@
 "validation_status": "a_verifier",
 "content_version": "2026.11",
 "keywords": "AOD NACO anticoagulant dose apixaban rivaroxaban édoxaban dabigatran clairance Cockcroft insuffisance rénale"
+},
+{
+"id": "aa_dose_fa",
+"title": "Dose d'antiarythmique dans la FA / le flutter (amiodarone, flécaïnide, propafénone, sotalol, dronédarone, digoxine)",
+"category": "Fibrillation atriale",
+"indication": "Aide au choix de la posologie d'un antiarythmique selon l'âge, le poids, la fonction rénale (Cockcroft-Gault), la cardiopathie sous-jacente et le mode d'utilisation (entretien, charge, « pilule de poche »).",
+"population": "FA / flutter de l'adulte",
+"reference_version": "RCP français ; ESC 2024 (FA), tableau des antiarythmiques",
+"calculator_key": "aa_dose_fa",
+"body": "## Repères\n- **Amiodarone** : charge 600 mg/j per os 8 à 10 jours puis 200 mg/j ; IV 5 mg/kg en 20 min à 2 h puis 900–1200 mg/24 h ; pas d'adaptation rénale ; TSH, bilan hépatique ; interactions AVK et digoxine.\n- **Flécaïnide** : 50 à 100 mg × 2/j (LP 100–200 mg × 1/j), max 300 mg/j ; « pilule de poche » 200 mg (< 70 kg) ou 300 mg (≥ 70 kg) ; ClCr ≤ 35 mL/min : dose initiale ≤ 100 mg/j ; **contre-indiqué si cardiopathie structurelle** ; toujours avec un freinateur nodal.\n- **Propafénone** : 450 à 900 mg/j ; « pilule de poche » 450 mg (< 70 kg) ou 600 mg (≥ 70 kg) ; contre-indiquée si cardiopathie structurelle.\n- **Sotalol** : 80 à 160 mg × 2/j ; ½ dose si ClCr 30–60, ¼ si 10–29, à éviter < 10 ; ECG 2–4 h après la dose (QTc > 500 ms : réduire/arrêter).\n- **Dronédarone** : 400 mg × 2/j au cours des repas ; contre-indiquée si IC ou dysfonction VG, FA permanente, ClCr < 30, QTc ≥ 500 ms, dabigatran.\n- **Digoxine** : 0,0625 à 0,25 mg/j selon l'âge et la fonction rénale ; digoxinémie 0,5–0,9 ng/mL ; diviser par 2 avec amiodarone ou dronédarone.\n\n## Limites\n- Aide au calcul : vérifier le RCP en vigueur, l'ECG (QRS, QTc, fréquence), la kaliémie, les interactions. À vérifier médicalement.\n\n## Sources\n- Van Gelder IC et al. 2024 ESC Guidelines for the management of atrial fibrillation. Eur Heart J 2024;45:3314-3414.\n- RCP (base de données publique des médicaments) : Cordarone, Flécaïne, Rythmol, Sotalex, Multaq, Digoxine Nativelle.",
+"official_url": "https://doi.org/10.1093/eurheartj/ehae176",
+"sort_order": 29,
+"validation_status": "a_verifier",
+"content_version": "2026.11b",
+"keywords": "antiarythmique amiodarone flecainide propafenone sotalol dronedarone digoxine dose posologie fa flutter pilule de poche"
 },
 {
 "id": "echo_normes",

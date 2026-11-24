@@ -1,12 +1,12 @@
 {
  "format": 1,
- "generated": "2026-11-23T21:15:36.758738Z",
+ "generated": "2026-11-24T00:40:51.824049Z",
  "packs": [
   {
    "id": "report_templates",
-   "version": 2,
+   "version": 3,
    "url": "https://raw.githubusercontent.com/Cardiogamerzs/cardio-ultime-maj/main/packs/report_templates.json",
-   "sha256": "bbbba3eb09bfc6107b27376603753991ff3ec44a63cfa7954d1ce1e3ab0beffd"
+   "sha256": "01725b6ea88064236f6012ccab7c411c51aec35fbcf5ac016eb6327fc9c36f33"
   },
   {
    "id": "search_lexicon",
@@ -34,9 +34,9 @@
   },
   {
    "id": "ecg",
-   "version": 5,
+   "version": 6,
    "url": "https://raw.githubusercontent.com/Cardiogamerzs/cardio-ultime-maj/main/packs/ecg.json",
-   "sha256": "67f0c0a4e324de396ddda78ae6cfe56badded8de1d631694a5ec1d1b13a60054"
+   "sha256": "e7758277e3753210c4a56c07f9acba565d3955044d268a37918b0a36dc5488ca"
   },
   {
    "id": "medicaments",
@@ -52,9 +52,9 @@
   },
   {
    "id": "scores",
-   "version": 6,
+   "version": 7,
    "url": "https://raw.githubusercontent.com/Cardiogamerzs/cardio-ultime-maj/main/packs/scores.json",
-   "sha256": "50efe2e42236521d7c660a66c7ea0807bdfd2a8ff1fe95a6a3bad1981a8ab52c"
+   "sha256": "84191dcbd79e084a0d0304aaff50b5ad9b90edea2e0a9b315e405d25b077699b"
   },
   {
    "id": "outils",
